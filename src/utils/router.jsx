@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "../pages/layout";
+import Index from "../pages/Home";
 // import Home from "../pages/Home";
 // import IndexLogin from "../pages/login";
 
@@ -10,7 +11,7 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        // element: <Home />,
+        element: <Index />,
         // loader: locationMapLoader,
       },
       {

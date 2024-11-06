@@ -1,10 +1,10 @@
 
-const index = () => {
+const Index = () => {
   return (
-    <div>
+    <div className="min-h-screen bg-red-400">
       
     </div>
   )
 }
 
-export default index
+export default Index
