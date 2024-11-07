@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*{
+    font-family: "Inter", sans-serif !important;
+}
+.active{
+    border-bottom: 2px solid #1a4f92
+}
