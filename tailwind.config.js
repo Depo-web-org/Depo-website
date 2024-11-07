@@ -11,7 +11,7 @@ export default {
         'primary-active': '#142A4A',
         'primary-hover': '#153F74',
         'primary-disabled': '#B3C8',
-        secondary: '#00A5A4',
+        secondary: '#00A5A4', 
         'secondary-active': '#2779bd',
         'secondary-hover': '#6cb2eb',
         'secondary-disabled': '#6cb2eb',
