@@ -9,7 +9,7 @@ const Navbar = () => {
     }
   return (
     <div className="bg-white h-[85px] fixed w-full ">
-        <div className=" h-full  w-[calc(100%-104px)] mx-auto flex justify-between px-2 py-4   ">
+        <div className=" h-full  w-[calc(100%-104px)] mx-auto flex justify-between py-2 px-8   ">
             <div className="h-full  w-1/4 ">
 
             </div> 
@@ -17,7 +17,6 @@ const Navbar = () => {
                 {
                     Object.entries(navItems).map(([key, item]) => (
                         <NavLink key={key} to={item.link} className="text-white px-4 py-2 font-bold  group relative "> {item.text} 
-                        <div  className={`bg-primary h-[2px] w-0 group-hover:w-full transition-all duration-200 absolute -bottom-[1.2px] left-1/2 -translate-x-1/2`}></div>
                         </NavLink> ))
                 }
             </div>
