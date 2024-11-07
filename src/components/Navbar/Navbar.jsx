@@ -18,7 +18,6 @@ const Navbar = () => {
               <img className="w-[96.23px] h-[49.77px]" src="lOGO.svg" alt="unavailable img"/>
               <div className="w-[50px] h-[49] p-[10px]">
               <span className="text-secondary font-bold text-[24px] leading-[29.05px] ">En</span>
-           
               </div>
 
            </div> 
