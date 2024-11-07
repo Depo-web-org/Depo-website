@@ -7,6 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
+        // #052c5d
         primary: '#1A4F92',
         'primary-active': '#142A4A',
         'primary-hover': '#153F74',
@@ -15,6 +16,11 @@ export default {
         'secondary-active': '#2779bd',
         'secondary-hover': '#6cb2eb',
         'secondary-disabled': '#6cb2eb',
+        "back-ground":"#052c5d",
+        "border-color":"#ffffff47"
+      },
+      boxShadow: {
+        'custom': '14px 13px 17px -9px rgba(0, 0, 0, 0.47)',
       },
     },
   },

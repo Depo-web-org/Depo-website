@@ -9,7 +9,7 @@ const Navbar = () => {
         contact:{text:'Contact',link:'/contact'}
     }
   return (
-    <div className="bg-white h-[85px] fixed w-full ">
+    <div className="bg-white h-[85px] fixed w-full z-50 ">
         <div className=" h-full  w-[calc(100%-104px)] mx-auto flex justify-between py-2 px-8   ">
             <div className="h-full  w-1/4 ">
 
@@ -31,7 +31,7 @@ const Navbar = () => {
                 }
             </div>
             <div className="h-full flex items-center justify-center w-1/4">
-            <Button/>
+            <Button style="w-[116px] h-[51px]  pt-[16px] pb-[16px] pl-[32px] pr-[32px]"/>
             </div>
         </div>
        

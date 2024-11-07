@@ -1,0 +1,22 @@
+.rotate-hand {
+  animation: rotate 3s infinite;
+  -webkit-animation: rotate 3s infinite;
+}
+
+@keyframes rotate { 
+  0% {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+}
+  
+  100% {
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+}
+}
