@@ -11,6 +11,16 @@ const Navbar = () => {
     <div className="bg-white h-[85px] fixed w-full ">
         <div className=" h-full  w-[calc(100%-104px)] mx-auto flex justify-between py-2 px-8   ">
             <div className="h-full  w-1/4 ">
+            
+            <div className="flex items-center h-full w-1/4 gap-[8px]">
+              
+              <img className="w-[96.23px] h-[49.77px]" src="lOGO.svg" alt="unavailable img"/>
+              <div className="w-[50px] h-[49] p-[10px]">
+              <span className="text-primary-active font-bold text-[24px] leading-[29.05px] ">En</span>
+           
+              </div>
+
+           </div> 
 
             </div> 
             <div className="h-full bg-secondary rounded-[57px] w-1/2 flex items-center justify-between px-8">
