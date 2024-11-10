@@ -1,23 +1,55 @@
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import "swiper/css/navigation";
 
-import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
+import { EffectCoverflow, Pagination } from "swiper/modules";
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
 
-// import slide_image_1 from "images/Untitled-1.png";
-// import slide_image_2 from "images/Untitled-1.png";
-// import slide_image_3 from "images/Untitled-1.png";
-// import slide_image_4 from "images/Untitled-1.png";
-// import slide_image_5 from "images/Untitled-1.png";
-// import slide_image_6 from "images/Untitled-1.png";
-// import slide_image_7 from "images/Untitled-1.png";
+const carouselImages = [
+  {
+    id: 1,
+    image: "public/images/carousel/campaign-creators-gMsnXqILjp4-unsplash.png",
+  },
+  {
+    id: 2,
+    image: "public/images/carousel/carlos-muza-hpjSkU2UYSU-unsplash.png",
+  },
+  {
+    id: 3,
+    image: "public/images/carousel/tim-van-der-kuip-CPs2X8JYmS8-unsplash.png",
+  },
+  { id: 4, image: "public/images/carousel/Untitled-1.png" },
+  {
+    id: 5,
+    image: "public/images/carousel/william-hook-9e9PD9blAto-unsplash 1.png",
+  },
+];
+
+function CustomNavigation() {
+  const swiper = useSwiper();
+
+  return (
+    <div className="slider-controler">
+      <div
+        className="swiper-button-prev text-secondary slider-arrow"
+        onClick={() => swiper.slidePrev()}
+      >
+        <FaArrowAltCircleLeft size={40} />
+      </div>
+      <div
+        className="swiper-button-next text-secondary slider-arrow"
+        onClick={() => swiper.slideNext()}
+      >
+        <FaArrowAltCircleRight size={40} />
+      </div>
+    </div>
+  );
+}
+
 export default function Carousel() {
   return (
-    <div className="container">
-      <h1 className="heading">Flower Gallery</h1>
+    <div className="container py-10">
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
@@ -31,45 +63,19 @@ export default function Carousel() {
           depth: 100,
           modifier: 2.5,
         }}
-        navigation={{
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-          clickable: true,
-        }}
-        modules={[EffectCoverflow, Pagination, Navigation]}
+        modules={[EffectCoverflow, Pagination]}
         className="swiper_container"
       >
-        <SwiperSlide>
-          <img src="public/images/Untitled-1.png" alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="public/images/Untitled-1.png" alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="public/images/Untitled-1.png" alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="public/images/Untitled-1.png" alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="public/images/Untitled-1.png" alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="public/images/Untitled-1.png" alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="public/images/Untitled-1.png" alt="slide_image" />
-        </SwiperSlide>
+        {carouselImages.map((carousel) => (
+          <SwiperSlide key={carousel.id}>
+            <img src={carousel.image} alt="slide_image" />
+          </SwiperSlide>
+        ))}
 
-        <div className="slider-controler">
-          <div className="swiper-button-prev text-secondary slider-arrow">
-            <FaArrowAltCircleLeft />
-          </div>
-          <div className="swiper-button-next slider-arrow">
-            <FaArrowAltCircleRight />{" "}
-          </div>
-          <div className="swiper-pagination"></div>
-        </div>
+        {/* Custom Navigation Component */}
+        <CustomNavigation />
+
+        <div className="swiper-pagination"></div>
       </Swiper>
     </div>
   );

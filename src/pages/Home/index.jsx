@@ -1,7 +1,17 @@
 import Carousel from "./Components/Carousel/Carousel";
+import HeaderInfo from "./Components/Header Info/HeaderInfo";
+import Hero from "./Components/Hero/Hero";
+import Services from "./Components/OurServices/Services";
 
 const Index = () => {
-  return <div className="min-h-screen px-[104px] pt-96 bg-primary"></div>;
+  return (
+    <div className="min-h-screen bg-back-ground px-[104px]">
+      <Hero />
+      <HeaderInfo />
+      <Services />
+      <Carousel />
+    </div>
+  );
 };
 
 export default Index;

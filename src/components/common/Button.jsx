@@ -1,5 +1,6 @@
 export default function Button({
     title = "Button",
+    style="",
     onClick,
     backgroundColor = "bg-primary",
     activeBackgroundColor = "bg-active", 
@@ -9,7 +10,8 @@ export default function Button({
   }) {
     // Base button classes
     const buttonClasses = `
-      w-[116px] h-[51px] rounded-[5px] text-white pt-[16px] pb-[16px] pl-[32px] pr-[32px]
+      ${style}
+      rounded-[5px] text-white font-semibold  px-8 py-4  font-bold
       ${backgroundColor}
       ${disabled ? disabledBackgroundColor : ""}
       ${!disabled ? hoverBackgroundColor : ""}

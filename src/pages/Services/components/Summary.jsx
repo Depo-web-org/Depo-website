@@ -1,5 +1,4 @@
 import Button from "../../../components/common/Button";
-import ServiceItem from "./ServiceItem";
 
 export default function Summary() {
   return (
@@ -10,7 +9,10 @@ export default function Summary() {
           we specialize in delivering high-quality digital solutions tailored to
           meet modern business needs.
         </p>
-        <Button />
+        <Button
+          style="h-[51px] w-[312px]"
+          title="Learn More About Our Solutions"
+        />
       </div>
       <div></div>
     </div>
