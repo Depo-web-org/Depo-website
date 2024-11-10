@@ -1,15 +1,17 @@
 import {  NavLink } from "react-router-dom"
 import Button from "../common/Button"
+// import { useScrollPosition } from "../../Hooks/useScrollPosition"
 
 const Navbar = () => {
+    // const scrollPosition =useScrollPosition()
     const navItems={
         home:{text:'Home',link:'/'},
-        about:{text:'About',link:'/about'},
         services:{text:'Services',link:'/services'},
-        contact:{text:'Contact',link:'/contact'}
+        about:{text:'Career',link:'/career'},
+        contact:{text:'About Us',link:'/about'}
     }
   return (
-    <div className="bg-white h-[85px] fixed w-full z-50 ">
+    <div className={` bg-transparent h-[85px] fixed top-0 w-full z-50 `}>
         <div className=" h-full  w-[calc(100%-104px)] mx-auto flex justify-between py-2 px-8   ">
             <div className="h-full  w-1/4 ">
 
@@ -31,7 +33,9 @@ const Navbar = () => {
                 }
             </div>
             <div className="h-full flex items-center justify-center w-1/4">
-            <Button style="w-[116px] h-[51px]  pt-[16px] pb-[16px] pl-[32px] pr-[32px]"/>
+            {/* <Button title="Contact Us" navigate={'contact'} style="w-48 "/> */}
+
+            <Button title="Contact Us" navigate={'contact'} style="w-48 h-[51px]  py-[16px]  px-[32px] "/>
             </div>
         </div>
        

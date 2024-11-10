@@ -1,6 +1,10 @@
+import { Link } from "react-router-dom";
+
 export default function Button({
     title = "Button",
+    navigate = '',
     style="",
+    type='submit',
     onClick,
     backgroundColor = "bg-primary",
     activeBackgroundColor = "bg-active", 
@@ -21,10 +25,13 @@ export default function Button({
   
     return (
       <button
+      type={type}
         onClick={disabled ? null : onClick} 
         className={buttonClasses}
       >
+        <Link to={`${navigate}`}>
         {title}
+        </Link>
       </button>
     );
   }

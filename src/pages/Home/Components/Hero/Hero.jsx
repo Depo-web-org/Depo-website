@@ -5,7 +5,7 @@ const Hero = () => {
     <>
     <main className=" w-full h-full pt-[85px] relative">
      
-     <div className="mt-[calc(149px-85px)]   grid grid-cols-12 pb-8 border-b border-[#ffffff47]">
+     <div className="mt-[calc(149px-85px)]   grid grid-cols-12 pb-8 border-b border-[#ffffff47] relative z-10">
       {/* left side */}
       <div className="col-span-7  pr-[130px]  xl:pr-40">
   <h1 className="text-[64px]  leading-[77.45px] font-bold text-white mt-20 ">

@@ -18,3 +18,10 @@
     @apply pb-8 border-b border-[#ffffff47];
   }
   
+
+
+
+  /* Gradient Background */ 
+  .gradient-bg{
+    @apply bg-gradient-to-t to-secondary-dark from-back-ground 
+  }
