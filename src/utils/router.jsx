@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Layout from "../pages/layout";
 import Index from "../pages/Home";
 import Services from "../pages/Services/Services";
+import Career from "../pages/Career/Career";
 // import Home from "../pages/Home";
 // import IndexLogin from "../pages/login";
 
@@ -28,6 +29,10 @@ export const router = createBrowserRouter([
       {
         path: "/services",
         element: <Services />,
+      },
+      {
+        path: "/contact",
+        element: <Career />,
       },
       //   {
       //     path: "master-plan",

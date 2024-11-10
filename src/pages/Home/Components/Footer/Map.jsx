@@ -1,4 +1,5 @@
 import { FaArrowRight } from "react-icons/fa";
+import Button from "../../../../components/common/Button";
 
 export default function Map() {
   const mapsUrl =
@@ -18,13 +19,15 @@ export default function Map() {
           style={{ border: 0 }}
         ></iframe>
       </div>
-      <button
-        onClick={() => window.open(mapsUrl, "_blank")}
-        className="mt-4 bg-primary hover:bg-primary-hover text-white font-semibold py-2 px-4 rounded-md flex items-center space-x-2"
-      >
-        <span>Get Directions</span>
-        <FaArrowRight />
-      </button>
+      <div className="flex justify-center w-full md:justify-start mt-4">
+        <Button
+          title="Get Directions"
+          onClick={() => window.open(mapsUrl, "_blank")}
+          className="w-full max-w-[100%] h-[36px] gap-[10px] rounded-tl-[5px] rounded-tr-none rounded-br-none rounded-bl-none bg-primary hover:bg-primary-hover text-white font-semibold flex items-center justify-center"
+        >
+          <FaArrowRight />
+        </Button>
+      </div>
     </div>
   );
 }
