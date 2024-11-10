@@ -1,8 +1,10 @@
 // import Button from "../../components/common/Button"
-// import { FaPhoneAlt } from "react-icons/fa";
-// import { IoLocationSharp } from "react-icons/io5";
+import { FaPhoneAlt } from "react-icons/fa";
+import { IoLocationSharp } from "react-icons/io5";
 // import { useForm } from 'react-hook-form';
 import FormContact from "./Components/FormContact";
+import { SiGmail } from "react-icons/si";
+import PagesBg from "../../components/common/PagesBg";
 
 const Contact = () => {
   // const { register, handleSubmit ,formState: { errors } } = useForm();
@@ -11,10 +13,9 @@ const Contact = () => {
   
   return (
     <section className="gradient-bg min-h-screen ">
-      <div className="mt-[85px] bg-white w-full h-40">
-
-      </div>
-      <div className="pt-9 px-[104px] grid grid-cols-12 pb-32">
+      {/* Header Back Ground */}
+  <PagesBg title="Got a Question?"/>
+      <div className="pt-9 px-4 lg:px-[104px] grid grid-cols-12 pb-32">
         {/* Left Side */}
 
         <div className=" col-span-12 lg:col-span-7    lg:border-r lg:border-white">
@@ -34,7 +35,7 @@ const Contact = () => {
 
 
         {/* Right Side */}
-      <div className="col-span-12 lg:col-span-5 lg:mx-14 my-14 lg:my-0 ">
+      <div className="col-span-12 lg:col-span-5 lg:mx-14 my-14 lg:my-0 hidden lg:block ">
       <div className="text-white">
                   <h3 className=" font-bold text-[32px]">
                   For Direct inquiries 
@@ -45,16 +46,14 @@ const Contact = () => {
           </div>
           <div className="flex flex-col mt-6 gap-y-10 text-white text-xl ">
           <div> 
-            {/* <FaPhoneAlt className="text-secondary"/>  */}
-            <p><span> +20 123456789</span></p>
+            <p className="flex items-center gap-x-2"><span className="text-3xl"> <FaPhoneAlt className="text-secondary"/></span>+20 123456789</p>
           </div>
           <div>
-            {/* <SiGmail className="text-secondary"/> */}
-            <p>Email: <span>depoweb.eg@gmail.com</span></p>
+            <p className="flex items-center gap-x-2"><span className="text-3xl"> <SiGmail className="text-secondary"/></span>depoweb.eg@gmail.com</p>
+
           </div>
           <div>
-            {/* <IoLocationSharp className="text-secondary"/> */}
-            <p> <span>Zahraa Al Maadi, Sama Towers, Building No. 9, 9th Floor, Apartment No. 93</span></p>
+            <p className="flex items-center gap-x-2"> <span className="text-3xl"><IoLocationSharp className="text-secondary"/></span>Zahraa Al Maadi, Sama Towers, Building No. 9, 9th Floor, Apartment No. 93</p>
           </div>
         </div>
      

@@ -7,7 +7,7 @@ const FormContact = () => {
     const onSubmit = data => console.log(data);
     
   return (
-    <div className="mt-4 text-white mr-16">
+    <div className="mt-4 text-white lg:mr-16">
     <form onSubmit={handleSubmit(onSubmit)} action="submit">
         <div className="flex gap-[20px] lg:flex-row flex-col">
             <label htmlFor="name" className="h-10 w-full cursor-pointer text-slate-100 font-medium flex flex-col">
@@ -75,7 +75,7 @@ const FormContact = () => {
         </label>
 
         {/* Button */}
-        <Button type="submit" backgroundColor={"bg-primary"} title={"Confirm"} style="w-48 mt-16" />
+        <Button type="submit" backgroundColor={"bg-primary"} title={"Confirm"} style="w-48 mt-8 lg:mt-16" />
     </form>
         </div>
 

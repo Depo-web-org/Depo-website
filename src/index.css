@@ -2,22 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-    font-family: "Inter", sans-serif !important;
+* {
+  font-family: "Inter", sans-serif !important;
 }
-.active{
-    border-bottom: 2px solid #1a4f92
+.active {
+  border-bottom: 2px solid #1a4f92;
 }
-.section_border{
-   border-bottom: 1px solid #ffffff47; 
+.section-border {
+  border: none;
 }
-
-
+@media(min-width: 1024px) {
+.section-border {
+  border-bottom: 1px solid #ffffff47;
+}
+}
 /* styles.css */
 .section-border {
-    @apply pb-8 border-b border-[#ffffff47];
-  }
-  
+  @apply pb-8 border-b border-[#ffffff47];
+}
+
+/* Container styling for the custom arrows */
+.slider-controler {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slider-arrow {
+  position: absolute;
+  top: 10%;
+  transform: translateY(-100%);
+  cursor: pointer;
+  z-index: 10;
+}
+
+.swiper-button-prev {
+  left: 10px;
+}
+
+.swiper-button-next {
+  right: 10px;
+}
 
 
 
@@ -25,3 +50,4 @@
   .gradient-bg{
     @apply bg-gradient-to-t to-secondary-dark from-back-ground 
   }
+  
