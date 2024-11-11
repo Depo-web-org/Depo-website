@@ -67,19 +67,7 @@
   }
 }
 
-<<<<<<< HEAD
-
-
-  /* Gradient Background */ 
-  .gradient-bg{
-    @apply bg-gradient-to-t to-secondary-dark from-back-ground 
-  }
-  
-
-
-=======
 /* Gradient Background */
 .gradient-bg {
   @apply bg-gradient-to-t to-secondary-dark from-back-ground;
 }
->>>>>>> aab9a2c (style:add tailwind scrollbar hide)
