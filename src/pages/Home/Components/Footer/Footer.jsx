@@ -7,8 +7,8 @@ import Rights from "./Rights";
 
 function Footer() {
   return (
-    <footer className="bg-white  text-black">
-      <div className=" grid px-[104px] mt-[32px] grid-cols-12 gap-5">
+    <footer className="bg-white absolute h-[397px] z-30 text-black">
+      <div className=" grid px-8 lg:px-[104px] mt-[32px] grid-cols-12 gap-5">
         {/* Logo and Social Links */}
         <SocialMedia />
         {/* Address */}
