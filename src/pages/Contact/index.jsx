@@ -30,8 +30,9 @@ const Contact = () => {
 
 
         {/* Right Side */}
-      <div className="col-span-12 lg:col-span-5 lg:mx-14 my-14 lg:my-0 hidden lg:block ">
+      <div className="col-span-12 lg:col-span-5 lg:ml-10 xl:ml-14 my-14 lg:my-0 hidden lg:block ">
       <div className="text-white">
+
                   <h3 className=" font-bold text-[32px]">
                   For Direct inquiries 
           </h3>
