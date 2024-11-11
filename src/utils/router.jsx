@@ -2,11 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import Layout from "../pages/layout";
 import Home from "../pages/Home";
 import Contact from "../pages/Contact";
-import Index from "../pages/Home";
 import Services from "../pages/Services/Services";
 import Career from "../pages/Career/Career";
-// import Home from "../pages/Home";
-// import IndexLogin from "../pages/login";
 
 export const router = createBrowserRouter([
   {
@@ -20,46 +17,36 @@ export const router = createBrowserRouter([
       },
       {
         path: "contact",
-        children: [
-          {
-            index: true,
-            element: <Contact />,
-            // loader: loginLoader,
-          },
-        ],
-      }
+        element: <Contact />,
+        // loader: loginLoader,
       },
       {
-        path: "/services",
+        path: "services",
         element: <Services />,
       },
       {
-        path: "/contact",
+        path: "career",
         element: <Career />,
       },
-      //   {
-      //     path: "master-plan",
-      //     children: [
-      //       {
-      //         index: true,
-      //         element: <MasterPlan />,
-      //         loader: masterPlanLoader,
-      //         shouldRevalidate: (args) => {
-      //           return false;
-      //         },
+      // Uncomment this section if needed for the master-plan route
+      // {
+      //   path: "master-plan",
+      //   children: [
+      //     {
+      //       index: true,
+      //       element: <MasterPlan />,
+      //       loader: masterPlanLoader,
+      //       shouldRevalidate: (args) => {
+      //         return false;
       //       },
-      //       {
-      //         path: "villa/:villaId",
-      //         children: [
-      //           {
-      //             index: true,
-      //             element: <Villa />,
-      //             loader: villaLoader,
-      //           },
-      //         ],
-      //       },
-      //     ],
-      //   },
+      //     },
+      //     {
+      //       path: "villa/:villaId",
+      //       element: <Villa />,
+      //       loader: villaLoader,
+      //     },
+      //   ],
+      // },
     ],
   },
 ]);
