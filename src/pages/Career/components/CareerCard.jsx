@@ -1,7 +1,7 @@
 export default function CareerCard({ title, subtitle, index }) {
   console.log(title, subtitle);
   return (
-    <div className="  h-[406px] p-2 pt-0 gap-2 rounded-[16px]   bg-white shadow-lg">
+    <div className="  h-[406px] p-2  gap-2 rounded-[16px]   bg-white shadow-lg">
       {/* Main Content */}
 
       <div
