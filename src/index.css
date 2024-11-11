@@ -19,23 +19,46 @@
 
 /* Container styling for the custom arrows */
 .slider-controler {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
 }
 
 .slider-arrow {
-  position: absolute;
-  top: 10%;
-  transform: translateY(-300%);
   cursor: pointer;
   z-index: 10;
+  pointer-events: all;
 }
 
 .swiper-button-prev {
-  left: 10px;
+  margin-left: 10px;
 }
 
 .swiper-button-next {
-  right: 10px;
+  margin-right: 10px;
+}
+
+.slider-arrow svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .slider-arrow svg {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .slider-arrow svg {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 }

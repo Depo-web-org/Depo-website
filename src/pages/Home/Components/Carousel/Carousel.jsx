@@ -32,7 +32,7 @@ function CustomNavigation() {
   return (
     <div className="slider-controler">
       <div
-        className="swiper-button-prev text-secondary slider-arrow"
+        className="swiper-button-prev text-secondary  slider-arrow"
         onClick={() => swiper.slidePrev()}
       >
         <FaArrowAltCircleLeft size={40} />
@@ -55,13 +55,16 @@ export default function Carousel() {
         grabCursor={true}
         centeredSlides={true}
         loop={true}
-        slidesPerView={3}
+        slidesPerView={2}
         spaceBetween={0}
         coverflowEffect={{
           rotate: 0,
           stretch: 0,
           depth: 100,
           modifier: 2.5,
+        }}
+        breakpoints={{
+          1024: { slidesPerView: 3 },
         }}
         modules={[EffectCoverflow, Pagination]}
         className="swiper_container"
