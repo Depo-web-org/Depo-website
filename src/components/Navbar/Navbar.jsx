@@ -16,19 +16,19 @@ const Navbar = () => {
 
   const scrollPosition = useScrollPosition();
   const navItems = {
-    home: { text: "Home", link: "/" },
-    services: { text: "Services", link: "/services" },
-    about: { text: "Career", link: "/career" },
-    contact: { text: "About Us", link: "/about" },
+    home: { text: "Home",icon:<IoHome className="inline"/> ,link: "/" },
+    services: { text: "Services",icon:<GrServices className="inline"/> ,link: "/services" },
+    about: { text: "Career",icon:<FaCode className="inline"/> ,link: "/career" },
+    contact: { text: "About Us",icon:<IoIosInformationCircle className="inline" /> ,link: "/about" },
   };
-  return (
-    <>
+  
+  return <> 
     <div
       className={`  bg-${
-        scrollPosition > 80 || pathname != "/" ? "white" : "transparent"
-      } transition-all duration-300 h-[85px] fixed top-0 w-full z-50 `}
+        scrollPosition > 80 || pathname != "/" || isOpen ? "white" : "transparent"
+      } transition-all duration-300 h-auto md:h-[85px] fixed top-0 w-full z-50  `}
     >
-      <div className=" h-full  w-[calc(100%-104px)] mx-auto flex justify-between py-2 px-8   ">
+      <div className="hidden lg:flex  h-full  w-[calc(100%-104px)] mx-auto justify-between py-2 px-8   ">
         <div className="h-full  w-1/4 ">
           <div className="flex items-center h-full w-1/4 gap-[8px]">
             <img
