@@ -1,7 +1,7 @@
 export default function ServiceItem({ title, description, image }) {
   return (
     <div
-      className="relative h-[238px] bg-cover bg-center rounded-[10px] overflow-hidden group"
+      className="relative h-[238px] max-w-[393px] bg-cover bg-center rounded-[10px] overflow-hidden group"
       style={{
         backgroundImage: `url("${image}")`,
       }}
