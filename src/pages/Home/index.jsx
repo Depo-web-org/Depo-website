@@ -1,4 +1,5 @@
 import Carousel from "./Components/Carousel/Carousel";
+import FAQs from "./Components/FAQs/FAQs";
 import HeaderInfo from "./Components/Header Info/HeaderInfo";
 import Hero from "./Components/Hero/Hero";
 import Services from "./Components/OurServices/Services";
@@ -9,6 +10,7 @@ const Home = () => {
       <Hero />
       <HeaderInfo />
       <Services />
+      <FAQs/>
       <Carousel />
     </div>
   );
