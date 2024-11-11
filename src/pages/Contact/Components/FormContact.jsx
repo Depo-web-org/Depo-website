@@ -7,9 +7,9 @@ const FormContact = () => {
     const onSubmit = data => console.log(data);
     
   return (
-    <div className="mt-4 text-white lg:mr-16">
+    <div className="mt-4 text-white lg:mr-16 ">
     <form onSubmit={handleSubmit(onSubmit)} action="submit">
-        <div className="flex gap-[20px] lg:flex-row flex-col">
+        <div className="flex gap-[20px] lg:flex-row flex-col flex-wrap xl:flex-nowrap lg:gap-y-16">
             <label htmlFor="name" className="h-10 w-full cursor-pointer text-slate-100 font-medium flex flex-col">
                 Name
                 <input 

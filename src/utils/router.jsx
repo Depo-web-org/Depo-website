@@ -5,12 +5,14 @@ import Contact from "../pages/Contact";
 import AboutUs from "../pages/About Us";
 import Services from "../pages/Services/Services";
 import Career from "../pages/Career/Career";
+import NotFound from "../pages/NotFound";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
     children: [
+      {path: '*', element: <NotFound/> },
       {
         index: true,
         element: <Home />,
@@ -34,25 +36,6 @@ export const router = createBrowserRouter([
         path: "career",
         element: <Career />,
       },
-      // Uncomment this section if needed for the master-plan route
-      // {
-      //   path: "master-plan",
-      //   children: [
-      //     {
-      //       index: true,
-      //       element: <MasterPlan />,
-      //       loader: masterPlanLoader,
-      //       shouldRevalidate: (args) => {
-      //         return false;
-      //       },
-      //     },
-      //     {
-      //       path: "villa/:villaId",
-      //       element: <Villa />,
-      //       loader: villaLoader,
-      //     },
-      //   ],
-      // },
     ],
   },
 ]);

@@ -1,21 +1,16 @@
-// import Button from "../../components/common/Button"
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoLocationSharp } from "react-icons/io5";
-// import { useForm } from 'react-hook-form';
 import FormContact from "./Components/FormContact";
 import { SiGmail } from "react-icons/si";
 import PagesBg from "../../components/common/PagesBg";
 
 const Contact = () => {
-  // const { register, handleSubmit ,formState: { errors } } = useForm();
 
-  // const onSubmit = data => console.log(data);
-  
   return (
     <section className="gradient-bg min-h-screen ">
       {/* Header Back Ground */}
   <PagesBg title="Got a Question?"/>
-      <div className="pt-9 px-4 lg:px-[104px] grid grid-cols-12 pb-32">
+      <div className="pt-28 lg:pt-9 px-4 lg:px-[104px] grid grid-cols-12 pb-32">
         {/* Left Side */}
 
         <div className=" col-span-12 lg:col-span-7    lg:border-r lg:border-white">
@@ -27,16 +22,17 @@ const Contact = () => {
           Fill out the form and we will do all we can to help you
           </p>
           </div>
+
       {/* form */}
-      <FormContact/>      
- 
-    
+      <FormContact/>  
+
         </div>
 
 
         {/* Right Side */}
-      <div className="col-span-12 lg:col-span-5 lg:mx-14 my-14 lg:my-0 hidden lg:block ">
+      <div className="col-span-12 lg:col-span-5 lg:ml-10 xl:ml-14 my-14 lg:my-0 hidden lg:block ">
       <div className="text-white">
+
                   <h3 className=" font-bold text-[32px]">
                   For Direct inquiries 
           </h3>
