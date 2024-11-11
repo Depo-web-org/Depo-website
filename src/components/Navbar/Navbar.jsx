@@ -1,27 +1,32 @@
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import Button from "../common/Button";
 import { useScrollPosition } from "../../Hooks/useScrollPosition";
-import { useState } from "react";
-import { Divide as Hamburger } from 'hamburger-react'
+import { useEffect, useState } from "react";
 import { IoHome } from "react-icons/io5";
 import './style.css'
 import { GrServices } from "react-icons/gr";
 import { FaCode } from "react-icons/fa";
 import { IoIosInformationCircle } from "react-icons/io";
-import Aderss from "../../pages/Home/Components/Footer/Aderss";
-import Map from "../../pages/Home/Components/Footer/Map";
+import ResponsiveNav from "./ResponsiveNav";
+
+const navItems = {
+  home: { text: "Home",icon:<IoHome className="inline"/> ,link: "/" },
+  services: { text: "Services",icon:<GrServices className="inline"/> ,link: "/services" },
+  about: { text: "Career",icon:<FaCode className="inline"/> ,link: "/career" },
+  contact: { text: "About Us",icon:<IoIosInformationCircle className="inline" /> ,link: "/about" },
+};
+
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false)
   const { pathname } = useLocation();
+  const scrollPosition = useScrollPosition(); 
 
-  const scrollPosition = useScrollPosition();
-  const navItems = {
-    home: { text: "Home",icon:<IoHome className="inline"/> ,link: "/" },
-    services: { text: "Services",icon:<GrServices className="inline"/> ,link: "/services" },
-    about: { text: "Career",icon:<FaCode className="inline"/> ,link: "/career" },
-    contact: { text: "About Us",icon:<IoIosInformationCircle className="inline" /> ,link: "/about" },
-  };
-  
+ useEffect(() => {
+    document.querySelector('#menuPhone').classList.remove("scale-in-Disaper")
+    document.querySelector('#menuPhone').classList.add("-left-full")
+  },[])
+ 
+
   return <> 
     <div
       className={`  bg-${
@@ -66,62 +71,8 @@ const Navbar = () => {
         </div>
       </div>
 
-
-
-
-
-
-
 {/* Responsive Navbar */}
-      <div>
-
-        <div className="flex lg:hidden items-center  py-2 px-4">
-
-        <div className=" flex-grow ">
-        <Hamburger size={20} toggled={isOpen} toggle={setOpen} color={ scrollPosition > 80 || pathname != "/" || isOpen? "#1A4F92" : "white"} />
-        </div>
-
-        <div className="w-16">
-        <img src="/public/images/lOGO.svg" alt="Depo-Web" />
-        </div>
-        </div>
-      </div>
-
-
-
-
-{/* Menu */}
-<div  className={ `min-h-screen w-4/5 bg-white ${isOpen ? "scale-in-hor-left" : "scale-in-Disaper"}   fixed z-20  transition-all duration-[5s]` }>
-<div className="mx-2">
-
-  <div className="w-16">
-        <img src="/public/images/lOGO.svg" alt="Depo-Web" />
-        </div>
-        <div className="my-6">
-          {Object.entries(navItems).map(([key, item]) => (
-              <div key={key} className="py-2 ">
-            <Link
-              to={item.link}
-              className="text-primary font-bold  group relative "
-            >
-              <span className="text-xl">{item.icon}</span> {item.text}
-            </Link>
-            </div>
-          ))}
-        </div>
-        {/* Address*/}
-        <div>
-          <Aderss/>
-        </div>
-        <div className="my-4">
-        <Map />
-
-        </div>
-</div>
-
-
-</div>  
-    
+<ResponsiveNav isOpen={isOpen} scrollPosition={scrollPosition} setOpen={setOpen} pathname={pathname} navItems={navItems} />
     </div>
      
   </>
