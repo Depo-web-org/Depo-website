@@ -12,6 +12,7 @@ export default function Button({
   hoverBackgroundColor = "hover:bg-primary-hover",
   disabled = false,
   disabledBackgroundColor = "bg-primary-disabled",
+  children,
 }) {
   // Base button classes
   const buttonClasses = `
@@ -35,6 +36,7 @@ export default function Button({
         className="w-full  h-full flex justify-center items-center gap-x-2"
       >
         <span>{icon}</span> {title}
+        {children}
       </Link>
     </button>
   );
