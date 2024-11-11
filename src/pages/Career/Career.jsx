@@ -15,7 +15,7 @@ export default function Career() {
     <>
       <PagesBg title="Join Our Team" />
 
-      <div className=" gradient-bg  px-[54px] md:px[104px] pt-[104px]">
+      <div className=" gradient-bg  px-[54px] md:px[104px] pt-[40px]">
         {careerArray.length === 0 ? (
           <NoCareer />
         ) : (
