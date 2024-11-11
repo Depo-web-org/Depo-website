@@ -22,8 +22,8 @@ export default function FAQs() {
   return (
     <>
       <div className="w-full h-auto my-[32px] text-white ">
-        <div className="flex flex-col items-center">
-          <h2 className="h-[39px] text-center text-[32px] font-bold mb-[64px] ">
+        <div className="flex flex-col md:items-center">
+          <h2 className="h-[39px]  text-[25px] lg:text-[32px] font-bold mb-[-8px] lg:mb-[64px] ">
             FAQs
           </h2>
         </div>
@@ -34,14 +34,14 @@ export default function FAQs() {
               <div className="color_details rounded-tl-xl rounded-br-xl overflow-hidden">
                 <details className="group p-3 w-full">
                   <summary className="h-[30px] flex cursor-pointer list-none items-center justify-between font-medium">
-                    <span className="h-[29px] w-full sm:w-[460px]">
+                    <span className="h-[29px] w-full sm:w-[460px] text-[13px] sm:text-[20px] md:text-[24px]">
                       {item.name}
                     </span>
                     <span className="transition group-open:rotate-180">
-                    <HiArrowCircleDown className="w-[26px] h-[26px] text-secondary"/>
+                      <HiArrowCircleDown className="w-[26px] h-[26px] text-secondary" />
                     </span>
                   </summary>
-                  <p className="group-open:transition-all group-open:duration-1000 group-open:transform group-open:translate-y-0 opacity-0 translate-y-16 group-open:opacity-100">
+                  <p className="group-open:transition-all group-open:duration-1000 group-open:transform group-open:translate-y-0 opacity-0 translate-y-16 group-open:opacity-100 pt-5 md:pt-0">
                     {item.dec}
                   </p>
                 </details>
