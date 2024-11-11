@@ -35,7 +35,6 @@ const Navbar = () => {
                 }
             </div>
             <div className="h-full flex items-center justify-center w-1/4">
-            {/* <Button title="Contact Us" navigate={'contact'} style="w-48 "/> */}
 
             <Button title="Contact Us" navigate={'contact'} style="w-48 h-[51px]  py-[16px]  px-[32px] "/>
             </div>
