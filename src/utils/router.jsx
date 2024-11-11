@@ -3,6 +3,8 @@ import Layout from "../pages/layout";
 import Index from "../pages/Home";
 import Services from "../pages/Services/Services";
 import Career from "../pages/Career/Career";
+import Home from "../pages/Home";
+import Contact from "../pages/Contact";
 // import Home from "../pages/Home";
 // import IndexLogin from "../pages/login";
 
@@ -13,15 +15,15 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Index />,
+        element: <Home />,
         // loader: locationMapLoader,
       },
       {
-        path: "login",
+        path: "contact",
         children: [
           {
             index: true,
-            // element: <IndexLogin />,
+            element: <Contact />,
             // loader: loginLoader,
           },
         ],
@@ -57,6 +59,7 @@ export const router = createBrowserRouter([
       //       },
       //     ],
       //   },
+      }
     ],
   },
 ]);

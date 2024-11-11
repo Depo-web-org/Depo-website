@@ -1,28 +1,29 @@
 import Button from "../../../../components/common/Button"
 import './animationHero.css'
+import { ImLink } from "react-icons/im"
 const Hero = () => {
   return (
     <>
     <main className=" w-full h-full pt-[85px] relative">
      
-     <div className="mt-[calc(149px-85px)]   grid grid-cols-12 pb-8 border-b border-[#ffffff47]">
+     <div className="mt-[calc(149px-85px)]   grid grid-cols-12 pb-8 lg:border-b lg:border-[#ffffff47] relative z-10">
       {/* left side */}
-      <div className="col-span-7  pr-[130px]  xl:pr-40">
-  <h1 className="text-[64px]  leading-[77.45px] font-bold text-white mt-20 ">
+      <div className=" col-span-12 lg:col-span-7  lg:pr-[130px]  xl:pr-40">
+  <h1 className="text-[32px] lg:text-[64px] leading-10  lg:leading-[77.45px] font-bold text-white mt-20 ">
       Innovative <span className="text-secondary">Digital Solutions</span> Tailored to Your Needs
       </h1>
-      <h2 className="text-2xl font-medium text-white mt-4 leading-7">
+      <h2 className="text-base lg:text-2xl font-medium text-white mt-4 leading-5 lg:leading-7">
       Leading the way in custom software and app development to enhance business efficiency and productivity
       </h2>
-      <div className="mt-16">
-      <Button backgroundColor={"bg-primary"} title={"Services"} style="w-[293px]"/>
+      <div className=" mt-4 lg:mt-16">
+      <Button navigate='services' backgroundColor={"bg-primary"} icon=<ImLink className="text-2xl"/> title={"Services"} style="w-44 lg:w-[293px]"/>
       {/* <FaLink /> icon needed to add  */}
       </div>
       </div>
 
 
       {/* right side */}
-      <div className="col-span-5  overflow-hidden   flex justify-center items-center flex-col ">
+      <div className="hidden lg:col-span-5  overflow-hidden   lg:flex justify-center items-center flex-col ">
         {/* top Photos */}
 {/* 1- */}
         <div className="flex gap-x-5">

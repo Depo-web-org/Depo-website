@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Button({
   title = "Button",
   style = "",
@@ -7,7 +9,6 @@ export default function Button({
   hoverBackgroundColor = "hover:bg-primary-hover",
   disabled = false,
   disabledBackgroundColor = "bg-primary-disabled",
-  children,
 }) {
   // Base button classes
   const buttonClasses = `
@@ -23,7 +24,6 @@ export default function Button({
   return (
     <button onClick={disabled ? null : onClick} className={buttonClasses}>
       {title}
-      {children}
     </button>
   );
 }

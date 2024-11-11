@@ -8,10 +8,14 @@
 .active {
   border-bottom: 2px solid #1a4f92;
 }
-.section_border {
+.section-border {
+  border: none;
+}
+@media(min-width: 1024px) {
+.section-border {
   border-bottom: 1px solid #ffffff47;
 }
-
+}
 /* styles.css */
 .section-border {
   @apply pb-8 border-b border-[#ffffff47];
@@ -62,3 +66,11 @@
     height: 2.5rem;
   }
 }
+
+
+
+  /* Gradient Background */ 
+  .gradient-bg{
+    @apply bg-gradient-to-t to-secondary-dark from-back-ground 
+  }
+  
