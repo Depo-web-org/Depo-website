@@ -17,7 +17,9 @@ export default {
         'secondary-hover': '#6cb2eb',
         'secondary-disabled': '#6cb2eb',
         "back-ground":"#052c5d",
-        "border-color":"#ffffff47"
+        "border-color":"#ffffff47",
+        "secondary-dark":"#007575"
+      
       },
       boxShadow: {
         'custom': '14px 13px 17px -9px rgba(0, 0, 0, 0.47)',

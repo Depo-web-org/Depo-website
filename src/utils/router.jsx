@@ -1,5 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "../pages/layout";
+import Home from "../pages/Home";
+import Contact from "../pages/Contact";
 import Index from "../pages/Home";
 import Services from "../pages/Services/Services";
 import Career from "../pages/Career/Career";
@@ -13,18 +15,19 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Index />,
+        element: <Home />,
         // loader: locationMapLoader,
       },
       {
-        path: "login",
+        path: "contact",
         children: [
           {
             index: true,
-            // element: <IndexLogin />,
+            element: <Contact />,
             // loader: loginLoader,
           },
         ],
+      }
       },
       {
         path: "/services",

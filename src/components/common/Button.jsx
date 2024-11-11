@@ -1,13 +1,17 @@
+import { Link } from "react-router-dom";
+
 export default function Button({
   title = "Button",
+  navigate = "",
   style = "",
+  type = "submit",
   onClick,
+  icon = "",
   backgroundColor = "bg-primary",
   activeBackgroundColor = "bg-active",
   hoverBackgroundColor = "hover:bg-primary-hover",
   disabled = false,
   disabledBackgroundColor = "bg-primary-disabled",
-  children,
 }) {
   // Base button classes
   const buttonClasses = `
@@ -21,9 +25,17 @@ export default function Button({
     `;
 
   return (
-    <button onClick={disabled ? null : onClick} className={buttonClasses}>
-      {title}
-      {children}
+    <button
+      type={type}
+      onClick={disabled ? null : onClick}
+      className={buttonClasses}
+    >
+      <Link
+        to={`${navigate}`}
+        className="w-full  h-full flex justify-center items-center gap-x-2"
+      >
+        <span>{icon}</span> {title}
+      </Link>
     </button>
   );
 }
