@@ -21,7 +21,7 @@ export default function FAQs() {
 
   return (
     <>
-      <div className="w-full h-auto my-[32px] text-white ">
+      <div className="w-full   mb-6 lg:my-[32px] text-white ">
         <div className="flex flex-col md:items-center">
           <h2 className="h-[39px]  text-[25px] lg:text-[32px] font-bold mb-[-8px] lg:mb-[64px] ">
             FAQs
@@ -38,7 +38,7 @@ export default function FAQs() {
                       {item.name}
                     </span>
                     <span className="transition group-open:rotate-180">
-                      <HiArrowCircleDown className="w-[26px] h-[26px] text-secondary" />
+                    <HiArrowCircleDown className="w-[26px] h-[26px] text-secondary"/>
                     </span>
                   </summary>
                   <p className="group-open:transition-all group-open:duration-1000 group-open:transform group-open:translate-y-0 opacity-0 translate-y-16 group-open:opacity-100 pt-5 md:pt-0">
