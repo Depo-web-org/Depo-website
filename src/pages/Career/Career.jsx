@@ -1,3 +1,4 @@
+import PagesBg from "../../components/common/PagesBg";
 import CareerContainer from "./components/CareerContainer";
 import NoCareer from "./components/NoCareer";
 
@@ -11,12 +12,16 @@ const careerArray = [
 ];
 export default function Career() {
   return (
-    <div className=" gradient-bg  px-[54px] md:px[104px] pt-[104px]">
-      {careerArray.length === 0 ? (
-        <NoCareer />
-      ) : (
-        <CareerContainer careerArray={careerArray} />
-      )}
-    </div>
+    <>
+      <PagesBg title="Join Our Team" />
+
+      <div className=" gradient-bg  px-[54px] md:px[104px] pt-[104px]">
+        {careerArray.length === 0 ? (
+          <NoCareer />
+        ) : (
+          <CareerContainer careerArray={careerArray} />
+        )}
+      </div>
+    </>
   );
 }
