@@ -6,7 +6,7 @@ export default function Rights() {
       {/* SVG Background */}
       <div className="absolute inset-0">
         <img
-          src="public/images/footer/Group 2.svg"
+          src="images/footer/Group 2.svg"
           alt="SVG background"
           className="w-full h-full object-cover " // Adjust opacity as desired
         />
