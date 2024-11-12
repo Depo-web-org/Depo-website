@@ -30,6 +30,7 @@ export default function Button({
       type={type}
       onClick={disabled ? null : onClick}
       className={buttonClasses}
+      disabled={disabled}
     >
       <Link
         to={`${navigate}`}
