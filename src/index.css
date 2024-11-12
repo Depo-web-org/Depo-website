@@ -11,10 +11,10 @@
 .section-border {
   border: none;
 }
-@media(min-width: 1024px) {
-.section-border {
-  border-bottom: 1px solid #ffffff47;
-}
+@media (min-width: 1024px) {
+  .section-border {
+    border-bottom: 1px solid #ffffff47;
+  }
 }
 /* styles.css */
 .section-border {
@@ -66,13 +66,13 @@
     height: 2.5rem;
   }
 }
-
-
-
-  /* Gradient Background */ 
-  .gradient-bg{
-    @apply bg-gradient-to-t to-secondary-dark from-back-ground 
+@media (max-width: 767px) {
+  .slider-arrow {
+    display: none;
   }
-  
+}
 
-
+/* Gradient Background */
+.gradient-bg {
+  @apply bg-gradient-to-t to-secondary-dark from-back-ground;
+}
