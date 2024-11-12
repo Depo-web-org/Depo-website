@@ -1,24 +1,35 @@
 import { useForm } from 'react-hook-form';
 import Button from '../../../components/common/Button';
 import axios from 'axios';
+import { useState } from 'react';
+
 
 const FormContact = () => {
     const { register, handleSubmit ,formState: { errors } } = useForm();
+    const [isLoading, setIsLoading] = useState(false);
     // data => console.log(data);
-    const onSubmit =  data =>{
-        axios.post("",data)
-        .then((data)=>{
-         if (data.data.message === "success") {
-        //  localStorage.setItem("token",data.data.token);
-        //    navigate('/home');
-         }
-        }).catch((err)=>{
-         console.log(err);
-        })
-       }
-    
+    const sendDataToBackend = async (data) => {
+        setIsLoading(true);
+        try {
+            const response = await axios.post("YOUR_BACKEND_URL", data, {
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            });
+            if (response.data.message === "success") {
+                // Navigate or perform any other actions here
+            }
+        } catch (err) {
+            console.log(err);
+        } finally {
+            setIsLoading(false);
+        }
+    };
+    const onSubmit = (data) => {
+        sendDataToBackend(data);
+    };
   return (
-    <section className="mt-4 text-white lg:mr-16 ">
+    <section className="pt-4 text-white lg:mr-16 ">
     <form onSubmit={handleSubmit(onSubmit)} action="submit">
         <div className="flex gap-[20px] lg:flex-row flex-col flex-wrap xl:flex-nowrap lg:gap-y-16">
             <label htmlFor="name" className="h-10 w-full cursor-pointer text-slate-100 font-medium flex flex-col">
@@ -86,7 +97,7 @@ const FormContact = () => {
         </label>
 
         {/* Button */}
-        <Button type="submit" backgroundColor={"bg-primary"} title={"Confirm"} style="w-48 mt-8 lg:mt-16" />
+        <Button  disabled={isLoading} type="submit" backgroundColor={"bg-primary"} title={"Confirm"} style="w-48 mt-8 lg:mt-16" />
     </form>
         </section>
 

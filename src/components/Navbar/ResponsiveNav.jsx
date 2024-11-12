@@ -31,13 +31,13 @@ const ResponsiveNav = ({isOpen,scrollPosition,pathname,setOpen , navItems}) => {
 
 
 {/* Menu */}
-<div id="menuPhone"  className={ `min-h-screen pt-2 lg:hidden w-4/5 bg-white ${isOpen ? "scale-in-hor-left" : "scale-in-Disaper"}   fixed z-20  ` }>
+<div id="menuPhone"  className={ `h-screen pt-2 overflow-y-auto scrollbar-hide lg:hidden w-4/5 bg-white ${isOpen ? "scale-in-hor-left" : "scale-in-Disaper"}   fixed z-20  ` }>
 <div className="mx-2">
 
 <div className="w-16">
 <img src="/images/lOGO.svg" alt="Depo-Web" />
 </div>
-<div className="my-6">
+<div className="py-6">
   {Object.entries(navItems).map(([key, item]) => (
       <div key={key} className="py-2 ">
     <Link
@@ -51,10 +51,10 @@ const ResponsiveNav = ({isOpen,scrollPosition,pathname,setOpen , navItems}) => {
   ))}
 </div>
 {/* Address*/}
-<div>
+<div className="pb-6 ">
   <Aderss/>
 </div>
-<div className="my-4">
+<div className="pb-20 ">
 <Map />
 
 </div>
