@@ -21,7 +21,7 @@ export default function FAQs() {
 
   return (
     <>
-      <div className="w-full h-auto my-[32px] text-white ">
+      <div className="w-full h-auto  md:my-[32px] text-white ">
         <div className="flex flex-col md:items-center">
           <h2 className="h-[39px]  text-[25px] lg:text-[32px] font-bold mb-[-8px] lg:mb-[64px] ">
             FAQs
