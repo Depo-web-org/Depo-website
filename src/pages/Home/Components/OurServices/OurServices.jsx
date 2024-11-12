@@ -33,7 +33,7 @@ pageDots: false
   //
   return (
     
-    <section className='section-border  '>
+    <section className='section-border py-6 lg:py-0 '>
          <h2 className="text-white font-bold text-2xl   text-start lg:text-center lg:text-[32px]  pb-6 lg:mt-8 lg:pb-16">
      Our Services
        
