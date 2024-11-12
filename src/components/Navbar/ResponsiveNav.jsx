@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+import React, { useEffect } from "react"
 import { Divide as Hamburger } from 'hamburger-react'
 import { Link } from "react-router-dom"
 import Aderss from "../../pages/Home/Components/Footer/Aderss"
@@ -22,7 +22,7 @@ const ResponsiveNav = ({isOpen,scrollPosition,pathname,setOpen , navItems}) => {
 </div>
 
 <div className="w-16">
-<img src="/public/images/lOGO.svg" alt="Depo-Web" />
+<img src="/images/lOGO.svg" alt="Depo-Web" />
 </div>
 </div>
       </div>
@@ -72,4 +72,4 @@ const ResponsiveNav = ({isOpen,scrollPosition,pathname,setOpen , navItems}) => {
   )
 }
 
-export default ResponsiveNav
+export default  React.memo(ResponsiveNav);
