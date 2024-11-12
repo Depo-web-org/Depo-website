@@ -19,7 +19,7 @@ export default function Map() {
           style={{ border: 0 }}
         ></iframe>
       </div>
-      <div className="">
+      <div className=" flex justify-start">
         <Button
           title="Get Directions"
           style="w-[260px]"
