@@ -31,7 +31,7 @@ const ResponsiveNav = ({isOpen,scrollPosition,pathname,setOpen , navItems}) => {
 
 
 {/* Menu */}
-<div id="menuPhone"  className={ `min-h-screen lg:hidden w-4/5 bg-white ${isOpen ? "scale-in-hor-left" : "scale-in-Disaper"}   fixed z-20  ` }>
+<div id="menuPhone"  className={ `min-h-screen pt-2 lg:hidden w-4/5 bg-white ${isOpen ? "scale-in-hor-left" : "scale-in-Disaper"}   fixed z-20  ` }>
 <div className="mx-2">
 
 <div className="w-16">

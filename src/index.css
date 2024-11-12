@@ -18,7 +18,7 @@
 }
 /* styles.css */
 .section-border {
-  @apply pb-8 border-b border-[#ffffff47];
+  @apply lg:pb-8 lg:border-b border-[#ffffff47];
 }
 
 /* Container styling for the custom arrows */
