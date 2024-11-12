@@ -54,7 +54,10 @@ export default function Card_AboutUs() {
             }`}
           >
             {/* Text */}
-            <div className="w-full h-auto pb-24 relative z-30">
+            <div
+              className={`w-full h-auto pb-24 md:pb-24 relative  
+            ${index === AllCard.length - 1 ? "pb-0" : ""}`}
+            >
               <p className="text-[24px] md:text-[32px] leading-[30px] md:leading-[38.73px] font-bold">
                 {item.name}
               </p>
@@ -75,7 +78,11 @@ export default function Card_AboutUs() {
             </div>
 
             {/* Image */}
-            <div className="w-[156px] h-[96px] bottom-2  absolute right-0 ">
+            <div
+              className={`w-[156px] h-[96px] bottom-2  absolute right-0 ${
+                index === AllCard.length - 1 ? "opacity-0 md:opacity-100" : ""
+              }`}
+            >
               <img className="h-full w-full" src={item.img} alt="img About" />
             </div>
           </div>
