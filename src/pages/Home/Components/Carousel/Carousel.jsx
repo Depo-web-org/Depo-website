@@ -9,20 +9,23 @@ import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
 const carouselImages = [
   {
     id: 1,
-    image: "public/images/carousel/campaign-creators-gMsnXqILjp4-unsplash.png",
+    image: "images/carousel/campaign-creators-gMsnXqILjp4-unsplash.webp",
   },
   {
     id: 2,
-    image: "public/images/carousel/carlos-muza-hpjSkU2UYSU-unsplash.png",
+    image: "images/carousel/carlos-muza-hpjSkU2UYSU-unsplash.webp",
   },
   {
     id: 3,
-    image: "public/images/carousel/tim-van-der-kuip-CPs2X8JYmS8-unsplash.png",
+    image: "images/carousel/christopher-gower-m_HRfLhgABo-unsplash.webp",
   },
-  { id: 4, image: "public/images/carousel/Untitled-1.png" },
+  {
+    id: 4,
+    image: "images/carousel/tim-van-der-kuip-CPs2X8JYmS8-unsplash.webp",
+  },
   {
     id: 5,
-    image: "public/images/carousel/william-hook-9e9PD9blAto-unsplash 1.png",
+    image: "images/carousel/william-hook-9e9PD9blAto-unsplash.webp",
   },
 ];
 
@@ -49,7 +52,7 @@ function CustomNavigation() {
 
 export default function Carousel() {
   return (
-    <div className="container py-10">
+    <div className="container py-4 lg:py-10">
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
@@ -71,7 +74,11 @@ export default function Carousel() {
       >
         {carouselImages.map((carousel) => (
           <SwiperSlide key={carousel.id}>
-            <img src={carousel.image} alt="slide_image" />
+            <img
+              className="rounded-[20px]"
+              src={carousel.image}
+              alt="slide_image"
+            />
           </SwiperSlide>
         ))}
 
