@@ -6,14 +6,15 @@ import { IoHome } from "react-icons/io5";
 import './style.css'
 import { GrServices } from "react-icons/gr";
 import { FaCode } from "react-icons/fa";
-import { IoIosInformationCircle } from "react-icons/io";
+import { IoIosInformationCircle, IoMdContact } from "react-icons/io";
 import ResponsiveNav from "./ResponsiveNav";
 
 const navItems = {
   home: { text: "Home",icon:<IoHome className="inline"/> ,link: "/" },
   services: { text: "Services",icon:<GrServices className="inline"/> ,link: "/services" },
-  about: { text: "Career",icon:<FaCode className="inline"/> ,link: "/career" },
-  contact: { text: "About Us",icon:<IoIosInformationCircle className="inline" /> ,link: "/about" },
+  career: { text: "Career",icon:<FaCode className="inline"/> ,link: "/career" },
+  about: { text: "About Us",icon:<IoIosInformationCircle className="inline" /> ,link: "/about" },
+  contact: { text: "Contact Us",icon:<IoMdContact className="inline" /> ,link: "/contact" },
 };
 
 const Navbar = () => {
@@ -28,7 +29,7 @@ const Navbar = () => {
  
 
   return <> 
-    <div
+    <nav
       className={`  bg-${
         scrollPosition > 80 || pathname != "/" || isOpen ? "white" : "transparent"
       } transition-all duration-300 h-auto md:h-[85px] fixed top-0 w-full z-50  `}
@@ -38,7 +39,7 @@ const Navbar = () => {
           <div className="flex items-center h-full w-1/4 gap-[8px]">
             <img
               className="w-[96.23px] h-[49.77px]"
-              src="/public/images/lOGO.svg"
+              src="/images/lOGO.svg"
               alt="unavailable img"
             />
             <div className="w-[50px] h-[49] p-[10px]">
@@ -49,16 +50,18 @@ const Navbar = () => {
           </div>
         </div>
         <div className="h-full bg-secondary rounded-[57px] w-1/2 flex items-center justify-between px-8">
-          {Object.entries(navItems).map(([key, item]) => (
-            <NavLink
-              key={key}
-              to={item.link}
-              className="text-white px-4 py-2 font-bold  group relative "
-            >
-              {" "}
-              {item.text}
-            </NavLink>
-          ))}
+        {Object.entries(navItems).map(([key, item]) => (
+        key !== "contact" ? (
+          <NavLink
+            key={key}
+            to={item.link}
+            className="text-white px-4 py-2 font-bold group relative"
+          >
+            {item.text}
+          </NavLink>
+        ) : null
+    ) )}
+
         </div>
         <div className="h-full flex items-center justify-center w-1/4">
           {/* <Button title="Contact Us" navigate={'contact'} style="w-48 "/> */}
@@ -73,7 +76,7 @@ const Navbar = () => {
 
 {/* Responsive Navbar */}
 <ResponsiveNav isOpen={isOpen} scrollPosition={scrollPosition} setOpen={setOpen} pathname={pathname} navItems={navItems} />
-    </div>
+    </nav>
      
   </>
 };

@@ -5,6 +5,7 @@ import Aderss from "../../pages/Home/Components/Footer/Aderss"
 import Map from "../../pages/Home/Components/Footer/Map"
 
 const ResponsiveNav = ({isOpen,scrollPosition,pathname,setOpen , navItems}) => {
+
     useEffect(() => {
         document.querySelector('#menuPhone').classList.remove("scale-in-Disaper")
         document.querySelector('#menuPhone').classList.add("-left-full")
@@ -24,7 +25,7 @@ const ResponsiveNav = ({isOpen,scrollPosition,pathname,setOpen , navItems}) => {
 <img src="/public/images/lOGO.svg" alt="Depo-Web" />
 </div>
 </div>
-</div>
+      </div>
 
 
 
@@ -34,7 +35,7 @@ const ResponsiveNav = ({isOpen,scrollPosition,pathname,setOpen , navItems}) => {
 <div className="mx-2">
 
 <div className="w-16">
-<img src="/public/images/lOGO.svg" alt="Depo-Web" />
+<img src="/images/lOGO.svg" alt="Depo-Web" />
 </div>
 <div className="my-6">
   {Object.entries(navItems).map(([key, item]) => (
@@ -60,7 +61,12 @@ const ResponsiveNav = ({isOpen,scrollPosition,pathname,setOpen , navItems}) => {
 </div>
 
 
-</div>  
+</div> 
+{/* Click to close Navbar */}
+{
+  isOpen&&<div onClick={()=> setOpen(!isOpen)} className="absolute min-h-screen w-full bg-transparent"></div>
+}
+
       
     </>
   )
