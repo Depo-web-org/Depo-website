@@ -71,7 +71,7 @@ const servicesData = [
 
 export default function ServicesContainer() {
   return (
-    <div className="grid grid-cols-12 pt-4 gap-[10px] md:gap-[20px]">
+    <div className="grid grid-cols-12 pt-2 gap-[10px] md:gap-[20px]">
       {servicesData.map((service) => (
         <div
           key={service.title}
