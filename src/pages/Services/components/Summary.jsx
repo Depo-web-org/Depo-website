@@ -13,7 +13,7 @@ export default function Summary() {
         </p>
         <div className="py-[16px]">
           <Button
-            style="h-[51px] text-[15px]  w-[312px]"
+            style="h-[51px] text-[15px] "
             title="Learn More About Our Solutions"
           />
         </div>

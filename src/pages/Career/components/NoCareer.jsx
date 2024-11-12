@@ -1,6 +1,6 @@
 export default function NoCareer() {
   return (
-    <div className="py-24  lg:py-0">
+    <div className="py-24  ">
       <div>
         <p className="font-[Inter] pb-10   text-[16px] md:text-[32px] font-bold leading-[38.73px] text-left text-white">
           There are no jobs available right now

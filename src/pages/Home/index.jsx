@@ -13,7 +13,7 @@ const Home = () => {
         <meta
           name="description"
           content="Welcome to Depo web a leader in delivering custom software solutions tailored to your needs. Explore our services and join our success journey."
-        />
+        /> 
       </Helmet>
 
       <div className="min-h-screen gradient-bg px-4 lg:px-[104px]">

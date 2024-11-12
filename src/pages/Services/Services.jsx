@@ -7,9 +7,7 @@ export default function Services() {
   return (
     <>
       <Helmet>
-        <title>
-          Services 
-        </title>
+        <title>Services</title>
         <meta
           name="description"
           content="Explore our range of services from website and app development to custom software solutions. Let us help you achieve your technical goals with Depo web "
