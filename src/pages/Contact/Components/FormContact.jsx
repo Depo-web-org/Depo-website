@@ -17,7 +17,7 @@ const FormContact = () => {
                 },
             });
             if (response.data.message === "success") {
-                // Navigate or perform any other actions here
+                return;
             }
         } catch (err) {
             console.log(err);
