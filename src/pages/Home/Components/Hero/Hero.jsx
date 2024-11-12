@@ -10,7 +10,7 @@ const Hero = () => {
       {/* left side */}
       <div className=" col-span-12 lg:col-span-6 xl:col-span-7     ">
         {/* text-start sm:text-center md:text-start  */}
-  <h1 className="text-4xl sm:text-6xl leading-10  md:leading-[65px]  lg:leading-[77.45px] font-bold text-white mt-20  ">
+  <h1 className="text-4xl sm:text-6xl leading-10  md:leading-[65px]  lg:leading-[77.45px] font-bold text-white pt-20  ">
       Innovative <span className="text-secondary">Digital <br /> Solutions</span> Tailored to <br />  
       Your Needs
       </h1>

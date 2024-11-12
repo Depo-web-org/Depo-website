@@ -2,7 +2,7 @@ import Button from "../../../components/common/Button";
 
 export default function Summary() {
   return (
-    <div className="flex items-center pt-[32px] pb-[32px] md:pb-[16px] text-white container">
+    <div className="flex items-center lg:pt-[32px] pb-[32px] md:pb-[16px]  text-white container ">
       <div className="w-[502px]  h-[154px] flex flex-col justify-start items-start ">
         <p className="font-inter text-2xl font-bold leading-[38.73px] text-left">
           Our Services

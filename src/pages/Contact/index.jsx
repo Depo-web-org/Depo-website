@@ -19,13 +19,13 @@ const Contact = () => {
       <section className="gradient-bg min-h-screen ">
         {/* Header Back Ground */}
         <PagesBg title="Got a Question?" />
-        <div className="pt-28 lg:pt-9 px-4 lg:px-[104px] grid grid-cols-12 pb-32">
+        <div className="pt-20  lg:pt-9 px-4 lg:px-[104px] grid grid-cols-12 pb-32">
           {/* Left Side */}
 
           <div className=" col-span-12 lg:col-span-7    lg:border-r lg:border-white">
             <div className="text-white">
               <h3 className=" font-bold text-[32px]">Need Help ?</h3>
-              <p className="text-xl italic">
+              <p className="lg:text-xl italic">
                 Fill out the form and we will do all we can to help you
               </p>
             </div>
