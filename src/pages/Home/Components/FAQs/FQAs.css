@@ -1,8 +1,26 @@
 
-
+/* color  Buttons*/
 .color_details {
   background: rgba(255, 255, 255, 0.09);
   backdrop-filter: blur(5.5px);
   -webkit-backdrop-filter: blur(5.5px);
   backdrop-filter: blur(4.199999809265137px);
+}
+
+ 
+/* animation FAQs */
+
+.decopene {
+  animation: decopene 2s ease forwards;
+}
+ 
+@keyframes decopene {
+  0% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
