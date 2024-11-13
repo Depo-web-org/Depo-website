@@ -15,6 +15,7 @@ export default function Summary() {
           <Button
             style="h-[51px] text-[15px] "
             title="Learn More About Our Solutions"
+            navigate={"/contact"}
           />
         </div>
       </div>
