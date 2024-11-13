@@ -25,7 +25,7 @@ const Contact = () => {
           <div className=" col-span-12 lg:col-span-7    lg:border-r lg:border-white">
             <div className="text-white">
               <h3 className=" font-bold text-[32px]">Need Help ?</h3>
-              <p className="lg:text-xl italic">
+              <p className="lg:text-xl italic lg:mr-16">
                 Fill out the form and we will do all we can to help you
               </p>
             </div>
@@ -35,7 +35,7 @@ const Contact = () => {
           </div>
 
           {/* Right Side */}
-          <div className="col-span-12 lg:col-span-5 lg:ml-10 xl:ml-14 my-14 lg:my-0 hidden lg:block ">
+          <div className="col-span-12 lg:col-span-5  lg:ml-10 xl:ml-14 my-14 lg:my-0 hidden lg:block ">
             <div className="text-white">
               <h3 className=" font-bold text-[32px]">For Direct inquiries</h3>
               <p className="text-xl italic">
@@ -46,29 +46,28 @@ const Contact = () => {
               <div>
                 <p className="flex items-center gap-x-2">
                   <span className="text-3xl">
-                    {" "}
                     <FaPhoneAlt className="text-secondary" />
                   </span>
-                  +20 123456789
+                  <a target="_blank"  href="tel:+20 1500919948 ">+20 1500919948</a>
                 </p>
               </div>
               <div>
                 <p className="flex items-center gap-x-2">
                   <span className="text-3xl">
-                    {" "}
                     <SiGmail className="text-secondary" />
                   </span>
-                  depoweb.eg@gmail.com
+                  <a target="_blank" href="mailto:depoweb.eg@gmail.com" >depoweb.eg@gmail.com</a>
                 </p>
               </div>
               <div>
-                <p className="flex items-center gap-x-2">
-                  {" "}
+                <p className="flex items-start gap-x-2">
                   <span className="text-3xl">
                     <IoLocationSharp className="text-secondary" />
                   </span>
+                  <a target="_blank"  href="https://www.google.com/maps/dir/?api=1&destination=29.982003604232442,31.34399201469942">
                   Zahraa Al Maadi, Sama Towers, Building No. 9, 9th Floor,
                   Apartment No. 93
+                  </a>
                 </p>
               </div>
             </div>
