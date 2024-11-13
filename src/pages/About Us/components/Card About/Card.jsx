@@ -53,7 +53,7 @@ export default function Card_AboutUs() {
                 : ""
             }`}
           >
-            {/* Text */}
+            {/* Text card */}
             <div
               className={`w-full h-auto pb-24 md:pb-24 relative  
             ${index === AllCard.length - 1 ? "pb-0" : ""}`}
@@ -77,7 +77,7 @@ export default function Card_AboutUs() {
               </div>
             </div>
 
-            {/* Image */}
+            {/* Img card*/}
             <div
               className={`w-[156px] h-[96px] bottom-2  absolute right-0 ${
                 index === AllCard.length - 1 ? "opacity-0 md:opacity-100" : ""

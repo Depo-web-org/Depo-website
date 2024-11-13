@@ -39,6 +39,8 @@ export default function FAQs() {
                   <summary className="h-[30px] flex cursor-pointer list-none items-center justify-between font-medium">
                     <span className="h-[29px] w-full sm:w-[460px] text-[13px] sm:text-[20px] md:text-[24px]">
                       {item.name}
+
+                      {/* Button */}
                     </span>
                     <span
                       onClick={() => {
