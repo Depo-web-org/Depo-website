@@ -17,11 +17,11 @@ export default function Button({
   // Base button classes
   const buttonClasses = `
       ${style}
-      rounded-[5px] text-white font-semibold  px-8 py-4  font-bold
       ${backgroundColor}
       ${disabled ? disabledBackgroundColor : ""}
       ${!disabled ? hoverBackgroundColor : ""}
       ${!disabled ? `active:${activeBackgroundColor}` : ""}
+      rounded-[5px] text-white font-semibold  px-8 py-4  font-bold
       transition-colors ease-out duration-300
     `;
 
