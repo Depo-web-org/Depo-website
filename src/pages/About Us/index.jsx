@@ -2,15 +2,22 @@ import { Helmet } from "react-helmet-async";
 import PagesBg from "../../components/common/PagesBg";
 import About_Depo from "./components/About Depo/About_Depo";
 import Card_AboutUs from "./components/Card About/Card";
+import { useEffect } from "react";
 
 export default function AboutUs() {
+  useEffect(() => window.scroll(0, 0), []);
+
   return (
     <>
       <Helmet>
-        <title>About Us</title>
+        <title>About Depo Web | Empowering Businesses with Innovation</title>
         <meta
           name="description"
-          content="Learn about Depo web's journey, vision, and extensive experience in software development. We are dedicated to delivering the best solutions to help you achieve your goals."
+          content="Learn more about Depo Web's mission and values. We are dedicated to providing top-quality digital development services, empowering businesses with creative, impactful solutions."
+        />
+        <meta
+          name="keywords"
+          content="Depo Web, about us, digital development, business empowerment, scalable solutions"
         />
       </Helmet>
 

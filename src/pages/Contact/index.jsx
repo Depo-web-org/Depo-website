@@ -4,15 +4,22 @@ import FormContact from "./Components/FormContact";
 import { SiGmail } from "react-icons/si";
 import PagesBg from "../../components/common/PagesBg";
 import { Helmet } from "react-helmet-async";
+import { useEffect } from "react";
 
 const Contact = () => {
+  useEffect(() => window.scroll(0, 0), []);
+
   return (
     <>
       <Helmet>
-        <title>Contact</title>
+        <title>Contact Depo Web | Let’s Build Your Digital Presence</title>
         <meta
           name="description"
-          content="Have questions or need support? Get in touch with us through the Contact page to find the right software solutions tailored for you."
+          content="Get in touch with Depo Web for expert website and app development services. We’re here to help you create a digital presence that drives growth and success."
+        />
+        <meta
+          name="keywords"
+          content="Depo Web contact, website development, app development, digital solutions, growth"
         />
       </Helmet>
 
@@ -48,7 +55,9 @@ const Contact = () => {
                   <span className="text-3xl">
                     <FaPhoneAlt className="text-secondary" />
                   </span>
-                  <a target="_blank"  href="tel:+20 1500919948 ">+20 1500919948</a>
+                  <a target="_blank" href="tel:+20 1500919948 ">
+                    +20 1500919948
+                  </a>
                 </p>
               </div>
               <div>
@@ -56,7 +65,9 @@ const Contact = () => {
                   <span className="text-3xl">
                     <SiGmail className="text-secondary" />
                   </span>
-                  <a target="_blank" href="mailto:depoweb.eg@gmail.com" >depoweb.eg@gmail.com</a>
+                  <a target="_blank" href="mailto:depoweb.eg@gmail.com">
+                    depoweb.eg@gmail.com
+                  </a>
                 </p>
               </div>
               <div>
@@ -64,9 +75,12 @@ const Contact = () => {
                   <span className="text-3xl">
                     <IoLocationSharp className="text-secondary" />
                   </span>
-                  <a target="_blank"  href="https://www.google.com/maps/dir/?api=1&destination=29.982003604232442,31.34399201469942">
-                  Zahraa Al Maadi, Sama Towers, Building No. 9, 9th Floor,
-                  Apartment No. 93
+                  <a
+                    target="_blank"
+                    href="https://www.google.com/maps/dir/?api=1&destination=29.982003604232442,31.34399201469942"
+                  >
+                    Zahraa Al Maadi, Sama Towers, Building No. 9, 9th Floor,
+                    Apartment No. 93
                   </a>
                 </p>
               </div>

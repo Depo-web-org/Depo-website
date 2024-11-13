@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import PagesBg from "../../components/common/PagesBg";
 import CareerContainer from "./components/CareerContainer";
 import NoCareer from "./components/NoCareer";
+import { useEffect } from "react";
 
 const careerArray = [
   // { title: "Front End Developer", subtitle: "Junior Frontend Developer" },
@@ -12,13 +13,19 @@ const careerArray = [
   // { title: "Product Manager", subtitle: "Junior Product Manager" },
 ];
 export default function Career() {
+  useEffect(() => window.scroll(0, 0), []);
+
   return (
     <>
       <Helmet>
-        <title>Careers</title>
+        <title>Careers at Depo Web | Join Our Innovative Team</title>
         <meta
           name="description"
-          content="Looking for a career in software development? Join Depo web's team, where we provide opportunities for growth and development alongside top technical talents."
+          content="Explore career opportunities at Depo Web, where you can work with a team of skilled developers and creative thinkers to build impactful digital solutions."
+        />
+        <meta
+          name="keywords"
+          content="Depo Web careers, join our team, digital development jobs, innovation, skilled developers"
         />
       </Helmet>
 
