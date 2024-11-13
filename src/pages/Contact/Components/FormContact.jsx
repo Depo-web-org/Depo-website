@@ -101,14 +101,12 @@ const FormContact = () => {
          transition-colors ease-out duration-300 '>
         {isLoading ? <LoadingAnimation/> : 'Confirm'  }
         </button >
-        {/* <Button   type="submit" backgroundColor={"bg-primary"} title={"Confirm"} style="w-48 mt-4 " /> */}
     </form>
     {
         response != null? <p className=' mt-2 text-white font-bold '>
                         {response} 
                         </p> : null
     }
-    
         </section>
 
 

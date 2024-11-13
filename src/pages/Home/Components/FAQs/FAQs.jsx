@@ -24,7 +24,7 @@ export default function FAQs() {
 
   return (
     <>
-      <div className="w-full h-auto  md:my-[32px] text-white ">
+      <div id="FAQs" className="w-full h-auto  md:my-[32px] text-white ">
         <div className="flex flex-col lg:items-center">
           <h2 className="h-[39px]  text-[25px] lg:text-[32px] font-bold mb-[-8px] lg:mb-[64px] ">
             FAQs
@@ -33,7 +33,13 @@ export default function FAQs() {
 
         {AllFAQs.map((item) => {
           return (
-            <div key={item.id} className="mx-auto m-[16px] grid w-full ">
+            <div
+              onClick={() => {
+                setopene(opene === "decopene" ? " " : "decopene");
+              }}
+              key={item.id}
+              className="mx-auto m-[16px] grid w-full "
+            >
               <div className="color_details rounded-tl-xl rounded-br-xl overflow-hidden">
                 <details className="group p-3 w-full">
                   <summary className="h-[30px] flex cursor-pointer list-none items-center justify-between font-medium">
@@ -42,12 +48,7 @@ export default function FAQs() {
 
                       {/* Button */}
                     </span>
-                    <span
-                      onClick={() => {
-                        setopene(opene === "decopene" ? " " : "decopene");
-                      }}
-                      className="transition group-open:rotate-180"
-                    >
+                    <span className="transition group-open:rotate-180">
                       <HiArrowCircleDown className="w-[26px] h-[26px] text-secondary" />
                     </span>
                   </summary>
