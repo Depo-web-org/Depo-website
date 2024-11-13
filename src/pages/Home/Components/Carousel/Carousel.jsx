@@ -52,7 +52,7 @@ function CustomNavigation() {
 
 export default function Carousel() {
   return (
-    <div className="container py-4 lg:py-10">
+    <div className=" py-4 lg:py-10">
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
