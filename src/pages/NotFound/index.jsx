@@ -29,9 +29,9 @@ const NotFound = () => {
         <img src="/public/images/wave.svg" alt="" className="w-full" />
     </div>
     <div className="absolute  w-full        flex lg:top-1/2 lg:-translate-y-full top-32 justify-center ct-animate-blink">
-        <img src="/public/images/moon.svg" alt="night_sky" className="hidden lg:inline"/>
-        <img src="/public/images/stars.svg" alt="nights star " className="absolute opacity-35 lg:hidden " />
-        <img src="/public/images/Vector.svg" alt="nights star"  className="absolute   left-[calc(100%-90%)]  lg:hidden "/>
+        <img src="/images/moon.svg" alt="night_sky" className="hidden lg:inline"/>
+        <img src="/images/stars.svg" alt="nights star " className="absolute opacity-35 lg:hidden " />
+        <img src="/images/Vector.svg" alt="nights star"  className="absolute   left-[calc(100%-90%)]  lg:hidden "/>
     </div>
 </div>
 

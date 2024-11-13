@@ -11,19 +11,17 @@ const FormContact = () => {
     const sendDataToBackend = async (data) => {
         setIsLoading(true);
         try {
-            const response = await axios.post("YOUR_BACKEND_URL", data, {
+            const response = await axios.post("BACKEND_URL", data, {
                 headers: {
                     'Content-Type': 'application/json',
                 },
             });
-            if (response.data.message === "success") {
-                return;
-            }
-        } catch (err) {
+            if (response.data.message === "success")  return;
+                } catch (err) {
             console.log(err);
-        } finally {
+            }        finally {
             setIsLoading(false);
-        }
+            }
     };
     const onSubmit = (data) => {
         sendDataToBackend(data);
@@ -98,7 +96,9 @@ const FormContact = () => {
 
         {/* Button */}
         <Button  disabled={isLoading} type="submit" backgroundColor={"bg-primary"} title={"Confirm"} style="w-48 mt-8 lg:mt-16" />
+        
     </form>
+    
         </section>
 
 
