@@ -1,33 +1,30 @@
 import { useForm } from 'react-hook-form';
-import Button from '../../../components/common/Button';
 import axios from 'axios';
 import { useState } from 'react';
+import LoadingAnimation from './loadingAnimation';
 const FormContact = () => {
-    const { register, handleSubmit ,formState: { errors } } = useForm();
+    const { register, handleSubmit ,formState: { errors } ,reset , } = useForm();
     const [isLoading, setIsLoading] = useState(false);
+    const [response, setResponse] = useState()
     const [value, setValue] = useState()
     const valueLength = value?.length || 0;
     const sendDataToBackend = async (data) => {
         setIsLoading(true);
-        try {
-            const response = await axios.post("BACKEND_URL", data, {
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-            });
-            if (response.data.message === "success")  return;
-                } catch (err) {
-            console.log(err);
-            } finally {
-                    setIsLoading(false);
-            }
+            await axios.post("http://192.168.1.25:4000/api/form", data, {
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        }).then(response => setResponse(response.data)).then(()=>reset()).catch(error => console.log(error.message)).finally(()=> {
+            setIsLoading(false)
+            setTimeout(() => {
+                setResponse(null);
+            }, 2000);
+        })
     };
-    const onSubmit = (data) => {
-        sendDataToBackend(data);
-    };
+
   return (
     <section className="pt-4 text-white lg:mr-16 ">
-    <form onSubmit={handleSubmit(onSubmit)} action="submit" >
+    <form onSubmit={handleSubmit(sendDataToBackend)} action="submit" >
         <div className="flex  gap-[20px] lg:flex-row flex-col flex-wrap xl:flex-nowrap lg:gap-y-16 ">
             <label htmlFor="name" className="h-10 w-full cursor-pointer text-slate-100 font-medium flex flex-col">
                 Name
@@ -100,9 +97,17 @@ const FormContact = () => {
         </label>
 
         {/* Button */}
-        <Button  disabled={isLoading} type="submit" backgroundColor={"bg-primary"} title={"Confirm"} style="w-48 mt-4 " />
-        
+        <button type="submit" className='bg-primary w-48 mt-4  rounded-[5px] text-white  px-8 py-4  font-bold
+         transition-colors ease-out duration-300 '>
+        {isLoading ? <LoadingAnimation/> : 'Confirm'  }
+        </button >
+        {/* <Button   type="submit" backgroundColor={"bg-primary"} title={"Confirm"} style="w-48 mt-4 " /> */}
     </form>
+    {
+        response != null? <p className=' mt-2 text-white font-bold '>
+                        {response} 
+                        </p> : null
+    }
     
         </section>
 
