@@ -6,7 +6,7 @@ import Services from "../pages/Services/Services";
 import Career from "../pages/Career/Career";
 import NotFound from "../pages/NotFound";
 import { lazy, Suspense } from "react";
-import Laoding from "../components/Laoding page/Laoding";
+import Loading from "../components/Loading page/Loading";
 const Home = lazy(() => import("../pages/Home"));
 
 export const router = createBrowserRouter([
@@ -18,7 +18,7 @@ export const router = createBrowserRouter([
       {
         index: true,
         element: (
-          <Suspense fallback={<Laoding />}>
+          <Suspense fallback={<Loading />}>
             <Home />
           </Suspense>
         ),

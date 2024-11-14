@@ -7,17 +7,17 @@ export default function FAQs() {
   const AllFAQs = [
     {
       id: "ddd",
-      name: "What services does Depo web provide?",
+      name: "What services does Depo web provide ?",
       dec: "Depo web offers a wide range of digital development and programming services, including custom website design, mobile app development, e-commerce solutions, digital marketing, and software consulting. We aim to deliver solutions tailored to meet the unique needs of each client .",
     },
     {
       id: "ffff",
-      name: "How long  it takes to complete a project?",
+      name: "How long  it takes to complete a project ?",
       dec: "Project timelines vary based on the complexity and specific requirements. Typically, smaller projects may take a few weeks, while larger or more complex solutions might take several months. After an initial consultation, we provide an estimated timeline that aligns with your goals and deadlines. ",
     },
     {
-      id: "xzgfdsx",
-      name: "How can I contact customer support?",
+      id: "www",
+      name: "How can I contact customer support ?",
       dec: "You can reach our support team through our Contact Us page, by phone, or by email. We’re here to answer questions, provide updates, and offer assistance as needed. We strive to respond to all inquiries within 24 hours during business days.",
     },
   ];
@@ -45,6 +45,7 @@ export default function FAQs() {
                       setshowText(showText === index ? null : index);
                     }}
                   >
+                {/* Text Item */}
                     <div className="flex items-center justify-between h-auto cursor-pointer font-medium">
                       <span className="tracking-wide h-auto w-full font-semibold leading-[29.05px] sm:w-auto text-[13px] sm:text-[20px] md:text-[24px]">
                         {item.name}
@@ -55,10 +56,11 @@ export default function FAQs() {
                         }`}
                       />
                     </div>
-                  </div>
 
+                  </div>
+                {/* dec Item */}
                   <div
-                    className={`transition-all duration-[1000ms] ease-in-out mb-2 px-2 md:mt-2 text-[11px] md:text-[16px] font-normal ${
+                    className={`transition-all duration-[1000ms] ease-in-out px-2 m-1 md:m-2 text-[11px] md:text-[16px] font-normal ${
                       showText === index ? "max-h-screen" : "max-h-0"
                     } overflow-hidden`}
                   >

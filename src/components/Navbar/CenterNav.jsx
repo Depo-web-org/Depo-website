@@ -12,11 +12,6 @@ const CenterNav = ({navItems}) => {
               src="/images/lOGO.svg"
               alt="Depo Web"
             />
-            <div className="w-[50px] h-[49]  p-[10px]">
-              <span className="text-secondary font-bold text-[24px] leading-[29.05px] ">
-                En
-              </span>
-            </div>
           </div>
         </div>
         <div className="h-full bg-secondary rounded-[57px] flex flex-1 items-center justify-between px-8">
