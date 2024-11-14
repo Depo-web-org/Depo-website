@@ -3,6 +3,7 @@ import { Divide as Hamburger } from 'hamburger-react'
 import {  NavLink } from "react-router-dom"
 import Aderss from "../../pages/Home/Components/Footer/Aderss"
 import Map from "../../pages/Home/Components/Footer/Map"
+import logo from '/images/Logo.webp'
 
 const ResponsiveNav = ({isOpen,scrollPosition,pathname,setOpen , navItems}) => {
 
@@ -22,7 +23,7 @@ const ResponsiveNav = ({isOpen,scrollPosition,pathname,setOpen , navItems}) => {
 </div>
 
 <div className="w-16">
-<img src="/images/lOGO.svg" alt="Depo-Web" />
+<img src={logo} alt="Depo-Web" />
 </div>
 </div>
       </div>
