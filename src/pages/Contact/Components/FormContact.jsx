@@ -22,13 +22,17 @@ const FormContact = () => {
         },
       })
       .then((response) => setResponse(response.data))
-      .then(() => reset())
+      .then(() => {
+        reset();
+        setValue('');
+      }
+    )
       .catch((error) => setResponse(error.message))
       .finally(() => {
         setIsLoading(false);
         setTimeout(() => {
           setResponse(null);
-        }, 2000);
+        }, 3000);
       });
   };
 
@@ -142,9 +146,8 @@ const FormContact = () => {
           {isLoading ? <LoadingAnimation /> : "Confirm"}
         </button>
       </form>
-      {response != null ? (
-        <p className=" mt-2 text-white font-bold ">{response}</p>
-      ) : null}
+
+      {response!=null&&<p className=" mt-2 text-white font-bold ">{response}</p>}
     </section>
   );
 };
