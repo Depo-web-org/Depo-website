@@ -19,19 +19,19 @@ export default function Card_AboutUs() {
       dec: [
         {
           title: ". Innovation ",
-          text: "We embrace creativity and stay ahead of industry trends to deliver cutting-edge solutions.",
+          text: " We embrace creativity and stay ahead of industry trends to deliver cutting-edge solutions.",
         },
         {
           title: ". Client-Centricity ",
-          text: "We prioritize our clients' needs, tailoring solutions to help them succeed.",
+          text: " We prioritize our clients' needs, tailoring solutions to help them succeed.",
         },
         {
           title: ". Integrity ",
-          text: "We operate with transparency and honesty in every aspect of our work.",
+          text: " We operate with transparency and honesty in every aspect of our work.",
         },
         {
           title: ". Excellence ",
-          text: "We focus on high-quality results that make a real impact.",
+          text: " We focus on high-quality results that make a real impact.",
         },
         {
           title: ". Collaboration ",
@@ -61,11 +61,13 @@ export default function Card_AboutUs() {
               <p className="text-[24px] md:text-[32px] leading-[30px] md:leading-[38.73px] font-bold">
                 {item.name}
               </p>
-              <div className="mt-5 md:mt-0">
+              <div className="mt-5 md:mt-0 pe-2">
                 {Array.isArray(item.dec) ? (
                   item.dec.map((subItem, index) => (
                     <p key={index} className="mb-2">
-                      <span className="font-bold">{subItem.title}:</span>
+                      <span className="font-bold">
+                      {subItem.title}:
+                      </span>
                       {subItem.text}
                     </p>
                   ))
