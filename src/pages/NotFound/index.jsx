@@ -26,7 +26,7 @@ const NotFound = () => {
     </div>
     {/* SVG  */}
     <div>
-        <img src="/public/images/wave.svg" alt="" className="w-full" />
+        <img src="/images/wave.svg" alt="" className="w-full" />
     </div>
     <div className="absolute  w-full        flex lg:top-1/2 lg:-translate-y-full top-32 justify-center ct-animate-blink">
         <img src="/images/moon.svg" alt="night_sky" className="hidden lg:inline"/>
