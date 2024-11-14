@@ -12,10 +12,10 @@ export default function Loading() {
         {/* laoding */}
         <div>
           <div className="wrapper">
-            <div className="colors ball" />
-            <div className="colors ball" />
-            <div className="colors ball" />
-            <div className="colors ball" />
+            <div className="colors1 ball" />
+            <div className="colors2 ball" />
+            <div className="colors3 ball" />
+            <div className="colors4 ball" />
           </div>
         </div>
       </div>
