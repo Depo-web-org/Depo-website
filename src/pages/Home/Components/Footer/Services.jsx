@@ -9,7 +9,7 @@ export default function Services() {
         <li>
           <div className="flex items-start space-x-2">
             <div className="text-primary h-[19px]pt-1 w-[19px]">
-              <BiCodeAlt style={{ height: "19px", width: "19px" }} />
+              <BiCodeAlt className="min-w-[19px] min-h-[19px]" />
             </div>
 
             <span>Web Development</span>
@@ -17,8 +17,8 @@ export default function Services() {
         </li>
         <li>
           <div className="flex items-start space-x-2">
-            <div className="text-primary h-[19px] pt-1 w-[14px]">
-              <FaMobileScreen />{" "}
+            <div className="text-primary ">
+              <FaMobileScreen className="min-w-[19px] min-h-[19px]" />
             </div>
 
             <span>App Development</span>
@@ -26,8 +26,8 @@ export default function Services() {
         </li>
         <li>
           <div className="flex items-start space-x-2">
-            <div className="text-primary h-[19px] pt-1 w-[19px]">
-              <FaGamepad />{" "}
+            <div className="text-primary  pt-1 ">
+              <FaGamepad className="min-w-[23px] min-h-[15px]" />
             </div>
 
             <span>Game Development</span>
@@ -35,8 +35,8 @@ export default function Services() {
         </li>
         <li>
           <div className="flex items-start space-x-2">
-            <div className="text-primary h-[19px] pt-1 w-[14px]">
-              <FaDatabase />{" "}
+            <div className="text-primary  pt-1 ">
+              <FaDatabase className="min-w-[19px] min-h-[19px]" />
             </div>
 
             <span>Integrated Database systems</span>
