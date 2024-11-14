@@ -54,10 +54,10 @@ export default function Carousel() {
         loop={true}
         slidesPerView={2}
         spaceBetween={0}
-        autoplay={{
-          delay: 1500, // Delay between slides in milliseconds
-          disableOnInteraction: false, // Keeps autoplay running after user interaction
-        }}
+        // autoplay={{
+        //   delay: 100,
+        //   disableOnInteraction: false, // Keeps autoplay running after user interaction
+        // }}
         coverflowEffect={{
           rotate: 0,
           stretch: 0,
