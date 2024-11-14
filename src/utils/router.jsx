@@ -1,51 +1,46 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "../pages/layout";
-// import Home from "../pages/Home";
-// import IndexLogin from "../pages/login";
+import Contact from "../pages/Contact";
+import AboutUs from "../pages/About Us";
+import Services from "../pages/Services/Services";
+import Career from "../pages/Career/Career";
+import NotFound from "../pages/NotFound";
+import { lazy, Suspense } from "react";
+import Loading from "../components/Loading page/Loading";
+const Home = lazy(() => import("../pages/Home"));
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
     children: [
+      { path: "*", element: <NotFound /> },
       {
         index: true,
-        // element: <Home />,
-        // loader: locationMapLoader,
+        element: (
+          <Suspense fallback={<Loading />}>
+            <Home />
+          </Suspense>
+        ),
       },
       {
-        path: "login",
-        children: [
-          {
-            index: true,
-            // element: <IndexLogin />,
-            // loader: loginLoader,
-          },
-        ],
-      }
-    //   {
-    //     path: "master-plan",
-    //     children: [
-    //       {
-    //         index: true,
-    //         element: <MasterPlan />,
-    //         loader: masterPlanLoader,
-    //         shouldRevalidate: (args) => {
-    //           return false;
-    //         },
-    //       },
-    //       {
-    //         path: "villa/:villaId",
-    //         children: [
-    //           {
-    //             index: true,
-    //             element: <Villa />,
-    //             loader: villaLoader,
-    //           },
-    //         ],
-    //       },
-    //     ],
-    //   },
+        path: "contact",
+        element: <Contact />,
+        // loader: loginLoader,
+      },
+      {
+        path: "about",
+        element: <AboutUs />,
+        // loader: loginLoader,
+      },
+      {
+        path: "services",
+        element: <Services />,
+      },
+      {
+        path: "career",
+        element: <Career />,
+      },
     ],
   },
 ]);

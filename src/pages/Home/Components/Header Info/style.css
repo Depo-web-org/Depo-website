@@ -1,0 +1,8 @@
+.Header-Info-card {
+    background: rgba(255, 255, 255, 0.17);
+    backdrop-filter: blur(39.599998474121094px)
+} 
+.custom-shadow {
+    transition: box-shadow 0.3s ease;
+}
+

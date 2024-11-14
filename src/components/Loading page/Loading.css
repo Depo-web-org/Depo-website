@@ -1,0 +1,39 @@
+/* From Uiverse.io by SteveBloX */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+.ball {
+  --size: 16px;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 11px;
+  margin: 0 10px;
+
+  animation: 2s bounce ease infinite;
+}
+
+.colors1 {
+  background-color: #00a5a4;
+}
+.colors2 {
+  background-color: #00a5a4;
+  animation-delay: 0.25s;
+}
+.colors3 {
+  background-color: #00a5a4;
+  animation-delay: 0.5s;
+}
+.colors4 {
+  background-color: #00a5a4;
+  animation-delay: 0.75s;
+}
+
+@keyframes bounce {
+  50% {
+    transform: translateY(25px);
+  }
+}

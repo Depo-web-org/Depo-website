@@ -1,3 +1,90 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  font-family: "Inter", sans-serif !important;
+}
+.active {
+  color: #00A5A4;
+}
+
+@media (min-width: 1024px) {
+  .active{
+    border-bottom: 2px solid #1a4f92;
+  color: white;
+
+  }
+}
+
+.section-border {
+  border: none;
+}
+@media (min-width: 1024px) {
+  .section-border {
+    border-bottom: 1px solid #ffffff47;
+  }
+}
+/* styles.css */
+.section-border {
+  @apply lg:pb-8 lg:border-b border-[#ffffff47];
+}
+
+
+/* Container styling for the custom arrows */
+.slider-controler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+}
+
+.slider-arrow {
+  cursor: pointer;
+  z-index: 10;
+  pointer-events: all;
+}
+
+.swiper-button-prev {
+  margin-left: 10px;
+}
+
+.swiper-button-next {
+  margin-right: 10px;
+}
+
+.slider-arrow svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .slider-arrow svg {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .slider-arrow svg {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+@media (max-width: 767px) {
+  .slider-arrow {
+    display: none;
+  }
+}
+
+/* Gradient Background */
+.gradient-bg {
+  @apply bg-gradient-to-t to-secondary-dark via-back-ground from-back-ground;
+}
+
+
