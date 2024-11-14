@@ -12,6 +12,7 @@ const Home = () => {
   return (
     <>
       <Helmet>
+        
         <title>Depo Web | Transforming Ideas into Digital Solutions</title>
         <meta
           name="description"

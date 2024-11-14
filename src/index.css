@@ -30,6 +30,7 @@
   @apply lg:pb-8 lg:border-b border-[#ffffff47];
 }
 
+
 /* Container styling for the custom arrows */
 .slider-controler {
   position: absolute;

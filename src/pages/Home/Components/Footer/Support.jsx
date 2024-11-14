@@ -18,7 +18,10 @@ export default function Support() {
       <h3 className="font-semibold text-lg mb-4">Support</h3>
       <ul className="space-y-4">
         <li>
-          <Link to="/about" className="hover:text-secondary">
+          <Link
+            to="/about"
+            className="hover:text-secondary transition-colors duration-300"
+          >
             <div className="flex items-center space-x-2">
               <div className="text-primary flex justify-center items-center h-5 w-5">
                 <FaInfoCircle />
@@ -28,7 +31,10 @@ export default function Support() {
           </Link>
         </li>
         <li>
-          <Link to="/contact" className="hover:text-secondary">
+          <Link
+            to="/contact"
+            className="hover:text-secondary transition-colors duration-300"
+          >
             <div className="flex items-center space-x-2">
               <div className="text-primary flex justify-center items-center h-5 w-5">
                 <IoMdContact />
@@ -38,7 +44,10 @@ export default function Support() {
           </Link>
         </li>
         <li>
-          <button onClick={handleScrollToFAQs} className="hover:text-secondary">
+          <button
+            onClick={handleScrollToFAQs}
+            className="hover:text-secondary transition-colors duration-300"
+          >
             <div className="flex items-center space-x-2">
               <div className="text-primary flex justify-center items-center h-5 w-5">
                 <FaQuestionCircle />

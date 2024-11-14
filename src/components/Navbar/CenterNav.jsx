@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import Button from '../common/Button'
+import logo from '/images/Logo.webp'
 
 const CenterNav = ({navItems}) => {
   return (
@@ -9,8 +10,9 @@ const CenterNav = ({navItems}) => {
         <div className="h-full  w-1/4 ">
           <div className="flex items-center h-full w-1/4 gap-1 xl:gap-[8px]  ">
             <img
-              src="/images/lOGO.svg"
+              src={logo}
               alt="Depo Web"
+              loading="lazy"
             />
           </div>
         </div>

@@ -12,6 +12,7 @@ const Contact = () => {
   return (
     <>
       <Helmet>
+        
         <title>Contact Depo Web | Let’s Build Your Digital Presence</title>
         <meta
           name="description"

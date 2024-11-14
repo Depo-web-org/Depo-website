@@ -21,18 +21,19 @@ const OurServices = () => {
     useEffect(() => {
       const flkty = new Flickity(carouselRef.current, {
         freeScroll: true,
-contain: true,
-prevNextButtons: false,
-pageDots: false
+        contain: true,
+        prevNextButtons: false,
+        pageDots: false,
+        autoPlay: 5000 ,
+        pauseAutoPlayOnHover: true,
+        wrapAround: true
       });
-  
       return () => {
         flkty.destroy(); 
       };
     }, []);
-  //
-  return (
     
+  return (
     <section className='section-border py-6 lg:py-0 '>
          <h2 className="text-white font-bold text-2xl   text-start lg:text-center lg:text-[32px]  pb-6 lg:mt-8 lg:pb-16">
      Our Services
