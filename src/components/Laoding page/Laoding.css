@@ -1,61 +1,42 @@
-/* From Uiverse.io by alexruix */
-.loader {
-  position: relative;
-  width: 120px;
-  height: 90px;
-  margin: 0 auto;
+/* From Uiverse.io by SteveBloX */ 
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
 }
 
-.loader:before {
-  content: "";
-  position: absolute;
-  bottom: 30px;
-  left: 50px;
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  background: #2a9d8f;
-  animation: loading-bounce 0.5s ease-in-out infinite alternate;
+.ball {
+  --size: 16px;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 11px;
+  margin: 0 10px;
+
+  animation: 2s bounce ease infinite;
 }
 
-.loader:after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 7px;
-  width: 45px;
-  border-radius: 4px;
-  box-shadow: 0 5px 0 #f2f2f2, -35px 50px 0 #f2f2f2, -70px 95px 0 #f2f2f2;
-  animation: loading-step 1s ease-in-out infinite;
+.blue {
+  background-color: #4285f5;
 }
 
-@keyframes loading-bounce {
-  0% {
-    transform: scale(1, 0.7);
-  }
-
-  40% {
-    transform: scale(0.8, 1.2);
-  }
-
-  60% {
-    transform: scale(1, 1);
-  }
-
-  100% {
-    bottom: 140px;
-  }
+.red {
+  background-color: #ea4436;
+  animation-delay: 0.25s;
 }
 
-@keyframes loading-step {
-  0% {
-    box-shadow: 0 10px 0 rgba(0, 0, 0, 0), 0 10px 0 #f2f2f2,
-      -35px 50px 0 #f2f2f2, -70px 90px 0 #f2f2f2;
-  }
+.yellow {
+  background-color: #fbbd06;
+  animation-delay: 0.5s;
+}
 
-  100% {
-    box-shadow: 0 10px 0 #f2f2f2, -35px 50px 0 #f2f2f2, -70px 90px 0 #f2f2f2,
-      -70px 90px 0 rgba(0, 0, 0, 0);
+.green {
+  background-color: #34a952;
+  animation-delay: 0.75s;
+}
+
+@keyframes bounce {
+  50% {
+    transform: translateY(25px);
   }
 }
