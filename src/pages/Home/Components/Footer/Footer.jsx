@@ -1,4 +1,4 @@
-import Aderss from "./Aderss";
+import Adderss from "./Address";
 import Support from "./Support";
 import Services from "./Services";
 import Map from "./Map";
@@ -12,7 +12,7 @@ function Footer() {
         {/* Logo and Social Links */}
         <SocialMedia />
         {/* Address */}
-        <Aderss />
+        <Adderss />
         {/* Support Links */}
         <Support />
         {/* Services */}
