@@ -23,8 +23,8 @@ export default function Support() {
             className="hover:text-secondary transition-colors duration-300"
           >
             <div className="flex items-center space-x-2">
-              <div className="text-primary flex justify-center items-center h-5 w-5">
-                <FaInfoCircle />
+              <div className="text-primary flex justify-center items-center ">
+                <FaInfoCircle className="min-w-[19px] min-h-[19px]" />
               </div>
               <span>About Us</span>
             </div>
@@ -36,8 +36,8 @@ export default function Support() {
             className="hover:text-secondary transition-colors duration-300"
           >
             <div className="flex items-center space-x-2">
-              <div className="text-primary flex justify-center items-center h-5 w-5">
-                <IoMdContact />
+              <div className="text-primary flex justify-center items-center ">
+                <IoMdContact className="min-w-[19px] min-h-[19px]" />
               </div>
               <span>Contact Us</span>
             </div>
@@ -49,8 +49,8 @@ export default function Support() {
             className="hover:text-secondary transition-colors duration-300"
           >
             <div className="flex items-center space-x-2">
-              <div className="text-primary flex justify-center items-center h-5 w-5">
-                <FaQuestionCircle />
+              <div className="text-primary flex justify-center items-center ">
+                <FaQuestionCircle className="min-w-[19px] min-h-[19px]" />
               </div>
               <span>FAQs</span>
             </div>

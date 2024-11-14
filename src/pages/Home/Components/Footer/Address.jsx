@@ -7,7 +7,7 @@ export default function Address() {
       <h3 className="font-semibold text-lg mb-4">Address</h3>
 
       <div className="flex items-start gap-x-2 mb-2">
-        <FaMapMarkerAlt className="text-primary w-6 h-6" />
+        <FaMapMarkerAlt className="text-primary min-w-[14px] min-h-[19px]" />
         <span>
           <a
             target="_blank"
@@ -22,7 +22,7 @@ export default function Address() {
       </div>
 
       <div className="flex items-center gap-x-2 mb-2">
-        <FaPhoneAlt className="text-primary h-5 w-5" />
+        <FaPhoneAlt className="text-primary min-w-[14px] min-h-[19px]" />
         <span>
           <a
             target="_blank"
@@ -36,7 +36,7 @@ export default function Address() {
       </div>
 
       <div className="flex items-center gap-x-2">
-        <SiGmail className="text-primary h-5 w-5" />
+        <SiGmail className="text-primary min-w-[14px] min-h-[12px]" />
         <span>
           <a
             target="_blank"
