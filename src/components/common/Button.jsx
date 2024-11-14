@@ -19,7 +19,7 @@ export default function Button({
       ${disabled ? disabledBackgroundColor : ""}
       ${!disabled ? hoverBackgroundColor : ""}
       ${!disabled ? `active:${activeBackgroundColor}` : ""}
-      rounded-[5px] text-white font-semibold px-6 xl:px-8 py-4  font-bold
+      rounded-[5px] text-white font-semibold px-6 lg:px-4 xl:px-8 py-4  font-bold 
       transition-colors ease-out duration-300 flex justify-center gap-x-2 items-center 
     `;
 

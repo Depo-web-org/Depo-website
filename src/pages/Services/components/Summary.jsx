@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "../../../components/common/Button";
 
 export default function Summary() {
@@ -12,11 +13,12 @@ export default function Summary() {
           meet modern business needs.
         </p>
         <div className="py-[16px]">
+          <Link to={'/contact'}>
           <Button
             style="h-[51px] text-[15px] "
             title="Learn More About Our Solutions"
-            navigate={"/contact"}
-          />
+            />
+            </Link>
         </div>
       </div>
       <div></div>
