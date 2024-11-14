@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./FQAs.css";
 import { HiArrowCircleDown } from "react-icons/hi";
 export default function FAQs() {
-  const [opene, setopene] = useState(" ");
+  const [showText, setshowText] = useState(null);
 
   const AllFAQs = [
     {
@@ -24,45 +24,52 @@ export default function FAQs() {
 
   return (
     <>
-      <div id="FAQs" className="w-full h-auto  md:my-[32px] text-white ">
+      <div
+        id="FAQs"
+        className="h-auto w-full md:my-[32px] text-white tracking-wide"
+      >
         <div className="flex flex-col lg:items-center">
-          <h2 className="h-[39px]  text-[25px] lg:text-[32px] font-bold mb-[-8px] lg:mb-[64px] ">
+          <h2 className="h-[39px] text-[25px] lg:text-[32px] font-bold mb-[-8px] lg:mb-[64px]">
             FAQs
           </h2>
         </div>
-
-        {AllFAQs.map((item) => {
+        {AllFAQs.map((item, index) => {
           return (
-            <div
-              onClick={() => {
-                setopene(opene === "decopene" ? " " : "decopene");
-              }}
-              key={item.id}
-              className="mx-auto m-[16px] grid w-full "
-            >
+            <div key={index} className="mx-auto w-full m-[16px]">
               <div className="color_details rounded-tl-xl rounded-br-xl overflow-hidden">
-                <details className="group p-3 w-full">
-                  <summary className="h-[30px] flex cursor-pointer list-none items-center justify-between font-medium">
-                    <span className="h-[29px] w-full sm:w-[460px] text-[13px] sm:text-[20px] md:text-[24px]">
-                      {item.name}
+                {/* Accordion Item */}
+                <div className="relative transition-all duration-700">
+                  <div
+                    className="w-full px-2 pt-2 text-left cursor-pointer"
+                    onClick={() => {
+                      setshowText(showText === index ? null : index);
+                    }}
+                  >
+                    <div className="flex items-center justify-between h-auto cursor-pointer font-medium">
+                      <span className="tracking-wide h-auto w-full font-semibold leading-[29.05px] sm:w-auto text-[13px] sm:text-[20px] md:text-[24px]">
+                        {item.name}
+                      </span>
+                      <HiArrowCircleDown
+                        className={`w-[26px] h-[26px] text-secondary transition-all duration-700 ${
+                          showText === index ? "rotate-180" : ""
+                        }`}
+                      />
+                    </div>
+                  </div>
 
-                      {/* Button */}
-                    </span>
-                    <span className="transition group-open:rotate-180">
-                      <HiArrowCircleDown className="w-[26px] h-[26px] text-secondary" />
-                    </span>
-                  </summary>
-                  {/* group-open:transition-all group-open:transform group-open:translate-y-0  group-open:duration-1000 opacity-0 translate-y-16 group-open:opacity-100  */}
-                  {opene && (
-                    <p className={`${opene} pt-1 md:pt-2`}>{item.dec}</p>
-                  )}
-                </details>
+                  <div
+                    className={`transition-all duration-[1000ms] ease-in-out mb-2 px-2 md:mt-2 text-[11px] md:text-[16px] font-normal ${
+                      showText === index ? "max-h-screen" : "max-h-0"
+                    } overflow-hidden`}
+                  >
+                    {item.dec}
+                  </div>
+                </div>
               </div>
             </div>
           );
         })}
       </div>
-
       <hr className="section-border" />
     </>
   );
