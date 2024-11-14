@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
 import { Divide as Hamburger } from 'hamburger-react'
-import { Link } from "react-router-dom"
+import {  NavLink } from "react-router-dom"
 import Aderss from "../../pages/Home/Components/Footer/Aderss"
 import Map from "../../pages/Home/Components/Footer/Map"
 
@@ -40,13 +40,13 @@ const ResponsiveNav = ({isOpen,scrollPosition,pathname,setOpen , navItems}) => {
 <div className="py-6">
   {Object.entries(navItems).map(([key, item]) => (
       <div key={key} className="py-2 ">
-    <Link
+    <NavLink
       to={item.link}
       onClick={()=> setOpen(!isOpen)  }
       className="text-primary font-bold  group relative "
     >
       <span className="text-xl">{item.icon}</span> {item.text}
-    </Link>
+    </NavLink>
     </div>
   ))}
 </div>

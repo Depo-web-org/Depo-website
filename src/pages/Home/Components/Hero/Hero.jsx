@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import Button from "../../../../components/common/Button"
 import './animationHero.css'
 import { ImLink } from "react-icons/im"
@@ -20,7 +21,9 @@ const Hero = () => {
       </h2>
       {/* flex sm:justify-center md:text-start */}
       <div className=" mt-4 lg:mt-16 ">
-      <Button navigate='services' backgroundColor={"bg-primary"} icon=<ImLink className="text-2xl"/> title={"Services"} style="w-44 lg:w-[293px]"/>
+        <Link to={'services'} className=" inline-block w-auto">
+      <Button  backgroundColor={"bg-primary"} icon=<ImLink className="text-2xl"/> title={"Services"} style="w-44 lg:w-[293px]"/>
+        </Link>
       {/* <FaLink /> icon needed to add  */}
       </div>
       </div>

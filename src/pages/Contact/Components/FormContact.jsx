@@ -14,7 +14,7 @@ const FormContact = () => {
             headers: {
                 'Content-Type': 'application/json',
             },
-        }).then(response => setResponse(response.data)).then(()=>reset()).catch(error => console.log(error.message)).finally(()=> {
+        }).then(response => setResponse(response.data)).then(()=>reset()).catch(error => setResponse(error.message)).finally(()=> {
             setIsLoading(false)
             setTimeout(() => {
                 setResponse(null);

@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import Button from '../common/Button'
 
 const CenterNav = ({navItems}) => {
@@ -34,11 +34,12 @@ const CenterNav = ({navItems}) => {
 
         </div>
         <div className="h-full flex items-center justify-end w-1/4 ">
+        <Link to={'contact'}>
           <Button
             title="Contact Us"
-            navigate={"contact"}
             style=" lg:w-40 xl:w-48 h-[51px]  py-[16px]  px-[32px] "
           />
+        </Link>
         </div>
       </div>
       

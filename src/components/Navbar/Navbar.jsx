@@ -32,6 +32,7 @@ const Navbar = () => {
       <CenterNav navItems={navItems}/>
 
 {/* Responsive Navbar in mobile and tablet  */}
+
 <ResponsiveNav isOpen={isOpen} scrollPosition={scrollPosition} setOpen={setOpen} pathname={pathname} navItems={navItems} />
     </nav>
      

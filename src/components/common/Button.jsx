@@ -1,8 +1,6 @@
-import { Link } from "react-router-dom";
 
 export default function Button({
   title = "Button",
-  navigate = "",
   style = "",
   type = "submit",
   onClick,
@@ -21,8 +19,8 @@ export default function Button({
       ${disabled ? disabledBackgroundColor : ""}
       ${!disabled ? hoverBackgroundColor : ""}
       ${!disabled ? `active:${activeBackgroundColor}` : ""}
-      rounded-[5px] text-white font-semibold  px-8 py-4  font-bold
-      transition-colors ease-out duration-300
+      rounded-[5px] text-white font-semibold px-6 xl:px-8 py-4  font-bold
+      transition-colors ease-out duration-300 flex justify-center gap-x-2 items-center 
     `;
 
   return (
@@ -32,13 +30,8 @@ export default function Button({
       className={buttonClasses}
       disabled={disabled}
     >
-      <Link
-        to={`${navigate}`}
-        className="w-full  h-full flex justify-center items-center gap-x-2"
-      >
         <span>{icon}</span> {title}
         {children}
-      </Link>
     </button>
   );
 }
