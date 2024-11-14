@@ -4,7 +4,7 @@ const HeaderInfo = () => {
     <section className='section-border  '>
         <h2 className="text-white font-bold text-2xl lg:text-[32px] lg:text-center lg:mt-8 mb-6 lg:mb-16">
         The Software Development Company
-        <span className="block">
+        <span className="block mt-2">
         That Empowers Businesses
         </span>
         </h2>
