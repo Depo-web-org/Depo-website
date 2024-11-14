@@ -3,7 +3,7 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
-import { EffectCoverflow, Pagination } from "swiper/modules";
+import { EffectCoverflow, Pagination, Autoplay } from "swiper/modules";
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
 
 const carouselImages = [
@@ -11,10 +11,7 @@ const carouselImages = [
     id: 1,
     image: "images/carousel/campaign-creators-gMsnXqILjp4-unsplash.webp",
   },
-  {
-    id: 2,
-    image: "images/carousel/carlos-muza-hpjSkU2UYSU-unsplash.webp",
-  },
+  { id: 2, image: "images/carousel/carlos-muza-hpjSkU2UYSU-unsplash.webp" },
   {
     id: 3,
     image: "images/carousel/christopher-gower-m_HRfLhgABo-unsplash.webp",
@@ -23,10 +20,7 @@ const carouselImages = [
     id: 4,
     image: "images/carousel/tim-van-der-kuip-CPs2X8JYmS8-unsplash.webp",
   },
-  {
-    id: 5,
-    image: "images/carousel/william-hook-9e9PD9blAto-unsplash.webp",
-  },
+  { id: 5, image: "images/carousel/william-hook-9e9PD9blAto-unsplash.webp" },
 ];
 
 function CustomNavigation() {
@@ -35,7 +29,7 @@ function CustomNavigation() {
   return (
     <div className="slider-controler">
       <div
-        className="swiper-button-prev text-secondary  slider-arrow"
+        className="swiper-button-prev text-secondary slider-arrow"
         onClick={() => swiper.slidePrev()}
       >
         <FaArrowAltCircleLeft size={40} />
@@ -52,7 +46,7 @@ function CustomNavigation() {
 
 export default function Carousel() {
   return (
-    <div className=" py-4 lg:py-10">
+    <div className="py-4 lg:py-10">
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
@@ -60,6 +54,10 @@ export default function Carousel() {
         loop={true}
         slidesPerView={2}
         spaceBetween={0}
+        // autoplay={{
+        //   delay: 100,
+        //   disableOnInteraction: false, // Keeps autoplay running after user interaction
+        // }}
         coverflowEffect={{
           rotate: 0,
           stretch: 0,
@@ -69,7 +67,7 @@ export default function Carousel() {
         breakpoints={{
           1024: { slidesPerView: 3 },
         }}
-        modules={[EffectCoverflow, Pagination]}
+        modules={[EffectCoverflow, Pagination, Autoplay]}
         className="swiper_container"
       >
         {carouselImages.map((carousel) => (
