@@ -7,7 +7,7 @@ const PagesBg = ({title}) => {
             {title   }
         </p>
     </div>
-    <img src="/images/componentsBg.svg" className="w-full " />
+    <img src="/images/componentsBg.jpeg" className="w-full " />
     </div>
   )
 }
