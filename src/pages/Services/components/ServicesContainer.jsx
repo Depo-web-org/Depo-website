@@ -4,13 +4,13 @@ const servicesData = [
   {
     title: "Web Application",
     description:
-      "We create engaging web apps designed to captivate a global audience.",
+      "We create engaging web apps designed to captivate a global audience using React and Next js for Front-end and Django for Back-end.",
     image: "images/services/web.webp",
   },
   {
     title: "Application Development",
     description:
-      "Custom mobile and desktop apps to elevate your business’s digital presence.",
+      "Custom mobile and desktop apps to elevate your business’s digital presence using Flutter framework.",
     image: "images/services/application.webp",
   },
   {
