@@ -52,7 +52,7 @@ const FormContact = () => {
               {...register("name", {
                 required: "Name is required",
                 pattern: {
-                  value: /^[a-zA-Z ]{4,22}$/,
+                  value: /^.{2,20}$/,
                   message: "Invalid name",
                 },
               })}
