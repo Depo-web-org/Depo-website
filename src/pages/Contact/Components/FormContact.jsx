@@ -16,7 +16,7 @@ const FormContact = () => {
   const sendDataToBackend = async (data) => {
     setIsLoading(true);
     await axios
-      .post("http://192.168.1.25:4000/api/form", data, {
+      .post("https://dev.depowebeg.com/api/api/form", data, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -32,7 +32,7 @@ const FormContact = () => {
         setIsLoading(false);
         setTimeout(() => {
           setResponse(null);
-        }, 3000);
+        }, 5000);
       });
   };
   const disableCopyPasteCut = (e) => {
@@ -52,7 +52,7 @@ const FormContact = () => {
               {...register("name", {
                 required: "Name is required",
                 pattern:{
-                  value: /^[a-zA-Z]{4,}$/,
+                  value: /^[a-zA-Z ]{4,22}$/,
                   message: "Invalid name",
                 }
               })}
