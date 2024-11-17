@@ -43,7 +43,7 @@ const Contact = () => {
           </div>
 
           {/* Right Side */}
-          <div className="col-span-12 lg:col-span-5  lg:ml-10 xl:ml-14 my-14 lg:my-0 hidden lg:block ">
+          <div className="col-span-12 lg:col-span-5  lg:ml-10 xl:ml-14 my-14 lg:my-0 hidden lg:block   ">
             <div className="text-white">
               <h3 className=" font-bold text-[32px]">For Direct inquiries</h3>
               <p className="text-xl italic">
@@ -56,7 +56,7 @@ const Contact = () => {
                   <span className="text-3xl">
                     <FaPhoneAlt className="text-secondary" />
                   </span>
-                  <a target="_blank" href="tel:+20 1500919948 ">
+                  <a target="_blank"className="hover:text-secondary  transition-all hover:underline duration-300" href="tel:+20 1500919948 ">
                     +20 1500919948
                   </a>
                 </p>
@@ -66,19 +66,19 @@ const Contact = () => {
                   <span className="text-3xl">
                     <SiGmail className="text-secondary" />
                   </span>
-                  <a target="_blank" href="mailto:info@depowebeg.com">
-                  info@depowebeg.com
+                  <a target="_blank"className="hover:text-secondary  transition-all hover:underline duration-300"href="mailto:info@depowebeg.com">
+                  info@underline
                   </a>
                 </p>
               </div>
               <div>
                 <p className="flex items-start gap-x-2">
                   <span className="text-3xl">
-                    <IoLocationSharp className="text-secondary" />
+                    <IoLocationSharp className="text-secondary " />
                   </span>
                   <a
                     target="_blank"
-                    href="https://www.google.com/maps/dir/?api=1&destination=29.982003604232442,31.34399201469942"
+                   className="hover:text-secondary transition-all hover:underline duration-300" href="https://www.google.com/maps/dir/?api=1&destination=29.982003604232442,31.34399201469942"
                   >
                     Zahraa Al Maadi, Sama Towers, Building No. 9, 9th Floor,
                     Apartment No. 93

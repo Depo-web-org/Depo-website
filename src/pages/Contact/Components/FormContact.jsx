@@ -16,7 +16,7 @@ const FormContact = () => {
   const sendDataToBackend = async (data) => {
     setIsLoading(true);
     await axios
-      .post("https://dev.depowebeg.com/api/api/form", data, {
+      .post("https://dev.depowebeg.com/api/api/for", data, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -27,7 +27,7 @@ const FormContact = () => {
         setValue('');
       }
     )
-      .catch((error) => setResponse(error.message))
+      .catch(() =>  setResponse('Something went wrong, please try again'))
       .finally(() => {
         setIsLoading(false);
         setTimeout(() => {
@@ -62,7 +62,7 @@ const FormContact = () => {
               className="bg-white rounded-[5px] my-[6px] active:outline-primary outline-primary placeholder:text-gray-400 p-[10px] text-gray-400"
             />
             {errors.name && (
-              <p className="text-red-500">{errors.name.message}</p>
+              <p className="text-red-500 ">{errors.name.message}</p>
             )}
           </label>
 
@@ -75,7 +75,7 @@ const FormContact = () => {
               {...register("email", {
                 required: "Email is required",
                 pattern: {
-                  value: /^[a-zA-Z4-9._%+-]{4,}@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                  value: /^[a-zA-Z0-9._%+-]{4,}@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
                   message: "Invalid email address",
                 },
               })}
