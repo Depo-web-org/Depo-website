@@ -26,7 +26,7 @@ const OurServices = () => {
         pageDots: false,
         autoPlay: 5000 ,
         pauseAutoPlayOnHover: true,
-        wrapAround: true
+        wrapAround: false
       });
       return () => {
         flkty.destroy(); 
