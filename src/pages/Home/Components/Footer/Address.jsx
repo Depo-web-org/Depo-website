@@ -44,7 +44,7 @@ export default function Address() {
             href="mailto:depoweb.eg@gmail.com"
             className="hover:text-secondary transition-colors duration-300"
           >
-            depoweb.eg@gmail.com
+            info@depowebeg.com
           </a>
         </span>
       </div>
