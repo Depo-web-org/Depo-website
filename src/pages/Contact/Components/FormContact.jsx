@@ -7,7 +7,7 @@ const FormContact = () => {
     register,
     handleSubmit,
     formState: { errors },
-    reset, 
+    reset,
   } = useForm();
   const [isLoading, setIsLoading] = useState(false);
   const [response, setResponse] = useState();
@@ -34,6 +34,7 @@ const FormContact = () => {
           setResponse(null);
         }, 5000);
       });
+    console.log(response.data);
   };
   const disableCopyPasteCut = (e) => {
     e.preventDefault();
@@ -51,10 +52,10 @@ const FormContact = () => {
             <input
               {...register("name", {
                 required: "Name is required",
-                pattern:{
+                pattern: {
                   value: /^[a-zA-Z ]{4,22}$/,
                   message: "Invalid name",
-                }
+                },
               })}
               id="name"
               type="text"
@@ -99,7 +100,7 @@ const FormContact = () => {
             {...register("phone", {
               required: "Phone number is required",
               pattern: {
-                value:/^\d{11,15}$/,
+                value: /^\d{11,15}$/,
                 message: "Invalid phone number",
               },
             })}
@@ -158,7 +159,9 @@ const FormContact = () => {
         </button>
       </form>
 
-      {response!=null&&<p className=" mt-2 text-white font-bold ">{response}</p>}
+      {response != null && (
+        <p className=" mt-2 text-white font-bold ">{response}</p>
+      )}
     </section>
   );
 };
