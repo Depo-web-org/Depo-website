@@ -66,8 +66,8 @@ const Contact = () => {
                   <span className="text-3xl">
                     <SiGmail className="text-secondary" />
                   </span>
-                  <a target="_blank" href="mailto:depoweb.eg@gmail.com">
-                    depoweb.eg@gmail.com
+                  <a target="_blank" href="mailto:info@depowebeg.com">
+                  info@depowebeg.com
                   </a>
                 </p>
               </div>

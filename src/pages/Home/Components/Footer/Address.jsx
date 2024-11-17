@@ -41,10 +41,10 @@ export default function Address() {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="mailto:depoweb.eg@gmail.com"
+            href="mailto:info@depowebeg.com"
             className="hover:text-secondary transition-colors duration-300"
           >
-            depoweb.eg@gmail.com
+            info@depowebeg.com
           </a>
         </span>
       </div>

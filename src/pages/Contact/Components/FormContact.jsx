@@ -7,7 +7,7 @@ const FormContact = () => {
     register,
     handleSubmit,
     formState: { errors },
-    reset,
+    reset, 
   } = useForm();
   const [isLoading, setIsLoading] = useState(false);
   const [response, setResponse] = useState();
@@ -16,7 +16,7 @@ const FormContact = () => {
   const sendDataToBackend = async (data) => {
     setIsLoading(true);
     await axios
-      .post("http://192.168.1.25:4000/api/form", data, {
+      .post("https://dev.depowebeg.com/api/api/form", data, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -32,8 +32,11 @@ const FormContact = () => {
         setIsLoading(false);
         setTimeout(() => {
           setResponse(null);
-        }, 3000);
+        }, 5000);
       });
+  };
+  const disableCopyPasteCut = (e) => {
+    e.preventDefault();
   };
 
   return (
@@ -48,6 +51,10 @@ const FormContact = () => {
             <input
               {...register("name", {
                 required: "Name is required",
+                pattern:{
+                  value: /^[a-zA-Z ]{4,22}$/,
+                  message: "Invalid name",
+                }
               })}
               id="name"
               type="text"
@@ -68,7 +75,7 @@ const FormContact = () => {
               {...register("email", {
                 required: "Email is required",
                 pattern: {
-                  value: /^\S+@\S+\.\S+$/,
+                  value: /^[a-zA-Z4-9._%+-]{4,}@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
                   message: "Invalid email address",
                 },
               })}
@@ -92,6 +99,7 @@ const FormContact = () => {
             {...register("phone", {
               required: "Phone number is required",
               pattern: {
+                value:/^\d{11,15}$/,
                 message: "Invalid phone number",
               },
             })}
@@ -116,24 +124,27 @@ const FormContact = () => {
             })}
             id="user-message"
             className={`h-60 ${
-              valueLength >= 500
+              valueLength >= 1200
                 ? "active:outline-red-500 outline-red-500 "
                 : "active:outline-primary outline-primary"
             } resize-none scrollbar-hide  placeholder:text-gray-400 my-[6px] rounded-[5px] p-[10px] text-gray-400`}
             placeholder="Write your inquiry"
             value={value}
             onChange={(e) =>
-              e.target.value.length <= 500 && setValue(e.target.value)
+              e.target.value.length <= 1200 && setValue(e.target.value)
             }
+            onCopy={disableCopyPasteCut}
+            onPaste={disableCopyPasteCut}
+            onCut={disableCopyPasteCut}
           ></textarea>
           {errors.message && (
             <p className="text-red-500">{errors.message.message}</p>
           )}
           <span className="text-right">
             {" "}
-            {valueLength >= 500
-              ? `500 Words used.`
-              : `${valueLength} / 500 Words`}
+            {valueLength >= 1200
+              ? `1200 character  used.`
+              : `${valueLength} / 1200 character `}
           </span>
         </label>
 
