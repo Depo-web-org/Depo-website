@@ -21,7 +21,7 @@ export default function About_Depo() {
         <div className="col-span-12 md:col-span-4 w-full h-[225px]  mt-5 sm:mt-5 md:-mt-0 mb-4 lg:mb-0">
           <img
             className="w-full sm:w-[438px] h-full rounded-lg "
-            src="/images/imgas AboutUs/img AboutUs.svg"
+            src="/images/imgas AboutUs/img AboutUs.webp"
             alt="About Us"
           />
         </div>

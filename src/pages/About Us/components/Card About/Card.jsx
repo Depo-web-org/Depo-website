@@ -1,16 +1,81 @@
 export default function Card_AboutUs() {
+  // const AllCard = [
+  //   {
+  //     id: "111",
+  //     name: "Our Vision",
+  //     img: "/images/imgas AboutUs/imgCard-1.svg",
+  //     dec: "To be a leading digital solutions provider, recognized for our commitment to quality, innovation, and client success. We envision a future where Depo web continues to set new standards in the digital industry, helping businesses around the world reach their full potential through cutting-edge technology.",
+  //   },
+  //   {
+  //     id: "222",
+  //     name: "Our Mission",
+  //     img: "/images/imgas AboutUs/imgCard-2.svg",
+  //     dec: "Our mission is to deliver customized, user-centered digital solutions that empower businesses to thrive in a rapidly evolving digital landscape. We are dedicated to excellence in every project, focusing on continuous improvement, collaboration, and integrity. At Depo web, we aim to bring our clients' visions to life through seamless and innovative digital experiences.",
+  //   },
+  //   {
+  //     id: "333",
+  //     name: "Our Values",
+  //     img: "/images/imgas AboutUs/imgCard-3.svg",
+  //     dec: [
+  //       {
+  //         title: ". Innovation ",
+  //         text: " We embrace creativity and stay ahead of industry trends to deliver cutting-edge solutions.",
+  //       },
+  //       {
+  //         title: ". Client-Centricity ",
+  //         text: " We prioritize our clients' needs, tailoring solutions to help them succeed.",
+  //       },
+  //       {
+  //         title: ". Integrity ",
+  //         text: " We operate with transparency and honesty in every aspect of our work.",
+  //       },
+  //       {
+  //         title: ". Excellence ",
+  //         text: " We focus on high-quality results that make a real impact.",
+  //       },
+  //       {
+  //         title: ". Collaboration ",
+  //         text: "We believe in teamwork, combining ideas to create the best solutions.",
+  //       },
+  //     ],
+  //   },
+  // ];
+
   const AllCard = [
     {
       id: "111",
       name: "Our Vision",
       img: "/images/imgas AboutUs/imgCard-1.svg",
-      dec: "To be a leading digital solutions provider, recognized for our commitment to quality, innovation, and client success. We envision a future where Depo web continues to set new standards in the digital industry, helping businesses around the world reach their full potential through cutting-edge technology.",
+      dec: [
+        {
+          text: "• Become a leading digital solutions provider recognized for commitment to quality, innovation, and client success.",
+        },
+        {
+          text: "• Envision a future where Depo Web sets new standards in the digital industry.",
+        },
+        {
+          text: "• Help businesses worldwide reach their full potential through cutting-edge technology.",
+        },
+      ],
     },
     {
       id: "222",
       name: "Our Mission",
       img: "/images/imgas AboutUs/imgCard-2.svg",
-      dec: "Our mission is to deliver customized, user-centered digital solutions that empower businesses to thrive in a rapidly evolving digital landscape. We are dedicated to excellence in every project, focusing on continuous improvement, collaboration, and integrity. At Depo web, we aim to bring our clients' visions to life through seamless and innovative digital experiences.",
+      dec: [
+        {
+          text: "• Deliver customized, user-centered digital solutions that empower businesses in a rapidly evolving digital landscape.",
+        },
+        {
+          text: "• Commit to excellence in every project, with a focus on continuous improvement, collaboration, and integrity.",
+        },
+        {
+          text: "• Bring clients' visions to life through seamless and innovative digital experiences.",
+        },
+        {
+          text: "• Aim to support business growth through digital innovation and tailored solutions.",
+        },
+      ],
     },
     {
       id: "333",
@@ -18,23 +83,23 @@ export default function Card_AboutUs() {
       img: "/images/imgas AboutUs/imgCard-3.svg",
       dec: [
         {
-          title: ". Innovation ",
+          title: "• Innovation :",
           text: " We embrace creativity and stay ahead of industry trends to deliver cutting-edge solutions.",
         },
         {
-          title: ". Client-Centricity ",
+          title: "• Client-Centricity :",
           text: " We prioritize our clients' needs, tailoring solutions to help them succeed.",
         },
         {
-          title: ". Integrity ",
+          title: "• Integrity :",
           text: " We operate with transparency and honesty in every aspect of our work.",
         },
         {
-          title: ". Excellence ",
+          title: "• Excellence :",
           text: " We focus on high-quality results that make a real impact.",
         },
         {
-          title: ". Collaboration ",
+          title: "• Collaboration :",
           text: "We believe in teamwork, combining ideas to create the best solutions.",
         },
       ],
@@ -61,13 +126,11 @@ export default function Card_AboutUs() {
               <p className="text-[24px] md:text-[32px] leading-[30px] md:leading-[38.73px] font-bold">
                 {item.name}
               </p>
-              <div className="mt-5 md:mt-0 pe-2">
+              <div className="mt-5 pe-2">
                 {Array.isArray(item.dec) ? (
                   item.dec.map((subItem, index) => (
                     <p key={index} className="mb-2">
-                      <span className="font-bold">
-                      {subItem.title}:
-                      </span>
+                      <span className="font-bold ">{subItem.title} </span>
                       {subItem.text}
                     </p>
                   ))
