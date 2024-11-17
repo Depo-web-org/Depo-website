@@ -75,7 +75,7 @@ export default function ServicesContainer() {
       {servicesData.map((service) => (
         <div
           key={service.title}
-          className="col-span-12 md:col-span-6 py-4 lg:col-span-3"
+          className="col-span-12  md:col-span-6 py-4 lg:col-span-3"
         >
           <ServiceItem
             title={service.title}

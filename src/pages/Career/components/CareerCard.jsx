@@ -29,7 +29,7 @@ export default function CareerCard({ title, subtitle, index }) {
       </div>
 
       {/* Modal */}
-      {isModalOpen && <CareerModal onClose={handleModalToggle} />}
+      {isModalOpen && <CareerModal title={title} onClose={handleModalToggle} />}
     </div>
   );
 }
