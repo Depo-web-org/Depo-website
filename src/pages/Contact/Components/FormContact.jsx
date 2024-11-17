@@ -16,7 +16,7 @@ const FormContact = () => {
   const sendDataToBackend = async (data) => {
     setIsLoading(true);
     await axios
-      .post("https://dev.depowebeg.com/api/api/for", data, {
+      .post("https://dev.depowebeg.com/api/api/form", data, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -34,7 +34,6 @@ const FormContact = () => {
           setResponse(null);
         }, 5000);
       });
-    console.log(response.data);
   };
   const disableCopyPasteCut = (e) => {
     e.preventDefault();
