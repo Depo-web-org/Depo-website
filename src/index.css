@@ -88,3 +88,6 @@
 }
 
 
+#user-phone:focus-visible{
+  outline: none;
+}
