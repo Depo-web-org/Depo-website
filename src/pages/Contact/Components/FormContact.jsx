@@ -105,11 +105,11 @@ const FormContact = () => {
             })}
             id="user-phone"
             type="text"
-            placeholder="+20 123456789"
+            placeholder="0123456789"
             className="bg-white rounded-[5px] my-[6px] active:outline-primary outline-primary placeholder:text-gray-400 p-[10px] text-gray-400"
           />
           {errors.phone && (
-            <p className="text-red-500">{errors.phone.message}</p>
+            <p className="text-red-500">{errors.phone.message&& 'Please enter numbers only, with no spaces or symbols.'}</p>
           )}
         </label>
 
