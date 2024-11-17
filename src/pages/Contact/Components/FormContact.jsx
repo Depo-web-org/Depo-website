@@ -1,7 +1,10 @@
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useState } from "react";
+import 'react-phone-number-input/style.css';
+import PhoneInput from 'react-phone-number-input';
 import LoadingAnimation from "./loadingAnimation";
+
 const FormContact = () => {
   const {
     register,
@@ -11,12 +14,15 @@ const FormContact = () => {
   } = useForm();
   const [isLoading, setIsLoading] = useState(false);
   const [response, setResponse] = useState();
-  const [value, setValue] = useState();
-  const valueLength = value?.length || 0;
+  const [phoneValue, setPhoneValue] = useState(); 
+  const [messageValue, setMessageValue] = useState('');
+  const messageLength = messageValue.length || 0;
+
   const sendDataToBackend = async (data) => {
     setIsLoading(true);
+    const formData = { ...data, phone: phoneValue }; 
     await axios
-      .post("https://dev.depowebeg.com/api/api/form", data, {
+      .post("https://dev.depowebeg.com/api/api/form", formData, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -24,10 +30,10 @@ const FormContact = () => {
       .then((response) => setResponse(response.data))
       .then(() => {
         reset();
-        setValue('');
-      }
-    )
-      .catch(() =>  setResponse('Something went wrong, please try again'))
+        setPhoneValue('');
+        setMessageValue('');
+      })
+      .catch(() => setResponse('Something went wrong, please try again'))
       .finally(() => {
         setIsLoading(false);
         setTimeout(() => {
@@ -35,14 +41,15 @@ const FormContact = () => {
         }, 5000);
       });
   };
+
   const disableCopyPasteCut = (e) => {
     e.preventDefault();
   };
 
   return (
-    <section className="pt-4 text-white lg:mr-16 ">
+    <section className="pt-4 text-white lg:mr-16">
       <form onSubmit={handleSubmit(sendDataToBackend)} action="submit">
-        <div className="flex  gap-[20px] lg:flex-row flex-col flex-wrap xl:flex-nowrap lg:gap-y-16 ">
+        <div className="flex gap-[20px] lg:flex-row flex-col flex-wrap xl:flex-nowrap lg:gap-y-16">
           <label
             htmlFor="name"
             className="h-10 w-full cursor-pointer text-slate-100 font-medium flex flex-col"
@@ -61,9 +68,7 @@ const FormContact = () => {
               placeholder="Full Name"
               className="bg-white rounded-[5px] my-[6px] active:outline-primary outline-primary placeholder:text-gray-400 p-[10px] text-gray-400"
             />
-            {errors.name && (
-              <p className="text-red-500 ">{errors.name.message}</p>
-            )}
+            {errors.name && <p className="text-red-500">{errors.name.message}</p>}
           </label>
 
           <label
@@ -84,9 +89,7 @@ const FormContact = () => {
               placeholder="Example@gmail.com"
               className="bg-white rounded-[5px] my-[6px] active:outline-primary outline-primary placeholder:text-gray-400 p-[10px] text-gray-400"
             />
-            {errors.email && (
-              <p className="text-red-500">{errors.email.message}</p>
-            )}
+            {errors.email && <p className="text-red-500">{errors.email.message}</p>}
           </label>
         </div>
 
@@ -95,27 +98,25 @@ const FormContact = () => {
           className="h-10 w-full cursor-pointer mt-16 text-slate-100 font-medium flex flex-col"
         >
           Phone Number
-          <input
-            {...register("phone", {
-              required: "Phone number is required",
-              pattern: {
-                value: /^\d{11,15}$/,
-                message: "Invalid phone number",
-              },
-            })}
-            id="user-phone"
-            type="text"
-            placeholder="0123456789"
-            className="bg-white rounded-[5px] my-[6px] active:outline-primary outline-primary placeholder:text-gray-400 p-[10px] text-gray-400"
-          />
+  
+          <PhoneInput
+  international
+  id="user-phone"
+  placeholder="Enter phone number"
+  value={phoneValue}
+  onChange={setPhoneValue}
+  defaultCountry="EG" 
+  className="bg-white rounded-[5px] my-[6px] active:outline-primary outline-primary placeholder:text-gray-400 p-[10px] text-gray-400 "/>
           {errors.phone && (
-            <p className="text-red-500">{errors.phone.message&& 'Please enter numbers only, with no spaces or symbols.'}</p>
+            <p className="text-red-500">
+              {errors.phone.message && "Please enter a valid phone number."}
+            </p>
           )}
         </label>
 
         <label
           htmlFor="user-message"
-          className="w-full cursor-pointer mt-16 text-slate-100 font-medium flex flex-col "
+          className="w-full cursor-pointer mt-16 text-slate-100 font-medium flex flex-col"
         >
           Your Message
           <textarea
@@ -124,27 +125,24 @@ const FormContact = () => {
             })}
             id="user-message"
             className={`h-60 ${
-              valueLength >= 1200
-                ? "active:outline-red-500 outline-red-500 "
+              messageLength >= 1200
+                ? "active:outline-red-500 outline-red-500"
                 : "active:outline-primary outline-primary"
-            } resize-none scrollbar-hide  placeholder:text-gray-400 my-[6px] rounded-[5px] p-[10px] text-gray-400`}
+            } resize-none scrollbar-hide placeholder:text-gray-400 my-[6px] rounded-[5px] p-[10px] text-gray-400`}
             placeholder="Write your inquiry"
-            value={value}
+            value={messageValue}
             onChange={(e) =>
-              e.target.value.length <= 1200 && setValue(e.target.value)
+              e.target.value.length <= 1200 && setMessageValue(e.target.value)
             }
             onCopy={disableCopyPasteCut}
             onPaste={disableCopyPasteCut}
             onCut={disableCopyPasteCut}
           ></textarea>
-          {errors.message && (
-            <p className="text-red-500">{errors.message.message}</p>
-          )}
+          {errors.message && <p className="text-red-500">{errors.message.message}</p>}
           <span className="text-right">
-            {" "}
-            {valueLength >= 1200
-              ? `1200 character  used.`
-              : `${valueLength} / 1200 character `}
+            {messageLength >= 1200
+              ? `1200 characters used.`
+              : `${messageLength} / 1200 characters`}
           </span>
         </label>
 
@@ -152,15 +150,13 @@ const FormContact = () => {
         <button
           type="submit"
           disabled={isLoading}
-          className="bg-primary w-48 mt-4 rounded-[5px] text-white px-8 py-4 font-bold transition-colors ease-out duration-300"
+          className="bg-primary w-48 mt-4 rounded-[5px] text-white px-8 py-4 font-bold transition-colors ease-out duration-300 hover:bg-primary-hover"
         >
           {isLoading ? <LoadingAnimation /> : "Confirm"}
         </button>
       </form>
 
-      {response != null && (
-        <p className=" mt-2 text-white font-bold ">{response}</p>
-      )}
+      {response != null && <p className="mt-2 text-white font-bold">{response}</p>}
     </section>
   );
 };
