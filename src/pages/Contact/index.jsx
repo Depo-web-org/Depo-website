@@ -67,7 +67,7 @@ const Contact = () => {
                     <SiGmail className="text-secondary" />
                   </span>
                   <a target="_blank"className="hover:text-secondary  transition-all hover:underline duration-300"href="mailto:info@depowebeg.com">
-                  info@underline
+                  info@depowebeg.com
                   </a>
                 </p>
               </div>
