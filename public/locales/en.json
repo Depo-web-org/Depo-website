@@ -1,0 +1,52 @@
+{
+  "services": {
+    "title": "What do we have to offer",
+    "header-title": "Our Services",
+    "header-content": "we specialize in delivering high-quality digital solutions tailored to meet modern business needs.",
+    "button-title": "Learn More About Our Solutions",
+    "web-title": "Web Application",
+    "web-content": "We create engaging web apps designed to captivate a global audience using React and Next js for Front-end and Django for Back-end.",
+    "application-title": "Application Development",
+    "application-content": "Custom mobile and desktop apps to elevate your business’s digital presence using Flutter framework.",
+    "website-title": "Website Development",
+    "website-content": "Well-designed websites that boost trust, user engagement, and lead generation.",
+    "games-title": "Games Development",
+    "games-content": "Combining creativity and technology to create engaging games across platforms.",
+    "financial-title": "Financial Analysis Systems",
+    "financial-content": "Simplify financial analysis with our reliable accounting management tools.",
+    "database-title": "Integrated Database Systems",
+    "database-content": "Efficiently manage, store, and analyze data with our database solutions.",
+    "consulting-title": "Consulting and Study Centers",
+    "consulting-content": "Consulting and research for informed decision-making in information and communications.",
+    "marketing-title": "Digital Marketing Solutions",
+    "marketing-content": "Comprehensive digital marketing to maximize your brand’s reach and impact.",
+    "career-title": "Career Development Coaching",
+    "career-content": "Coaching in key areas like security, testing, analytics, and UX design.",
+    "saas-title": "SaaS Development",
+    "saas-content": "Tailored SaaS solutions for efficient, cloud-based business operations.",
+    "ux-title": "User Experience Design",
+    "ux-content": "Crafting intuitive, visually appealing interfaces for an exceptional user experience."
+  },
+
+  "career": {
+    "title": "Join Our Team"
+  },
+  "no-career": {
+    "header-title": "There are no jobs available right now"
+  },
+  "footer": {
+    "address-title": "Address",
+    "address-content": "Zahraa Al Maadi, Sama Towers, Building No. 9, 9th Floor, Apartment No. 93",
+    "support-title": "Support",
+    "support-about": "About Us",
+    "support-contact": "Contact Us",
+    "support-faq": "FAQs",
+    "services-title": "Services",
+    "services-web": "Web Development",
+    "services-apps": "Application Development",
+    "services-games": "Games Development",
+    "services-database": "Integrated Database systems",
+    "map-button": "Get Directions",
+    "rights-title": " 2024 Depo Web - All rights reserved"
+  }
+}
