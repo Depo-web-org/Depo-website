@@ -25,7 +25,7 @@ export default function Career() {
         <meta name="keywords" content={t("helmet.career.keywords")} />
       </Helmet>
 
-      <PagesBg title="Join Our Team" />
+      <PagesBg title={t("career.title")} />
 
       <div className=" gradient-bg min-h-screen px-[54px] md:px-[104px] pt-[40px]">
         {careerArray.length === 0 ? (
