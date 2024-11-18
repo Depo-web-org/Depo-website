@@ -14,7 +14,7 @@ function LanguageSwitcher() {
 
   return (
     <button
-      className="text-secondary bg-transparent font-bold text-[24px] z-40 leading-[29.05px] "
+      className="text-secondary  font-bold text-[24px] z-40 leading-[29.05px] "
       onClick={toggleLanguage}
     >
       {i18n.language === "en" ? "En" : "عربي"}

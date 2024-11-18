@@ -8,12 +8,9 @@ const CenterNav = ({ navItems }) => {
     <>
       <div className="hidden lg:flex  h-full  lg:px-[104px] mx-auto justify-between py-2 px-8   ">
         <div className="h-full  w-1/4 ">
-          <div
-            dir="ltr"
-            className="flex items-center h-full w-1/4 gap-1 xl:gap-[8px]  "
-          >
+          <div dir="ltr" className="flex items-center h-full w-1/4 gap-1  ">
             <img src="/images/lOGO.svg" alt="Depo Web" />
-            <div className="w-[50px] h-[49]  p-[10px] bg">
+            <div className="w-[50px] h-[49]  ">
               <LanguageSwitcher />
             </div>
           </div>
