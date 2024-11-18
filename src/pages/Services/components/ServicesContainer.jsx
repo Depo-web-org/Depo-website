@@ -1,84 +1,77 @@
+import { useTranslation } from "react-i18next";
 import ServiceItem from "./ServiceItem";
 
-const servicesData = [
-  {
-    title: "Web Application",
-    description:
-      "We create engaging web apps designed to captivate a global audience using React and Next js for Front-end and Django for Back-end.",
-    image: "images/services/web.webp",
-  },
-  {
-    title: "Application Development",
-    description:
-      "Custom mobile and desktop apps to elevate your business’s digital presence using Flutter framework.",
-    image: "images/services/application.webp",
-  },
-  {
-    title: "Website Development",
-    description:
-      "Well-designed websites that boost trust, user engagement, and lead generation.",
-    image: "images/services/website.webp",
-  },
-  {
-    title: "Games Development",
-    description:
-      "Combining creativity and technology to create engaging games across platforms.",
-    image: "images/services/game.webp",
-  },
-  {
-    title: "Financial Analysis Systems",
-    description:
-      "Simplify financial analysis with our reliable accounting management tools.",
-    image: "images/services/financial.webp",
-  },
-  {
-    title: "Integrated Database Systems",
-    description:
-      "Efficiently manage, store, and analyze data with our database solutions.",
-    image: "images/services/database.webp",
-  },
-  {
-    title: "Consulting and Study Centers",
-    description:
-      "Consulting and research for informed decision-making in information and communications.",
-    image: "images/services/consulting.webp",
-  },
-  {
-    title: "Digital Marketing Solutions",
-    description:
-      "Comprehensive digital marketing to maximize your brand’s reach and impact.",
-    image: "images/services/markting.webp",
-  },
-  {
-    title: "Career Development Coaching",
-    description:
-      "Coaching in key areas like security, testing, analytics, and UX design.",
-    image: "images/services/career.webp",
-  },
-  {
-    title: "SaaS Development",
-    description:
-      "Tailored SaaS solutions for efficient, cloud-based business operations.",
-    image: "images/services/sass.webp",
-  },
-  {
-    title: "User Experience Design",
-    description:
-      "Crafting intuitive, visually appealing interfaces for an exceptional user experience.",
-    image: "images/services/user.webp",
-  },
-];
-
 export default function ServicesContainer() {
+  const { t } = useTranslation();
+
+  // Add translation keys directly to the servicesData array
+  const servicesData = [
+    {
+      titleKey: "services.web-title",
+      description: t("services.web-content"),
+      image: "images/services/web.webp",
+    },
+    {
+      titleKey: "services.application-title",
+      description: t("services.application-content"),
+      image: "images/services/application.webp",
+    },
+    {
+      titleKey: "services.website-title",
+      description: t("services.website-content"),
+      image: "images/services/website.webp",
+    },
+    {
+      titleKey: "services.games-title",
+      description: t("services.games-content"),
+      image: "images/services/game.webp",
+    },
+    {
+      titleKey: "services.financial-title",
+      description: t("services.financial-content"),
+      image: "images/services/financial.webp",
+    },
+    {
+      titleKey: "services.database-title",
+      description: t("services.database-content"),
+      image: "images/services/database.webp",
+    },
+    {
+      titleKey: "services.consulting-title",
+      description: t("services.consulting-content"),
+      image: "images/services/consulting.webp",
+    },
+    {
+      titleKey: "services.marketing-title",
+      description: t("services.marketing-content"),
+      image: "images/services/markting.webp",
+    },
+    {
+      titleKey: "services.career-title",
+      description: t("services.career-content"),
+      image: "images/services/career.webp",
+    },
+    {
+      titleKey: "services.saas-title",
+      description: t("services.saas-content"),
+      image: "images/services/sass.webp",
+    },
+    {
+      titleKey: "services.ux-title",
+      description: t("services.ux-content"),
+      image: "images/services/user.webp",
+    },
+  ];
+
   return (
     <div className="grid grid-cols-12 pt-2 gap-[10px] md:gap-[20px]">
       {servicesData.map((service) => (
         <div
-          key={service.title}
-          className="col-span-12  md:col-span-6 py-4 lg:col-span-3"
+          key={service.titleKey}
+          className="col-span-12 md:col-span-6 py-4 lg:col-span-3"
         >
           <ServiceItem
-            title={service.title}
+            title={t(service.titleKey)} // Dynamically translate the title
             description={service.description}
             image={service.image}
           />

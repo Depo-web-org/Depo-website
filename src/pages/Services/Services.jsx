@@ -3,9 +3,12 @@ import PagesBg from "../../components/common/PagesBg";
 import ServicesContainer from "./components/ServicesContainer";
 import Summary from "./components/Summary";
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function Services() {
   useEffect(() => window.scroll(0, 0), []);
+  const { t } = useTranslation();
+
   return (
     <>
       <Helmet>
@@ -22,7 +25,7 @@ export default function Services() {
         />
       </Helmet>
 
-      <PagesBg title={"What do we have to offer"} />
+      <PagesBg title={t("services.title")} />
       <div className="min-h-screen gradient-bg px-4 pt-20 lg:pt-0 md:px-[104px] ">
         <Summary />
         <ServicesContainer />
