@@ -12,17 +12,9 @@ export default function Services() {
   return (
     <>
       <Helmet>
-        <title>
-          Our Services | Comprehensive Digital Solutions by Depo Web
-        </title>
-        <meta
-          name="description"
-          content="Depo Web offers a range of services including web development, mobile app creation, and SEO optimization to ensure your digital presence stands out and performs."
-        />
-        <meta
-          name="keywords"
-          content="Depo Web, services, web development, app creation, SEO optimization, digital solutions"
-        />
+        <title>{t("helmet.services.title")}</title>
+        <meta name="description" content={t("helmet.services.description")} />
+        <meta name="keywords" content={t("helmet.services.keywords")} />
       </Helmet>
 
       <PagesBg title={t("services.title")} />

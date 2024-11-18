@@ -3,6 +3,7 @@ import PagesBg from "../../components/common/PagesBg";
 import CareerContainer from "./components/CareerContainer";
 import NoCareer from "./components/NoCareer";
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 const careerArray = [
   // { title: "Front End Developer", subtitle: "Junior Frontend Developer" },
@@ -14,19 +15,14 @@ const careerArray = [
 ];
 export default function Career() {
   useEffect(() => window.scroll(0, 0), []);
+  const { t } = useTranslation();
 
   return (
     <>
       <Helmet>
-        <title>Careers at Depo Web | Join Our Innovative Team</title>
-        <meta
-          name="description"
-          content="Explore career opportunities at Depo Web, where you can work with a team of skilled developers and creative thinkers to build impactful digital solutions."
-        />
-        <meta
-          name="keywords"
-          content="Depo Web careers, join our team, digital development jobs, innovation, skilled developers"
-        />
+        <title>{t("helmet.career.title")}</title>
+        <meta name="description" content={t("helmet.career.description")} />
+        <meta name="keywords" content={t("helmet.career.keywords")} />
       </Helmet>
 
       <PagesBg title="Join Our Team" />

@@ -27,7 +27,6 @@
     "ux-title": "User Experience Design",
     "ux-content": "Crafting intuitive, visually appealing interfaces for an exceptional user experience."
   },
-
   "career": {
     "title": "Join Our Team"
   },
@@ -48,5 +47,32 @@
     "services-database": "Integrated Database systems",
     "map-button": "Get Directions",
     "rights-title": " 2024 Depo Web - All rights reserved"
+  },
+  "helmet": {
+    "home": {
+      "title": "Depo Web | Transforming Ideas into Digital Solutions",
+      "description": "Depo Web specializes in innovative website and application development with a focus on achieving top-tier SEO. Our expert team delivers impactful, scalable solutions to drive your business growth.",
+      "keywords": "Depo Web, digital solutions, website development, SEO, scalable applications"
+    },
+    "about": {
+      "title": "About Depo Web | Empowering Businesses with Innovation",
+      "description": "Learn more about Depo Web's mission and values. We are dedicated to providing top-quality digital development services, empowering businesses with creative, impactful solutions.",
+      "keywords": "Depo Web, about us, digital development, business empowerment, scalable solutions"
+    },
+    "career": {
+      "title": "Careers at Depo Web | Join Our Innovative Team",
+      "description": "Explore career opportunities at Depo Web, where you can work with a team of skilled developers and creative thinkers to build impactful digital solutions.",
+      "keywords": "Depo Web careers, join our team, digital development jobs, innovation, skilled developers"
+    },
+    "services": {
+      "title": "Our Services | Comprehensive Digital Solutions by Depo Web",
+      "description": "Depo Web offers a range of services including web development, mobile app creation, and SEO optimization to ensure your digital presence stands out and performs.",
+      "keywords": "Depo Web, services, web development, app creation, SEO optimization, digital solutions"
+    },
+    "contact": {
+      "title": "Contact Depo Web | Let’s Build Your Digital Presence",
+      "description": "Get in touch with Depo Web for expert website and app development services. We’re here to help you create a digital presence that drives growth and success.",
+      "keywords": "Depo Web contact, website development, app development, digital solutions, growth"
+    }
   }
 }

@@ -5,23 +5,18 @@ import { SiGmail } from "react-icons/si";
 import PagesBg from "../../components/common/PagesBg";
 import { Helmet } from "react-helmet-async";
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
   useEffect(() => window.scroll(0, 0), []);
+  const { t } = useTranslation();
 
   return (
     <>
       <Helmet>
-        
-        <title>Contact Depo Web | Let’s Build Your Digital Presence</title>
-        <meta
-          name="description"
-          content="Get in touch with Depo Web for expert website and app development services. We’re here to help you create a digital presence that drives growth and success."
-        />
-        <meta
-          name="keywords"
-          content="Depo Web contact, website development, app development, digital solutions, growth"
-        />
+        <title>{t("helmet.contact.title")}</title>
+        <meta name="description" content={t("helmet.contact.description")} />
+        <meta name="keywords" content={t("helmet.contact.keywords")} />
       </Helmet>
 
       <section className="gradient-bg min-h-screen ">
@@ -56,7 +51,11 @@ const Contact = () => {
                   <span className="text-3xl">
                     <FaPhoneAlt className="text-secondary" />
                   </span>
-                  <a target="_blank"className="hover:text-secondary  transition-all hover:underline duration-300" href="tel:+20 1500919948 ">
+                  <a
+                    target="_blank"
+                    className="hover:text-secondary  transition-all hover:underline duration-300"
+                    href="tel:+20 1500919948 "
+                  >
                     +20 1500919948
                   </a>
                 </p>
@@ -66,8 +65,12 @@ const Contact = () => {
                   <span className="text-3xl">
                     <SiGmail className="text-secondary" />
                   </span>
-                  <a target="_blank"className="hover:text-secondary  transition-all hover:underline duration-300"href="mailto:info@depowebeg.com">
-                  info@depowebeg.com
+                  <a
+                    target="_blank"
+                    className="hover:text-secondary  transition-all hover:underline duration-300"
+                    href="mailto:info@depowebeg.com"
+                  >
+                    info@depowebeg.com
                   </a>
                 </p>
               </div>
@@ -78,7 +81,8 @@ const Contact = () => {
                   </span>
                   <a
                     target="_blank"
-                   className="hover:text-secondary transition-all hover:underline duration-300" href="https://www.google.com/maps/dir/?api=1&destination=29.982003604232442,31.34399201469942"
+                    className="hover:text-secondary transition-all hover:underline duration-300"
+                    href="https://www.google.com/maps/dir/?api=1&destination=29.982003604232442,31.34399201469942"
                   >
                     Zahraa Al Maadi, Sama Towers, Building No. 9, 9th Floor,
                     Apartment No. 93
