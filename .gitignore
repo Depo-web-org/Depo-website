@@ -1,3 +1,6 @@
 # Ignore .htaccess file
 .htaccess
-.dist.zip
+# Ignore .dist.zip file
+dist.zip
+# Ignore .dist file
+dist
