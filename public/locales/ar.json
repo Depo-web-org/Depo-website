@@ -57,10 +57,11 @@
       "phone-require":"رقم الهاتف غير صحيح",
       "textarea": "رسالتك",
       "textarea-placeholder": "رسالتك",
-      "textarea-numberOfWords": "أستخدمت 1200 كلمه ",
-      "textarea-numberUsed": "/ 1200 كلمة ",
+      "textarea-numberOfWords": "أستخدمت 500 كلمه ",
+      "textarea-numberUsed": "/ 500 كلمة ",
       "textarea-require":"رسالتك غير صحيحة",
-      "button": "تأكيد"
+      "button": "تأكيد",
+      "public-error":" حدث خطأ يرجي المحاولة مره اخري"
     },
     "Right Side": {
       "h3": "للاستفسارات المباشرة",
