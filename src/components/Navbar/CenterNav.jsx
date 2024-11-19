@@ -4,8 +4,6 @@ import Button from "../common/Button";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 const CenterNav = ({ navItems }) => {
-  console.log();
-  
   return (
     <>
       <div className="hidden lg:flex  h-full  lg:px-[104px] mx-auto justify-between py-2 px-8   ">
