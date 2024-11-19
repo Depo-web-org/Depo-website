@@ -12,7 +12,7 @@ export default function FAQs() {
     {
       id: "ddd",
       name: t("FAQsSection.Questions.0.question"),
-      dec: t("FAQsSection.Questions.0.answer"), // تصحيح الحقل هنا إلى "dec" بدلاً من "des"
+      dec: t("FAQsSection.Questions.0.answer"), 
     },
     {
       id: "ffff",
