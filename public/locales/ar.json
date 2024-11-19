@@ -31,9 +31,9 @@
     "Game": "تصميم اﻻلعاب",
     "Accounting": "نظام المحاسبة والتحليل المالي ",
     "UIUX": "تصميم واجهة المستخدم وتجربة المستخدم",
-    "Testing": "أختبار البرمجيات",
+    "Testing": "اختبار البرمجيات",
     "Mobile": "تطوير تطبيقات الهواتف المحمولة",
-    "swipe-text": "أسحب لرؤية كافة الخدمات"
+    "swipe-text": "اسحب لرؤية كافة الخدمات"
   },
   "NotFound": {
     "head-title": " عذراً !",
@@ -48,14 +48,18 @@
       "p": "املأ النموذج وسنفعل كل ما في وسعنا لمساعدتك",
       "name": "اﻵسم",
       "name-placeholder": "اﻵسم الكامل",
+      "name-require":"اﻻسم غير صحيح",
       "email": "البريد الإلكتروني",
       "email-placeholder": "البريد الإلكتروني",
+      "email-require":"البريد الإلكتروني غير صحيح",
       "phone": "رقم الهاتف",
       "phone-placeholder": "أكتب رقم هاتفك",
+      "phone-require":"رقم الهاتف غير صحيح",
       "textarea": "رسالتك",
       "textarea-placeholder": "رسالتك",
       "textarea-numberOfWords": "أستخدمت 1200 كلمه ",
       "textarea-numberUsed": "/ 1200 كلمة ",
+      "textarea-require":"رسالتك غير صحيحة",
       "button": "تأكيد"
     },
     "Right Side": {
