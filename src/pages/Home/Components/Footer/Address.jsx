@@ -29,6 +29,7 @@ export default function Address() {
         <FaPhoneAlt className="text-primary min-w-[14px] min-h-[19px]" />
         <span>
           <a
+            dir="ltr"
             target="_blank"
             rel="noopener noreferrer"
             href="tel:+201500919948"
