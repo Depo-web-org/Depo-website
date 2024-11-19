@@ -21,7 +21,7 @@ export default function Map() {
           style={{ border: 0 }}
         ></iframe>
       </div>
-      <div dir="ltr" className=" flex justify-start lg:justify-center">
+      <div className=" flex justify-start lg:justify-center">
         <Button
           title={t("footer.map-button")}
           style="w-[260px]"
