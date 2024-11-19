@@ -19,18 +19,17 @@ const Contact = () => {
         <meta name="keywords" content={t("helmet.contact.keywords")} />
       </Helmet>
 
-      <section className="gradient-bg min-h-screen ">
+      <section dir="ltr" className="gradient-bg min-h-screen ">
         {/* Header Back Ground */}
-        <PagesBg title="Got a Question?" />
-        <div className="pt-20  lg:pt-9 px-4 lg:px-[104px] grid grid-cols-12 pb-32">
+        <PagesBg title={t("Contact.pageInfo")} />
+        <div className="pt-20 lg:pt-9 px-4 lg:px-[104px] grid grid-cols-12 pb-32">
           {/* Left Side */}
-
-          <div className=" col-span-12 lg:col-span-7    lg:border-r lg:border-white">
+          <div className="col-span-12 lg:col-span-7 lg:border-r lg:border-white lg:pr-16">
             <div className="text-white">
-              <h3 className=" font-bold text-[32px]">Need Help ?</h3>
-              <p className="lg:text-xl italic lg:mr-16">
-                Fill out the form and we will do all we can to help you
-              </p>
+              <h3 className="font-bold text-[32px]">
+                {t("Contact.Left Side.h3")}
+              </h3>
+              <p className="lg:text-xl italic ">{t("Contact.Left Side.p")}</p>
             </div>
 
             {/* form */}
@@ -38,26 +37,49 @@ const Contact = () => {
           </div>
 
           {/* Right Side */}
-          <div className="col-span-12 lg:col-span-5  lg:ml-10 xl:ml-14 my-14 lg:my-0 hidden lg:block   ">
+          <div className="col-span-12 lg:col-span-5 lg:ml-10 xl:ml-14 my-14 lg:my-0 hidden lg:block text-dir">
             <div className="text-white">
-              <h3 className=" font-bold text-[32px]">For Direct inquiries</h3>
-              <p className="text-xl italic">
-                Feel free to contact us through the following
-              </p>
+              <h3 className="font-bold text-[32px]">
+                {t("Contact.Right Side.h3")}
+              </h3>
+              <p className="text-xl italic">{t("Contact.Right Side.p")}</p>
             </div>
             <div className="flex flex-col mt-6 gap-y-10 text-white text-xl ">
               <div>
-                <p className="flex items-center gap-x-2">
+                <p className="flex items-start gap-x-2">
                   <span className="text-3xl">
                     <FaPhoneAlt className="text-secondary" />
                   </span>
-                  <a
-                    target="_blank"
-                    className="hover:text-secondary  transition-all hover:underline duration-300"
-                    href="tel:+20 1500919948 "
-                  >
-                    +20 1500919948
-                  </a>
+                  <div dir="ltr" className="flex flex-col items-center ">
+                    <a
+                      target="_blank"
+                      className="hover:text-secondary transition-all hover:underline duration-300"
+                      href="tel:+20 1500919948"
+                    >
+                      +20 1500919948
+                    </a>
+                    <a
+                      target="_blank"
+                      className="hover:text-secondary transition-all hover:underline duration-300"
+                      href="tel:+20 1500721994"
+                    >
+                      +20 1500721994
+                    </a>
+                    <a
+                      target="_blank"
+                      className="hover:text-secondary transition-all hover:underline duration-300"
+                      href="tel:+20 1508199424"
+                    >
+                      +20 1508199424
+                    </a>
+                    <a
+                      target="_blank"
+                      className="hover:text-secondary transition-all hover:underline duration-300 -ml-3"
+                      href="tel:+20 1501111994 "
+                    >
+                      +20 1501111994
+                    </a>
+                  </div>
                 </p>
               </div>
               <div>
@@ -67,7 +89,7 @@ const Contact = () => {
                   </span>
                   <a
                     target="_blank"
-                    className="hover:text-secondary  transition-all hover:underline duration-300"
+                    className="hover:text-secondary transition-all hover:underline duration-300"
                     href="mailto:info@depowebeg.com"
                   >
                     info@depowebeg.com
@@ -77,15 +99,14 @@ const Contact = () => {
               <div>
                 <p className="flex items-start gap-x-2">
                   <span className="text-3xl">
-                    <IoLocationSharp className="text-secondary " />
+                    <IoLocationSharp className="text-secondary" />
                   </span>
                   <a
                     target="_blank"
                     className="hover:text-secondary transition-all hover:underline duration-300"
                     href="https://www.google.com/maps/dir/?api=1&destination=29.982003604232442,31.34399201469942"
                   >
-                    Zahraa Al Maadi, Sama Towers, Building No. 9, 9th Floor,
-                    Apartment No. 93
+                    {t("Contact.Right Side.Location")}
                   </a>
                 </p>
               </div>

@@ -7,6 +7,7 @@ import OurServices from "./Components/OurServices/OurServices";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
+
 const Home = () => {
   useEffect(() => window.scroll(0, 0), []);
   const { t } = useTranslation();
