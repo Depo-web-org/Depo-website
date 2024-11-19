@@ -1,9 +1,11 @@
 import { IoMdContact } from "react-icons/io";
 import { FaQuestionCircle, FaInfoCircle } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export default function Support() {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const handleScrollToFAQs = () => {
     navigate("/");
@@ -15,7 +17,9 @@ export default function Support() {
 
   return (
     <div className="col-span-12 md:col-span-6 lg:col-span-2">
-      <h3 className="font-semibold text-lg mb-4">Support</h3>
+      <h3 className="font-semibold text-lg mb-4">
+        {t("footer.support-title")}
+      </h3>
       <ul className="space-y-4">
         <li>
           <Link
@@ -26,7 +30,7 @@ export default function Support() {
               <div className="text-primary flex justify-center items-center ">
                 <FaInfoCircle className="min-w-[19px] min-h-[19px]" />
               </div>
-              <span>About Us</span>
+              <span>{t("footer.support-about")}</span>
             </div>
           </Link>
         </li>
@@ -39,7 +43,7 @@ export default function Support() {
               <div className="text-primary flex justify-center items-center ">
                 <IoMdContact className="min-w-[19px] min-h-[19px]" />
               </div>
-              <span>Contact Us</span>
+              <span>{t("footer.support-contact")}</span>
             </div>
           </Link>
         </li>
@@ -52,7 +56,7 @@ export default function Support() {
               <div className="text-primary flex justify-center items-center ">
                 <FaQuestionCircle className="min-w-[19px] min-h-[19px]" />
               </div>
-              <span>FAQs</span>
+              <span>{t("footer.support-faq")}</span>
             </div>
           </button>
         </li>

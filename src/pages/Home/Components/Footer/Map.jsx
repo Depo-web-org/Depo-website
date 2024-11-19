@@ -1,7 +1,9 @@
 import { FaArrowRight } from "react-icons/fa";
 import Button from "../../../../components/common/Button";
+import { useTranslation } from "react-i18next";
 
 export default function Map() {
+  const { t } = useTranslation();
   const mapsUrl =
     "https://www.google.com/maps/dir/?api=1&destination=29.982003604232442,31.34399201469942";
 
@@ -19,9 +21,9 @@ export default function Map() {
           style={{ border: 0 }}
         ></iframe>
       </div>
-      <div className=" flex justify-start lg:justify-center">
+      <div dir="ltr" className=" flex justify-start lg:justify-center">
         <Button
-          title="Get Directions"
+          title={t("footer.map-button")}
           style="w-[260px]"
           onClick={() => window.open(mapsUrl, "_blank")}
           className="h-[36px] gap-[10px] rounded-tl-[5px]  rounded-tr-none rounded-br-none rounded-bl-none bg-primary hover:bg-primary-hover text-white font-semibold flex items-center justify-center "
