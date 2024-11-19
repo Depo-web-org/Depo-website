@@ -48,5 +48,94 @@
     "services-database": "Integrated Database systems",
     "map-button": "Get Directions",
     "rights-title": " 2024 Depo Web - All rights reserved"
+  },
+
+  "FAQsSection": {
+    "Title": "FAQs",
+    "Questions": [
+      {
+        "question": "What services does Depo web provide?",
+        "answer": "Depo web offers a wide range of digital development and programming services, including custom website design, mobile app development, e-commerce solutions, digital marketing, and software consulting. We aim to deliver solutions tailored to meet the unique needs of each client."
+      },
+      {
+        "question": "How long does it take to complete a project?",
+        "answer": "Project timelines vary based on the complexity and specific requirements. Typically, smaller projects may take a few weeks, while larger or more complex solutions might take several months. After an initial consultation, we provide an estimated timeline that aligns with your goals and deadlines."
+      },
+      {
+        "question": "How can I contact customer support?",
+        "answer": "You can reach our support team through our Contact Us page, by phone, or by email. We’re here to answer questions, provide updates, and offer assistance as needed. We strive to respond to all inquiries within 24 hours during business days."
+      }
+    ]
+  },
+  
+  "AboutUsSection": {
+    "Title": "About Depo web",
+    "Description": "At Depo Web, we are passionate about innovation and committed to transforming ideas into impactful digital solutions. With a team of skilled developers and creative thinkers, we specialize in providing a wide range of digital development and programming services tailored to meet the unique needs of each client. Our mission is to empower businesses by delivering high-quality scalable solutions that drive growth and success."
+  },
+  
+  "CardsSection": {
+    "Title": "Our Core Values",
+    "Cards": [
+      {
+        "Title": "Our Vision",
+        "Points": [
+          "• Become a leading digital solutions provider recognized for commitment to quality, innovation, and client success.",
+          "• Envision a future where Depo Web sets new standards in the digital industry.",
+          "• Help businesses worldwide reach their full potential through cutting-edge technology."
+        ]
+      },
+      {
+        "Title": "Our Mission",
+        "Points": [
+          "• Deliver customized, user-centered digital solutions that empower businesses in a rapidly evolving digital landscape.",
+          "• Commit to excellence in every project, with a focus on continuous improvement, collaboration, and integrity.",
+          "• Bring clients' visions to life through seamless and innovative digital experiences.",
+          "• Aim to support business growth through digital innovation and tailored solutions."
+        ]
+      },
+      {
+        "Title": "Our Values",
+        "Values": [
+          {
+
+            "Title": "• Innovation:",
+            "Description": "We embrace creativity and stay ahead of industry trends to deliver cutting-edge solutions."
+          },
+          {
+
+            "Title": "• Client-Centricity:",
+            "Description": "We prioritize our clients' needs, tailoring solutions to help them succeed."
+          },
+          {
+
+            "Title": "• Integrity:",
+            "Description": "We operate with transparency and honesty in every aspect of our work."
+          },
+          {
+
+            "Title": "• Excellence:",
+            "Description": "We focus on high-quality results that make a real impact."
+          },
+          {
+
+            "Title": "• Collaboration:",
+            "Description": "We believe in teamwork, combining ideas to create the best solutions."
+          }
+        ]
+      }
+    ]
   }
+  
+
 }
+
+
+
+
+
+
+
+
+
+
+

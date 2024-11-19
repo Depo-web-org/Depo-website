@@ -1,158 +1,108 @@
+import { t } from "i18next";
+import UseEffectAboutUS from "../../../../Hooks/useEffectAboutUS";
+
 export default function Card_AboutUs() {
-  // const AllCard = [
-  //   {
-  //     id: "111",
-  //     name: "Our Vision",
-  //     img: "/images/imgas AboutUs/imgCard-1.svg",
-  //     dec: "To be a leading digital solutions provider, recognized for our commitment to quality, innovation, and client success. We envision a future where Depo web continues to set new standards in the digital industry, helping businesses around the world reach their full potential through cutting-edge technology.",
-  //   },
-  //   {
-  //     id: "222",
-  //     name: "Our Mission",
-  //     img: "/images/imgas AboutUs/imgCard-2.svg",
-  //     dec: "Our mission is to deliver customized, user-centered digital solutions that empower businesses to thrive in a rapidly evolving digital landscape. We are dedicated to excellence in every project, focusing on continuous improvement, collaboration, and integrity. At Depo web, we aim to bring our clients' visions to life through seamless and innovative digital experiences.",
-  //   },
-  //   {
-  //     id: "333",
-  //     name: "Our Values",
-  //     img: "/images/imgas AboutUs/imgCard-3.svg",
-  //     dec: [
-  //       {
-  //         title: ". Innovation ",
-  //         text: " We embrace creativity and stay ahead of industry trends to deliver cutting-edge solutions.",
-  //       },
-  //       {
-  //         title: ". Client-Centricity ",
-  //         text: " We prioritize our clients' needs, tailoring solutions to help them succeed.",
-  //       },
-  //       {
-  //         title: ". Integrity ",
-  //         text: " We operate with transparency and honesty in every aspect of our work.",
-  //       },
-  //       {
-  //         title: ". Excellence ",
-  //         text: " We focus on high-quality results that make a real impact.",
-  //       },
-  //       {
-  //         title: ". Collaboration ",
-  //         text: "We believe in teamwork, combining ideas to create the best solutions.",
-  //       },
-  //     ],
-  //   },
-  // ];
+  // Hoock useEffect
+  UseEffectAboutUS();
 
   const AllCard = [
     {
       id: "111",
-      name: "Our Vision",
+      name: `${t("CardsSection.Title")}`,
       img: "/images/imgas AboutUs/imgCard-1.svg",
-      dec: [
-        {
-          text: "• Become a leading digital solutions provider recognized for commitment to quality, innovation, and client success.",
-        },
-        {
-          text: "• Envision a future where Depo Web sets new standards in the digital industry.",
-        },
-        {
-          text: "• Help businesses worldwide reach their full potential through cutting-edge technology.",
-        },
+      points: [
+        { point: `${t("CardsSection.Cards.0.Points.0")}` },
+        { point: `${t("CardsSection.Cards.0.Points.1")}` },
+        { point: `${t("CardsSection.Cards.0.Points.2")}` },
       ],
     },
     {
       id: "222",
-      name: "Our Mission",
+      name: `${t("CardsSection.Cards.0.Title")}`,
       img: "/images/imgas AboutUs/imgCard-2.svg",
-      dec: [
-        {
-          text: "• Deliver customized, user-centered digital solutions that empower businesses in a rapidly evolving digital landscape.",
-        },
-        {
-          text: "• Commit to excellence in every project, with a focus on continuous improvement, collaboration, and integrity.",
-        },
-        {
-          text: "• Bring clients' visions to life through seamless and innovative digital experiences.",
-        },
-        {
-          text: "• Aim to support business growth through digital innovation and tailored solutions.",
-        },
+      points: [
+        { point: `${t("CardsSection.Cards.1.Points.0")}` },
+        { point: `${t("CardsSection.Cards.1.Points.1")}` },
+        { point: `${t("CardsSection.Cards.1.Points.2")}` },
       ],
     },
     {
       id: "333",
-      name: "Our Values",
+      name: `${t("CardsSection.Cards.1.Title")}`,
       img: "/images/imgas AboutUs/imgCard-3.svg",
-      dec: [
+      values: [
         {
-          title: "• Innovation :",
-          text: " We embrace creativity and stay ahead of industry trends to deliver cutting-edge solutions.",
+          Title: `${t("CardsSection.Cards.2.Values.0.Title")}`,
+          description: t("CardsSection.Cards.2.Values.0.Description"),
         },
         {
-          title: "• Client-Centricity :",
-          text: " We prioritize our clients' needs, tailoring solutions to help them succeed.",
+          Title: `${t("CardsSection.Cards.2.Values.1.Title")}`,
+          description: t("CardsSection.Cards.2.Values.1.Description"),
         },
         {
-          title: "• Integrity :",
-          text: " We operate with transparency and honesty in every aspect of our work.",
+          Title: `${t("CardsSection.Cards.2.Values.2.Title")}`,
+          description: t("CardsSection.Cards.2.Values.2.Description"),
         },
         {
-          title: "• Excellence :",
-          text: " We focus on high-quality results that make a real impact.",
+          Title: `${t("CardsSection.Cards.2.Values.3.Title")}`,
+          description: t("CardsSection.Cards.2.Values.3.Description"),
         },
         {
-          title: "• Collaboration :",
-          text: "We believe in teamwork, combining ideas to create the best solutions.",
+          Title: `${t("CardsSection.Cards.2.Values.4.Title")}`,
+          description: t("CardsSection.Cards.2.Values.4.Description"),
         },
       ],
     },
   ];
 
   return (
-    <>
-      <section className="grid grid-cols-12 gap-5 pb-5 mt-[26px]">
-        {AllCard.map((item, index) => (
+    <section className="grid grid-cols-12 gap-5 pb-5 mt-[26px]">
+      {AllCard.map((item, index) => (
+        <div
+          key={item.id}
+          className={`bg-primary relative col-span-12 md:col-span-6 h-auto text-white w-full py-3 ps-3 rounded-md flex flex-col md:flex-row ${
+            index === AllCard.length - 1
+              ? "sm:col-span-12 md:col-span-12 lg:col-span-12 lg:w-[calc(100%-43%)]  md:ms-[220px] lg:m-auto"
+              : ""
+          }`}
+        >
+          {/* Text card */}
           <div
-            key={item.id}
-            className={`bg-primary relative col-span-12 md:col-span-6 h-auto text-white w-full py-3 ps-3 rounded-md flex flex-col md:flex-row ${
-              index === AllCard.length - 1
-                ? "sm:col-span-12 md:col-span-12 lg:col-span-12 lg:w-[calc(100%-43%)]  md:ms-[220px] lg:m-auto"
-                : ""
-            }`}
+            className={`w-full h-auto pb-24 md:pb-24 relative  
+              ${index === AllCard.length - 1 ? "pb-[5px]" : ""}`}
           >
-            {/* Text card */}
-            <div
-              className={`w-full h-auto pb-24 md:pb-24 relative  
-            ${index === AllCard.length - 1 ? "pb-[5px]" : ""}`}
-            >
-              <p className="text-[24px] md:text-[32px] leading-[30px] md:leading-[38.73px] font-bold">
-                {item.name}
-              </p>
-              <div className="mt-5 pe-2">
-                {Array.isArray(item.dec) ? (
-                  item.dec.map((subItem, index) => (
-                    <p key={index} className="mb-2">
-                      <span className="font-bold ">{subItem.title} </span>
-                      {subItem.text}
-                    </p>
-                  ))
-                ) : (
-                  <span className="text-[14px] md:text-[16px] font-normal">
-                    {item.dec}
-                  </span>
-                )}
-              </div>
-            </div>
-
-            {/* Img card*/}
-            <div
-              className={`w-[156px] h-[96px] bottom-2  absolute right-0 ${
-                index === AllCard.length - 1 ? "hidden md:block" : ""
-              }`}
-            >
-              <img className="h-full w-full" src={item.img} alt="img About" />
+            <p className="text-[24px] md:text-[32px] leading-[30px] md:leading-[38.73px] font-bold">
+              {item.name}
+            </p>
+            <div className="mt-5 pe-2">
+              {Array.isArray(item.values) ? (
+                item.values.map((subItem, index) => (
+                  <p key={index} className="mb-2">
+                    <span className="font-bold ">{subItem.Title} </span>
+                    {subItem.description}
+                  </p>
+                ))
+              ) : (
+                <span className="text-[14px] md:text-[16px] font-normal">
+                  {/* Creating  <br/> */}
+                  {AllCard[0].points.map((item, index) => (
+                    <p key={index}>{item.point}</p>
+                  ))}
+                </span>
+              )}
             </div>
           </div>
-        ))}
-      </section>
-    </>
+
+          {/* Img card*/}
+          <div
+            className={`w-[156px] h-[96px] bottom-2  absolute right-0 ${
+              index === AllCard.length - 1 ? "hidden md:block" : ""
+            }`}
+          >
+            <img className="h-full w-full" src={item.img} alt="img About" />
+          </div>
+        </div>
+      ))}
+    </section>
   );
 }
