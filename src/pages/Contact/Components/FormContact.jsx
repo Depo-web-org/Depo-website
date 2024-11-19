@@ -103,9 +103,9 @@ const FormContact = () => {
 
   
           <PhoneInput
-      international
-      id="user-phone"
-      placeholder={t('Contact.Left Side.phone-placeholder')}
+          international
+          id="user-phone"
+          placeholder={t('Contact.Left Side.phone-placeholder')}
       value={phoneValue}
       onChange={setPhoneValue}
       defaultCountry="EG" 
