@@ -18,7 +18,7 @@ export default function Address() {
             target="_blank"
             rel="noopener noreferrer"
             href="https://www.google.com/maps/dir/?api=1&destination=29.982003604232442,31.34399201469942"
-            className="hover:text-secondary transition-colors duration-300"
+            className="hover:text-secondary hover:underline transition-colors duration-300"
           >
             {t("footer.address-content")}
           </a>
@@ -27,17 +27,36 @@ export default function Address() {
 
       <div className="flex items-center gap-x-2 mb-2">
         <FaPhoneAlt className="text-primary min-w-[14px] min-h-[19px]" />
-        <span>
+        <div dir="ltr" className="flex flex-col items-center ">
           <a
-            dir="ltr"
             target="_blank"
-            rel="noopener noreferrer"
-            href="tel:+201500919948"
-            className="hover:text-secondary transition-colors duration-300"
+            className="hover:text-secondary transition-all hover:underline duration-300"
+            href="tel:+20 1500919948"
           >
             +20 1500919948
           </a>
-        </span>
+          <a
+            target="_blank"
+            className="hover:text-secondary transition-all hover:underline duration-300"
+            href="tel:+20 1500721994"
+          >
+            +20 1500721994
+          </a>
+          <a
+            target="_blank"
+            className="hover:text-secondary transition-all hover:underline duration-300"
+            href="tel:+20 1508199424"
+          >
+            +20 1508199424
+          </a>
+          <a
+            target="_blank"
+            className="hover:text-secondary transition-all hover:underline duration-300 -ml-3"
+            href="tel:+20 1501111994 "
+          >
+            +20 1501111994
+          </a>
+        </div>
       </div>
 
       <div className="flex items-center gap-x-2">
@@ -47,7 +66,7 @@ export default function Address() {
             target="_blank"
             rel="noopener noreferrer"
             href="mailto:info@depowebeg.com"
-            className="hover:text-secondary transition-colors duration-300"
+            className="hover:text-secondary hover:underline transition-colors duration-300"
           >
             info@depowebeg.com
           </a>
