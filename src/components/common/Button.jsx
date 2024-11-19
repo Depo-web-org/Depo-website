@@ -25,6 +25,7 @@ export default function Button({
 
   return (
     <button
+    dir="ltr"
       type={type}
       onClick={disabled ? null : onClick}
       className={buttonClasses}

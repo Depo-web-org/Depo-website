@@ -4,6 +4,8 @@ import Button from "../common/Button";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 const CenterNav = ({ navItems }) => {
+  console.log();
+  
   return (
     <>
       <div className="hidden lg:flex  h-full  lg:px-[104px] mx-auto justify-between py-2 px-8   ">
@@ -31,7 +33,7 @@ const CenterNav = ({ navItems }) => {
         <div className="h-full flex items-center justify-end w-1/4 ">
           <Link to={"contact"}>
             <Button
-              title="Contact Us"
+              title={`${navItems.contact.text}`}
               style=" lg:w-40 xl:w-48 h-[51px]  py-[16px]  px-[32px] "
             />
           </Link>
