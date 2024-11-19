@@ -4,7 +4,8 @@ import { useState } from "react";
 import 'react-phone-number-input/style.css';
 import PhoneInput from 'react-phone-number-input';
 import LoadingAnimation from "./loadingAnimation";
-
+import { useTranslation } from "react-i18next";
+import './FormContact.css'
 const FormContact = () => {
   const {
     register,
@@ -17,6 +18,7 @@ const FormContact = () => {
   const [phoneValue, setPhoneValue] = useState(); 
   const [messageValue, setMessageValue] = useState('');
   const messageLength = messageValue.length || 0;
+  const { t } = useTranslation(); 
 
   const sendDataToBackend = async (data) => {
     setIsLoading(true);
@@ -47,14 +49,14 @@ const FormContact = () => {
   };
 
   return (
-    <section className="pt-4 text-white lg:mr-16">
+    <section className="pt-4 text-white ">
       <form onSubmit={handleSubmit(sendDataToBackend)} action="submit">
         <div className="flex gap-[20px] lg:flex-row flex-col flex-wrap xl:flex-nowrap lg:gap-y-16">
           <label
             htmlFor="name"
             className="h-10 w-full cursor-pointer text-slate-100 font-medium flex flex-col"
           >
-            Name
+             {t('Contact.Left Side.name')}
             <input
               {...register("name", {
                 required: "Name is required",
@@ -65,7 +67,7 @@ const FormContact = () => {
               })}
               id="name"
               type="text"
-              placeholder="Full Name"
+              placeholder={t('Contact.Left Side.name-placeholder')}
               className="bg-white rounded-[5px] my-[6px] active:outline-primary outline-primary placeholder:text-gray-400 p-[10px] text-gray-400"
             />
             {errors.name && <p className="text-red-500">{errors.name.message}</p>}
@@ -75,7 +77,7 @@ const FormContact = () => {
             htmlFor="user-mail"
             className="h-10 w-full mt-8 lg:mt-0 cursor-pointer text-slate-100 font-medium flex flex-col"
           >
-            Email
+                {t('Contact.Left Side.email')}
             <input
               {...register("email", {
                 required: "Email is required",
@@ -86,7 +88,7 @@ const FormContact = () => {
               })}
               id="user-mail"
               type="email"
-              placeholder="Example@gmail.com"
+              placeholder={t('Contact.Left Side.email-placeholder')}
               className="bg-white rounded-[5px] my-[6px] active:outline-primary outline-primary placeholder:text-gray-400 p-[10px] text-gray-400"
             />
             {errors.email && <p className="text-red-500">{errors.email.message}</p>}
@@ -97,16 +99,17 @@ const FormContact = () => {
           htmlFor="user-phone"
           className="h-10 w-full cursor-pointer mt-16 text-slate-100 font-medium flex flex-col"
         >
-          Phone Number
+             {t('Contact.Left Side.phone')}
+
   
           <PhoneInput
   international
   id="user-phone"
-  placeholder="Enter phone number"
+  placeholder={t('Contact.Left Side.phone-placeholder')}
   value={phoneValue}
   onChange={setPhoneValue}
   defaultCountry="EG" 
-  className="bg-white rounded-[5px] my-[6px] active:outline-primary outline-primary placeholder:text-gray-400 p-[10px] text-gray-400 "/>
+  className="bg-white rounded-[5px] my-[6px]  active:outline-primary outline-primary placeholder:text-gray-400 p-[10px] text-gray-400 "/>
           {errors.phone && (
             <p className="text-red-500">
               {errors.phone.message && "Please enter a valid phone number."}
@@ -118,7 +121,7 @@ const FormContact = () => {
           htmlFor="user-message"
           className="w-full cursor-pointer mt-16 text-slate-100 font-medium flex flex-col"
         >
-          Your Message
+         {t('Contact.Left Side.textarea')}
           <textarea
             {...register("message", {
               required: "Message is required",
@@ -129,7 +132,7 @@ const FormContact = () => {
                 ? "active:outline-red-500 outline-red-500"
                 : "active:outline-primary outline-primary"
             } resize-none scrollbar-hide placeholder:text-gray-400 my-[6px] rounded-[5px] p-[10px] text-gray-400`}
-            placeholder="Write your inquiry"
+            placeholder={t('Contact.Left Side.textarea-placeholder')}
             value={messageValue}
             onChange={(e) =>
               e.target.value.length <= 1200 && setMessageValue(e.target.value)
@@ -141,8 +144,8 @@ const FormContact = () => {
           {errors.message && <p className="text-red-500">{errors.message.message}</p>}
           <span className="text-right">
             {messageLength >= 1200
-              ? `1200 characters used.`
-              : `${messageLength} / 1200 characters`}
+              ? `${t('Contact.Left Side.textarea-numberOfWords')}` //
+              : `${messageLength}  ${t('Contact.Left Side.textarea-numberUsed')}`}
           </span>
         </label>
 
@@ -152,7 +155,7 @@ const FormContact = () => {
           disabled={isLoading}
           className="bg-primary w-48 mt-4 rounded-[5px] text-white px-8 py-4 font-bold transition-colors ease-out duration-300 hover:bg-primary-hover"
         >
-          {isLoading ? <LoadingAnimation /> : "Confirm"}
+          {isLoading ? <LoadingAnimation /> : `${t('Contact.Left Side.button')}`}
         </button>
       </form>
 
