@@ -6,6 +6,7 @@ import Hero from "./Components/Hero/Hero";
 import OurServices from "./Components/OurServices/OurServices";
 import { useEffect } from "react";
 
+
 const Home = () => {
   useEffect(() => window.scroll(0, 0), []);
 
