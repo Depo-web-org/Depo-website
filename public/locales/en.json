@@ -47,14 +47,18 @@
 "p":"Fill out the form and we will do all we can to help you",
 "name":"Name",
 "name-placeholder":"Full Name",
+"name-require":"Name is required",
 "email":"Email", 
 "email-placeholder":"Example@gmail.com",
+"email-require":"Email is required",
 "phone":" Phone Number",
 "phone-placeholder":"Enter phone number",
+"phone-require":"Phone is required",
 "textarea":"Your Message",
 "textarea-placeholder":"Write your inquiry",
 "textarea-numberOfWords":"1200 characters used. ",
 "textarea-numberUsed":"/ 1200 characters",
+"textarea-require":"Message is required",
 "button":"Confirm"
 },
 "Right Side":{

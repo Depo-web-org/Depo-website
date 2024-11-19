@@ -59,10 +59,10 @@ const FormContact = () => {
              {t('Contact.Left Side.name')}
             <input
               {...register("name", {
-                required: "Name is required",
+                required: `${t('Contact.Left Side.name-require')}`,
                 pattern: {
                   value: /^.{2,20}$/,
-                  message: "Invalid name",
+                  message: `${t('Contact.Left Side.name-require')}`,
                 },
               })}
               id="name"
@@ -80,10 +80,10 @@ const FormContact = () => {
                 {t('Contact.Left Side.email')}
             <input
               {...register("email", {
-                required: "Email is required",
+                required: `${t('Contact.Left Side.email-require')}`,
                 pattern: {
                   value: /^[a-zA-Z0-9._%+-]{4,}@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-                  message: "Invalid email address",
+                  message: `${t('Contact.Left Side.email-require')}`,
                 },
               })}
               id="user-mail"
@@ -103,16 +103,16 @@ const FormContact = () => {
 
   
           <PhoneInput
-  international
-  id="user-phone"
-  placeholder={t('Contact.Left Side.phone-placeholder')}
-  value={phoneValue}
-  onChange={setPhoneValue}
-  defaultCountry="EG" 
-  className="bg-white rounded-[5px] my-[6px]  active:outline-primary outline-primary placeholder:text-gray-400 p-[10px] text-gray-400 "/>
+      international
+      id="user-phone"
+      placeholder={t('Contact.Left Side.phone-placeholder')}
+      value={phoneValue}
+      onChange={setPhoneValue}
+      defaultCountry="EG" 
+      className="bg-white rounded-[5px] my-[6px]  active:outline-primary outline-primary placeholder:text-gray-400 p-[10px] text-gray-400 "/>
           {errors.phone && (
             <p className="text-red-500">
-              {errors.phone.message && "Please enter a valid phone number."}
+              {errors.phone.message && `${t('Contact.Left Side.phone-require')}`}
             </p>
           )}
         </label>
@@ -124,7 +124,7 @@ const FormContact = () => {
          {t('Contact.Left Side.textarea')}
           <textarea
             {...register("message", {
-              required: "Message is required",
+              required: `${t('Contact.Left Side.phone-require')}`,
             })}
             id="user-message"
             className={`h-60 ${
@@ -141,10 +141,10 @@ const FormContact = () => {
             onPaste={disableCopyPasteCut}
             onCut={disableCopyPasteCut}
           ></textarea>
-          {errors.message && <p className="text-red-500">{errors.message.message}</p>}
+          {errors.message && <p className="text-red-500">{t('Contact.Left Side.textarea-require')}</p>}
           <span className="text-right">
             {messageLength >= 1200
-              ? `${t('Contact.Left Side.textarea-numberOfWords')}` //
+              ? `${t('Contact.Left Side.textarea-numberOfWords')}` 
               : `${messageLength}  ${t('Contact.Left Side.textarea-numberUsed')}`}
           </span>
         </label>
