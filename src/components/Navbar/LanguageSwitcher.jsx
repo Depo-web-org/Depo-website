@@ -8,7 +8,6 @@ function LanguageSwitcher() {
     document.getElementsByTagName("html")[0].setAttribute("lang", newLang);
     i18n
       .changeLanguage(newLang)
-      .then(() => console.log("Language switched to:", newLang)) // Log 3
       .catch((err) => console.error("Error switching language:", err));
   };
 

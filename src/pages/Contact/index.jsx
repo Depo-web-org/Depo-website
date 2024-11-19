@@ -46,7 +46,7 @@ const Contact = () => {
             </div>
             <div className="flex flex-col mt-6 gap-y-10 text-white text-xl ">
               <div>
-                <p className="flex items-start gap-x-2">
+                <div className="flex items-start gap-x-2">
                   <span className="text-3xl">
                     <FaPhoneAlt className="text-secondary" />
                   </span>
@@ -80,7 +80,7 @@ const Contact = () => {
                       +20 1501111994
                     </a>
                   </div>
-                </p>
+                </div>
               </div>
               <div>
                 <p className="flex items-center gap-x-2">
