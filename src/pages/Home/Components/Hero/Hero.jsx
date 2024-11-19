@@ -4,7 +4,7 @@ import './animationHero.css'
 import { ImLink } from "react-icons/im"
 import { useTranslation } from "react-i18next"
 const Hero = () => {
-  const { t } = useTranslation();
+  const { t , i18n } = useTranslation();
   
   return (
     <>
@@ -21,7 +21,7 @@ const Hero = () => {
       </h1>
 
       {/* text-start sm:text-center md:text-start */}
-      <h2 className="text-base  lg:text-2xl font-semibold text-white mt-4 leading-5 lg:leading-7 xl:mr-32">
+      <h2 className={`text-base  lg:text-2xl font-semibold text-white mt-4 leading-5 lg:leading-7  ${i18n.language==='en'&& 'xl:mr-32'}`}>
       {t('Hero.h2')}
       </h2>
 
