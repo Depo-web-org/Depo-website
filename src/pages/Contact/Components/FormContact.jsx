@@ -26,29 +26,33 @@ const FormContact = () => {
   const { t } = useTranslation(); 
 
   const sendDataToBackend = async (data) => {
-    setIsLoading(true);
-    const formData = { ...data, phone: phoneValue }; 
-    await axios
-      .post("https://dev.depowebeg.com/api/api/form", formData, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      })
-      .then((response) => setResponse(response.data))
-      .then(() => {
-        reset();
-        setPhoneValue('');
-        setMessageValue('');
-      setIsSubmitted(false)
-
-      })
-      .catch(() => setResponse('Something went wrong, please try again'))
-      .finally(() => {
-        setIsLoading(false);
-        setTimeout(() => {
-          setResponse(null);
-        }, 5000);
-      });
+    if (phoneValue?.length  >= 10   ) {
+      setIsLoading(true);
+      const formData = { ...data, phone: phoneValue }; 
+      await axios
+        .post("https://dev.depowebeg.com/api/api/form", formData, {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        })
+        .then((response) => setResponse(response.data))
+        .then(() => {
+          reset();
+          setPhoneValue('');
+          setMessageValue('');
+        setIsSubmitted(false)
+  
+        })
+        .catch(() => setResponse('Something went wrong, please try again'))
+        .finally(() => {
+          setIsLoading(false);
+          setTimeout(() => {
+            setResponse(null);
+          }, 5000);
+        });
+    }else{
+      return;
+    }
   };
 
   const disableCopyPasteCut = (e) => {
@@ -118,12 +122,16 @@ const FormContact = () => {
             value={phoneValue}
             onChange={setPhoneValue}
             defaultCountry="EG" 
+
             className="bg-white rounded-[5px] my-[6px] active:outline-primary outline-primary placeholder:text-gray-400 p-[10px] text-gray-400"
           />
-          {isSubmitted && !isValidPhoneNumber(phoneValue) && (
+          {isSubmitted && !isValidPhoneNumber(`${phoneValue?.toString()}`) && (
             <p className="text-red-500">{t('Contact.Left Side.phone-require')}</p>
           )}
+        
+       
         </label>
+        
         <label
           htmlFor="user-message"
           className="w-full cursor-pointer mt-16 text-slate-100 font-medium flex flex-col"
@@ -170,7 +178,7 @@ const FormContact = () => {
           {isLoading ? <LoadingAnimation /> : `${t('Contact.Left Side.button')}`}
         </button>
       </form>
-
+     
       {response != null && <p className="mt-2 text-white font-bold">{response}</p>}
     </section>
   );
