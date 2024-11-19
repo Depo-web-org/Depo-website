@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import Aderss from "../../pages/Home/Components/Footer/Address";
 import Map from "../../pages/Home/Components/Footer/Map";
 import logo from "/images/Logo.webp";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const ResponsiveNav = ({
   isOpen,
@@ -19,7 +20,7 @@ const ResponsiveNav = ({
 
   return (
     <>
-      <div>
+      <div dir="ltr"> 
         <div className="flex lg:hidden items-center  justify-between py-2 px-4 ">
           <div className="  -ml-2">
             <Hamburger
@@ -34,9 +35,16 @@ const ResponsiveNav = ({
             />
           </div>
 
-          <div className="w-16">
-            <img src={logo} alt="Depo-Web" />
+         
+          <div dir="ltr" className="flex items-center h-full  gap-1  pr-2 ">
+            <img src={logo} alt="Depo Web" className=' w-16' />
+            <div className=''>
+              <LanguageSwitcher />
+            </div>
           </div>
+
+
+
         </div>
       </div>
 
@@ -73,6 +81,7 @@ const ResponsiveNav = ({
           </div>
         </div>
       </div>
+      
       {/* Click to close Navbar */}
       {isOpen && (
         <div

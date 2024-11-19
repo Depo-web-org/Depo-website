@@ -1,10 +1,15 @@
 import { SiGmail } from "react-icons/si";
 import { FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 export default function Address() {
+  const { t } = useTranslation();
+
   return (
     <div className="col-span-12 md:col-span-6 lg:col-span-2">
-      <h3 className="font-semibold text-lg mb-4">Address</h3>
+      <h3 className="font-semibold text-lg mb-4">
+        {t("footer.address-title")}
+      </h3>
 
       <div className="flex items-start gap-x-2 mb-2">
         <FaMapMarkerAlt className="text-primary min-w-[14px] min-h-[19px]" />
@@ -15,8 +20,7 @@ export default function Address() {
             href="https://www.google.com/maps/dir/?api=1&destination=29.982003604232442,31.34399201469942"
             className="hover:text-secondary transition-colors duration-300"
           >
-            Zahraa Al Maadi, Sama Towers, Building No. 9, 9th Floor, Apartment
-            No. 93
+            {t("footer.address-content")}
           </a>
         </span>
       </div>
@@ -25,6 +29,7 @@ export default function Address() {
         <FaPhoneAlt className="text-primary min-w-[14px] min-h-[19px]" />
         <span>
           <a
+            dir="ltr"
             target="_blank"
             rel="noopener noreferrer"
             href="tel:+201500919948"
