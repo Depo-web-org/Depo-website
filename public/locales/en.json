@@ -56,8 +56,8 @@
 "phone-require":"Phone is required",
 "textarea":"Your Message",
 "textarea-placeholder":"Write your inquiry",
-"textarea-numberOfWords":"1200 characters used. ",
-"textarea-numberUsed":"/ 1200 characters",
+"textarea-numberOfWords":"500 characters used. ",
+"textarea-numberUsed":"/ 500 characters",
 "textarea-require":"Message is required",
 "button":"Confirm"
 },
