@@ -13,20 +13,15 @@ const Hero = () => {
      <div className="lg:mt-[calc(149px-85px)]   grid grid-cols-12 pb-8 lg:border-b lg:border-[#ffffff47] relative z-10">
       {/* left side */}
       <div className=" col-span-12 lg:col-span-6 xl:col-span-7     ">
-
         {/* text-start sm:text-center md:text-start  */}
   <h1 className="text-4xl sm:text-6xl leading-10  md:leading-[65px]  lg:leading-[77.45px] font-bold text-white pt-20  ">
   {t('Hero.h1-partOne')}  <span className="text-secondary">{t('Hero.span-One')} <br />{t('Hero.span-Two')}</span> <br />  
   {t('Hero.h1-partTwo')}
       </h1>
-
       {/* text-start sm:text-center md:text-start */}
       <h2 className={`text-base  lg:text-2xl font-semibold text-white mt-4 leading-5 lg:leading-7  ${i18n.language==='en'&& 'xl:mr-32'}`}>
       {t('Hero.h2')}
       </h2>
-
-
-      
       {/* flex sm:justify-center md:text-start */}
       <div className=" mt-4 lg:mt-16 ">
         <Link to={'services'} className=" inline-block w-auto">
