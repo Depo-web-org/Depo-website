@@ -156,8 +156,9 @@
         }
       ]
     },
-    
+ 
     "AboutUsSection": {
+      "propsTitle":" Get to know us better",
       "Title": "About Depo web",
       "Description": "At Depo Web, we are passionate about innovation and committed to transforming ideas into impactful digital solutions. With a team of skilled developers and creative thinkers, we specialize in providing a wide range of digital development and programming services tailored to meet the unique needs of each client. Our mission is to empower businesses by delivering high-quality scalable solutions that drive growth and success."
     },

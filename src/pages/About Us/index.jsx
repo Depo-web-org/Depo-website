@@ -16,9 +16,9 @@ export default function AboutUs() {
         <meta name="description" content={t("helmet.about.description")} />
         <meta name="keywords" content={t("helmet.about.keywords")} />
       </Helmet>
-
+ 
       <div className="gradient-bg min-h-screen">
-        <PagesBg title="Get to know us better" />
+        <PagesBg title={t("AboutUsSection.propsTitle")}/>
         <section className="w-[calc(100%-32px)] lg:w-[calc(100%-208px)]  mx-auto">
           <About_Depo />
           <Card_AboutUs />
