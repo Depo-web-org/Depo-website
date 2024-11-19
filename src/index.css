@@ -5,15 +5,23 @@
 * {
   font-family: "Inter", sans-serif !important;
 }
+html[lang="ar"] {
+  direction: rtl;
+  text-align: right;
+}
+html[lang="en"] {
+  direction: ltr;
+  text-align: left;
+}
+
 .active {
-  color: #00A5A4;
+  color: #00a5a4;
 }
 
 @media (min-width: 1024px) {
-  .active{
+  .active {
     border-bottom: 2px solid #1a4f92;
-  color: white;
-
+    color: white;
   }
 }
 
@@ -29,7 +37,6 @@
 .section-border {
   @apply lg:pb-8 lg:border-b border-[#ffffff47];
 }
-
 
 /* Container styling for the custom arrows */
 .slider-controler {
@@ -87,7 +94,6 @@
   @apply bg-gradient-to-t to-secondary-dark via-back-ground from-back-ground;
 }
 
-
-#user-phone:focus-visible{
+#user-phone:focus-visible {
   outline: none;
 }

@@ -5,23 +5,19 @@ import HeaderInfo from "./Components/Header Info/HeaderInfo";
 import Hero from "./Components/Hero/Hero";
 import OurServices from "./Components/OurServices/OurServices";
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
+
 
 const Home = () => {
   useEffect(() => window.scroll(0, 0), []);
+  const { t } = useTranslation();
 
   return (
     <>
       <Helmet>
-        
-        <title>Depo Web | Transforming Ideas into Digital Solutions</title>
-        <meta
-          name="description"
-          content="Depo Web specializes in innovative website and application development with a focus on achieving top-tier SEO. Our expert team delivers impactful, scalable solutions to drive your business growth."
-        />
-        <meta
-          name="keywords"
-          content="Depo Web, digital solutions, website development, SEO, scalable applications"
-        />
+        <title>{t("helmet.home.title")}</title>
+        <meta name="description" content={t("helmet.home.description")} />
+        <meta name="keywords" content={t("helmet.home.keywords")} />
       </Helmet>
 
       <div className="min-h-screen gradient-bg px-4 lg:px-[104px]">

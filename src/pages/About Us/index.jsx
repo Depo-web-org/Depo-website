@@ -3,22 +3,18 @@ import PagesBg from "../../components/common/PagesBg";
 import About_Depo from "./components/About Depo/About_Depo";
 import Card_AboutUs from "./components/Card About/Card";
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function AboutUs() {
   useEffect(() => window.scroll(0, 0), []);
+  const { t } = useTranslation();
 
   return (
     <>
       <Helmet>
-        <title>About Depo Web | Empowering Businesses with Innovation</title>
-        <meta
-          name="description"
-          content="Learn more about Depo Web's mission and values. We are dedicated to providing top-quality digital development services, empowering businesses with creative, impactful solutions."
-        />
-        <meta
-          name="keywords"
-          content="Depo Web, about us, digital development, business empowerment, scalable solutions"
-        />
+        <title>{t("helmet.about.title")}</title>
+        <meta name="description" content={t("helmet.about.description")} />
+        <meta name="keywords" content={t("helmet.about.keywords")} />
       </Helmet>
 
       <div className="gradient-bg min-h-screen">
