@@ -36,6 +36,17 @@ export default function SocialMedia() {
             alt="LinkedIn"
           />
         </a>
+        <a
+          href="https://www.youtube.com/@depoweb"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            className="h-[41px] w-[41px]"
+            src="images/youtube.svg"
+            alt="LinkedIn"
+          />
+        </a>
       </div>
     </div>
   );
