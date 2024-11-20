@@ -8,8 +8,11 @@ import PhoneInput, {
 import LoadingAnimation from "./loadingAnimation";
 import { useTranslation } from "react-i18next";
 import './FormContact.css';
+import ar from '../../../../public/locales/countrysAr.json';
+import en from '../../../../public/locales/countrysEn.json';
 
 const FormContact = () => {
+ 
   const {
     register,
     handleSubmit,
@@ -23,7 +26,15 @@ const FormContact = () => {
   const [isSubmitted, setIsSubmitted] = useState(false); 
 
   const messageLength = messageValue?.trim().split(/\s+/).filter(Boolean).length || 0;
-  const { t } = useTranslation(); 
+  const { t , i18n  } = useTranslation(); 
+  let countryOptions;
+
+  if(i18n.language === 'en'){ 
+    countryOptions=en
+  }else{
+    countryOptions=ar
+  }
+  
 
   const sendDataToBackend = async (data) => {
     if (phoneValue?.length  >= 10   ) {
@@ -122,7 +133,7 @@ const FormContact = () => {
             value={phoneValue}
             onChange={setPhoneValue}
             defaultCountry="EG" 
-
+            labels={countryOptions}
             className="bg-white rounded-[5px] my-[6px] active:outline-primary outline-primary placeholder:text-gray-400 p-[10px] text-gray-400"
           />
           {isSubmitted && !isValidPhoneNumber(`${phoneValue?.toString()}`) && (
