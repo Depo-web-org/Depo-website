@@ -46,7 +46,7 @@ const FormContact = () => {
             "Content-Type": "application/json",
           },
         })
-        .then((response) => setResponse(response.data))
+        .then(() => setResponse(`${t("Contact.Left Side.success")}`))
         .then(() => {
           reset();
           recaptcha.current.reset();
@@ -80,7 +80,6 @@ const FormContact = () => {
     }
     await handleSubmit((data) => sendDataToBackend(data, recaptchaValue))(e);
   };
-  // useEffect(() => {}, [recaptchaValue]);
   return (
     <section className="pt-4 text-white ">
       <form onSubmit={handleFormSubmit} action="submit">
@@ -194,12 +193,14 @@ const FormContact = () => {
                 )}`}
           </span>
         </label>
+        <div  className="recaptcha-dir">
         <ReCAPTCHA
           key={i18n.language}
           ref={recaptcha}
           sitekey="6Lcl6YEqAAAAANdKLVZywDSMl7iLTh24k9QaXGnu"
           hl={i18n.language === "ar" ? "ar" : "en"}
         />
+        </div>
         {isSubmitted && !recaptchaValue && (
           <span className="text-red-500 block">
             {t("Contact.Left Side.recaptcha-error")}
@@ -208,7 +209,7 @@ const FormContact = () => {
         <button
           type="submit"
           disabled={isLoading}
-          className="bg-primary w-48 mt-4 rounded-[5px] text-white px-8 py-4 font-bold transition-colors ease-out duration-300 hover:bg-primary-hover"
+          className="bg-primary  w-48 mt-4 rounded-[5px] text-white px-8 py-4 font-bold transition-colors ease-out duration-300 hover:bg-primary-hover"
         >
           {isLoading ? (
             <LoadingAnimation />

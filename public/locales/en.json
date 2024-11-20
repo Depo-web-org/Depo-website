@@ -60,7 +60,8 @@
       "textarea-numberUsed": "/ 500 characters",
       "textarea-require": "Message is required",
       "button": "Confirm",
-      "recaptcha-error": "Please complete the reCAPTCHA verification."
+      "recaptcha-error": "Please complete the reCAPTCHA verification.",
+      "success": "Thank you for contacting us! Your message has been received, and we will get back to you shortly. 👀❤️"
     },
     "Right Side": {
       "h3": "For Direct inquiries",
