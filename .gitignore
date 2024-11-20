@@ -1,9 +1,16 @@
-# Ignore .htaccess file
-.htaccess
-
-# Ignore .zip files inside the dist directory
-dist/*.zip
-
-# Ignore dist directory
-dist/
+# Dependencies
 node_modules/
+ 
+# Build output
+dist/
+build/
+
+# System Files
+.DS_Store
+
+# Logs
+*.log
+
+# IDE files
+*.vscode/
+*.idea/
