@@ -44,7 +44,7 @@ const OurServices = () => {
         </h2>
   <div className="carousel " ref={carouselRef}>
     {
-        Object.entries(servicesItems).map(([key, item]) => <div key={key} className="carousel-cell hover:bg-white transition-all duration-150 group mx-2 lg:mx-5 bg-secondary text-white  font-bold w-40 lg:w-96 h-32 lg:h-[270px] leading-10 rounded-[10px] flex items-center justify-center flex-col ">
+        Object.entries(servicesItems).map(([key, item]) => <div key={key} className="carousel-cell hover:bg-white transition-all duration-150 group mx-2 lg:mx-5 bg-secondary text-white  font-bold w-44 h-40  lg:w-96  lg:h-[270px] leading-10 rounded-[10px] flex items-center justify-center flex-col ">
           <p className=' text-2xl lg:text-6xl group-hover:text-primary transition-all duration-500'>
             {item.Icon}
           </p>
