@@ -3,11 +3,15 @@ html[lang="ar"] .text-dir{
     direction: rtl;
     text-align: right;
   }
-  html[lang="ar"] .text-dir{
-    direction: rtl;
+  html[lang="ar"] .recaptcha-dir{
+    direction: rtl !important;
     text-align: right;
   }
   html[lang="ar"] input{
+    direction: rtl;
+    text-align: right;
+  }
+  html[lang="ar"] .text-dir{
     direction: rtl;
     text-align: right;
   }

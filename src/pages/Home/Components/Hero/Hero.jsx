@@ -10,23 +10,18 @@ const Hero = () => {
     <>
     <main className=" w-full h-full lg:pt-[85px] relative">
      
-     <div className="lg:mt-[calc(149px-85px)]   grid grid-cols-12 pb-8 lg:border-b lg:border-[#ffffff47] relative z-10">
+     <div className="lg:mt-[calc(149px-85px)] gap-y-8  grid grid-cols-12 pb-8 lg:border-b lg:border-[#ffffff47] relative z-10">
       {/* left side */}
       <div className=" col-span-12 lg:col-span-6 xl:col-span-7     ">
-
         {/* text-start sm:text-center md:text-start  */}
   <h1 className="text-4xl sm:text-6xl leading-10  md:leading-[65px]  lg:leading-[77.45px] font-bold text-white pt-20  ">
   {t('Hero.h1-partOne')}  <span className="text-secondary">{t('Hero.span-One')} <br />{t('Hero.span-Two')}</span> <br />  
   {t('Hero.h1-partTwo')}
       </h1>
-
       {/* text-start sm:text-center md:text-start */}
       <h2 className={`text-base  lg:text-2xl font-semibold text-white mt-4 leading-5 lg:leading-7  ${i18n.language==='en'&& 'xl:mr-32'}`}>
       {t('Hero.h2')}
       </h2>
-
-
-      
       {/* flex sm:justify-center md:text-start */}
       <div className=" mt-4 lg:mt-16 ">
         <Link to={'services'} className=" inline-block w-auto">
@@ -38,17 +33,17 @@ const Hero = () => {
 
 
       {/* right side */}
-      <div className="hidden lg:col-span-6 xl:col-span-5  overflow-hidden   lg:flex justify-center items-center flex-col ">
+      <div className=" col-span-12 lg:col-span-6 xl:col-span-5  overflow-hidden   flex justify-center items-center flex-col  ">
         
         {/* top Photos */}
 {/* 1- */}
         <div className="flex gap-x-5 ">
-           <div className="  slide-in-top w-[188px] h-[358px] overflow-hidden rounded-t-full  rounded-r-[153px] rounded-b-full rounded-l-[153px]  ">
+           <div className="  slide-in-top w-[121px] lg:w-[188px] h-[229px] lg:h-[358px] overflow-hidden rounded-t-full  rounded-r-[153px] rounded-b-full rounded-l-[153px]  ">
           <img className=" object-cover h-full w-full rounded-b-full" src="/images/Hero Section/Next-js.webp" alt="Next Web Application" />
         </div>
 {/* 2- */}
 
-        <div className=" slide-in-right w-[189px] h-[196px] overflow-hidden rounded-t-full rounded-r-full rounded-b-full rounded-l-full  rounded-tr-none rounded-tl-full">
+        <div className=" slide-in-right w-[121px] lg:w-[189px] h-[125px] lg:h-[196px] overflow-hidden rounded-t-full rounded-r-full rounded-b-full rounded-l-full  rounded-tr-none rounded-tl-full">
           <img className="  w-full h-full object-cover  " src="/images/Hero Section/flutter.webp" alt="Flutter Mobile Application" />
         </div>
         </div> 
@@ -57,12 +52,12 @@ const Hero = () => {
         <div className="flex gap-x-5">
 {/* 1- */}
 
-        <div className=" slide-in-left  mt-10 w-[189px] h-[196px] overflow-hidden rounded-t-full rounded-r-full rounded-b-full rounded-l-full  rounded-bl-none rounded-br-full">
+        <div className=" slide-in-left  mt-5 lg:mt-10 w-[121px] lg:w-[189px] h-[125px] lg:h-[196px] overflow-hidden rounded-t-full rounded-r-full rounded-b-full rounded-l-full  rounded-bl-none rounded-br-full">
           <img className="  w-full h-full object-cover  " src="/images/Hero Section/React.webp" alt="React Web Application" />
         </div>
 {/* 2- */}
 
-        <div className=" slide-in-bottom -mt-32  w-[188px] h-[358px] overflow-hidden rounded-t-full  rounded-r-[153px] rounded-b-full rounded-l-[153px]  ">
+        <div className=" slide-in-bottom -mt-20 lg:-mt-32 w-[121px] lg:w-[188px] h-[229px] lg:h-[358px] overflow-hidden rounded-t-full  rounded-r-[153px] rounded-b-full rounded-l-[153px]  ">
           <img className=" object-cover h-full w-full  rounded-b-full" src="/images/Hero Section/Python.webp" alt="Python logo" />
         </div>
       

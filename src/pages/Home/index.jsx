@@ -20,13 +20,13 @@ const Home = () => {
         <meta name="keywords" content={t("helmet.home.keywords")} />
       </Helmet>
 
-      <div className="min-h-screen gradient-bg px-4 lg:px-[104px]">
+      <main className="min-h-screen gradient-bg px-4 lg:px-[104px]">
         <Hero />
         <HeaderInfo />
         <OurServices />
         <FAQs />
         <Carousel />
-      </div>
+      </main>
     </>
   );
 };
