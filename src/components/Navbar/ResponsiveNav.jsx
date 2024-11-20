@@ -5,6 +5,7 @@ import Aderss from "../../pages/Home/Components/Footer/Address";
 import Map from "../../pages/Home/Components/Footer/Map";
 import logo from "/images/Logo.webp";
 import LanguageSwitcher from "./LanguageSwitcher";
+import { SocialMediaLogos } from "../../pages/Home/Components/Footer/SocialMedia";
 
 const ResponsiveNav = ({
   isOpen,
@@ -73,12 +74,16 @@ const ResponsiveNav = ({
             ))}
           </div>
           {/* Address*/}
-          <div className="pb-6 ">
+          <div >
             <Aderss />
           </div>
-          <div className="pb-20 ">
+          <div className="min-h-20 w-full flex justify-start py-3 ">
+          <SocialMediaLogos/>
+          </div>
+          <div>
             <Map />
           </div>
+          
         </div>
       </div>
       
