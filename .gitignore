@@ -6,3 +6,4 @@ dist/*.zip
 
 # Ignore dist directory
 dist/
+node_modules/
