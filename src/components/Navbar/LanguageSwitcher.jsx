@@ -3,13 +3,16 @@ import { useTranslation } from "react-i18next";
 function LanguageSwitcher() {
   const { i18n } = useTranslation();
 
+
   const toggleLanguage = () => {
-    const newLang = i18n.language === "en" ? "ar" : "en";
-    document.getElementsByTagName("html")[0].setAttribute("lang", newLang);
-    i18n
-      .changeLanguage(newLang)
-      .catch((err) => console.error("Error switching language:", err));
-  };
+    const newLanguage = i18n.language === "en" ? "ar" : "en";
+   // change in Html 
+     document.documentElement.setAttribute("lang", newLanguage);
+     document.documentElement.setAttribute("dir", newLanguage === "ar" ? "rtl" : "ltr");
+   // change in i18n Lang
+     i18n.changeLanguage(newLanguage)
+     .then(() => localStorage.setItem("language", newLanguage))
+ };
 
   return (
     <button
