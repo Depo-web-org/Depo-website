@@ -52,7 +52,7 @@ const ResponsiveNav = ({
       {/* Menu */}
       <div
         id="menuPhone"
-        className={`h-screen pt-2 overflow-y-auto scrollbar-hide lg:hidden w-4/5 bg-white ${
+        className={`h-screen pt-2 pb-32 overflow-y-auto scrollbar-hide lg:hidden w-4/5 bg-white ${
           isOpen ? "scale-in-hor-left" : "scale-in-Disaper"
         }   fixed z-20  `}
       >
