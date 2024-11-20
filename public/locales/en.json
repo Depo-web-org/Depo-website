@@ -1,72 +1,73 @@
 {
-  "navItems":{
-    "home":"Home",
-    "services":"Services",
-    "career":"Career",
-    "about":"About Us",
-    "button-nav":"Contact Us"
-},
-"Hero":{
-"h1-partOne":"Innovative ",
-"span-One":"Digital",
-"span-Two":" Solutions",
-"h1-partTwo":"Tailored to Your Needs ",
-"h2":"Leading the way in custom software and app development to enhance business efficiency and productivity",
-"button-Home":"Services"
-},
-"HeaderInfo":{
-"h2":"The Software Development Company",
-"span":"That Empowers Businesses",
-"box-one":" At Depo Web, we are a forward-thinking company specializing in innovative digital development and programming solutions that meet the evolving needs of modern businesses. Our goal is    simple yet impactful: to empower organizations by creating tailored digital solutions that not only meet their current needs but also position them for future growth.",
-"box-Two-span-One":"Mission:",
-"box-Two-p-One":"Highlight your mission to enhance business efficiency and productivity with tailored digital solutions",
-"box-Two-span-Two":"Vision:",
-"box-Two-p-Two":"To lead in digital innovation by empowering businesses with high-quality, customized technology solutions. At Depo, we transform ideas into digital realities that drive impact and enhance business success."
-},
-"OurServices":{
-"title-OurServices":"Services",
-"Graphic":"Graphic Design",
-"FrontEND":"Front End Development",
-"Game":"Game Design",
-"Accounting":"Accounting and Financial analysis systems",
-"UIUX":"UI/UX Design",
-"Testing":"Software Testing",
-"Mobile":"Mobile App Development",
-"swipe-text":"Swipe to see all services"
-},
-"NotFound":{
-"head-title":"Page Not Found",
-"title":"Page Not Found",
-"message":"The page you were looking for was not found",
-"not-found-button":"Home"
-},
-"Contact":{
-"pageInfo":"Got a Question?",
-"Left Side":{
-"h3":"Need Help ?",
-"p":"Fill out the form and we will do all we can to help you",
-"name":"Name",
-"name-placeholder":"Full Name",
-"name-require":"Name is required",
-"email":"Email", 
-"email-placeholder":"Example@gmail.com",
-"email-require":"Email is required",
-"phone":" Phone Number",
-"phone-placeholder":"Enter phone number",
-"phone-require":"Phone is required",
-"textarea":"Your Message",
-"textarea-placeholder":"Write your inquiry",
-"textarea-numberOfWords":"500 characters used. ",
-"textarea-numberUsed":"/ 500 characters",
-"textarea-require":"Message is required",
-"button":"Confirm"
-},
-"Right Side":{
-"h3":"For Direct inquiries",
-"p":"Feel free to contact us through the following",
-"Location":"Zahraa Al Maadi, Sama Towers, Building No. 9, 9th Floor, Apartment No. 93"
-}
-} ,   
+  "navItems": {
+    "home": "Home",
+    "services": "Services",
+    "career": "Career",
+    "about": "About Us",
+    "button-nav": "Contact Us"
+  },
+  "Hero": {
+    "h1-partOne": "Innovative ",
+    "span-One": "Digital",
+    "span-Two": " Solutions",
+    "h1-partTwo": "Tailored to Your Needs ",
+    "h2": "Leading the way in custom software and app development to enhance business efficiency and productivity",
+    "button-Home": "Services"
+  },
+  "HeaderInfo": {
+    "h2": "The Software Development Company",
+    "span": "That Empowers Businesses",
+    "box-one": " At Depo Web, we are a forward-thinking company specializing in innovative digital development and programming solutions that meet the evolving needs of modern businesses. Our goal is    simple yet impactful: to empower organizations by creating tailored digital solutions that not only meet their current needs but also position them for future growth.",
+    "box-Two-span-One": "Mission:",
+    "box-Two-p-One": "Highlight your mission to enhance business efficiency and productivity with tailored digital solutions",
+    "box-Two-span-Two": "Vision:",
+    "box-Two-p-Two": "To lead in digital innovation by empowering businesses with high-quality, customized technology solutions. At Depo, we transform ideas into digital realities that drive impact and enhance business success."
+  },
+  "OurServices": {
+    "title-OurServices": "Services",
+    "Graphic": "Graphic Design",
+    "FrontEND": "Front End Development",
+    "Game": "Game Design",
+    "Accounting": "Accounting and Financial analysis systems",
+    "UIUX": "UI/UX Design",
+    "Testing": "Software Testing",
+    "Mobile": "Mobile App Development",
+    "swipe-text": "Swipe to see all services"
+  },
+  "NotFound": {
+    "head-title": "Page Not Found",
+    "title": "Page Not Found",
+    "message": "The page you were looking for was not found",
+    "not-found-button": "Home"
+  },
+  "Contact": {
+    "pageInfo": "Got a Question?",
+    "Left Side": {
+      "h3": "Need Help ?",
+      "p": "Fill out the form and we will do all we can to help you",
+      "name": "Name",
+      "name-placeholder": "Full Name",
+      "name-require": "Name is required",
+      "email": "Email",
+      "email-placeholder": "Example@gmail.com",
+      "email-require": "Email is required",
+      "phone": " Phone Number",
+      "phone-placeholder": "Enter phone number",
+      "phone-require": "Phone is required",
+      "textarea": "Your Message",
+      "textarea-placeholder": "Write your inquiry",
+      "textarea-numberOfWords": "500 characters used. ",
+      "textarea-numberUsed": "/ 500 characters",
+      "textarea-require": "Message is required",
+      "button": "Confirm",
+      "recaptcha-error": "Please complete the reCAPTCHA verification."
+    },
+    "Right Side": {
+      "h3": "For Direct inquiries",
+      "p": "Feel free to contact us through the following",
+      "Location": "Zahraa Al Maadi, Sama Towers, Building No. 9, 9th Floor, Apartment No. 93"
+    }
+  },
   "services": {
     "title": "What do we have to offer",
     "header-title": "Our Services",
@@ -143,83 +144,75 @@
       "keywords": "Depo Web contact, website development, app development, digital solutions, growth"
     }
   },
-    "FAQsSection": {
-      "Title": "FAQs",
-      "Questions": [
-        {
-          "question": "What services does Depo web provide?",
-          "answer": "Depo web offers a wide range of digital development and programming services, including custom website design, mobile app development, e-commerce solutions, digital marketing, and software consulting. We aim to deliver solutions tailored to meet the unique needs of each client."
-        },
-        {
-          "question": "How long does it take to complete a project?",
-          "answer": "Project timelines vary based on the complexity and specific requirements. Typically, smaller projects may take a few weeks, while larger or more complex solutions might take several months. After an initial consultation, we provide an estimated timeline that aligns with your goals and deadlines."
-        },
-        {
-          "question": "How can I contact customer support?",
-          "answer": "You can reach our support team through our Contact Us page, by phone, or by email. We’re here to answer questions, provide updates, and offer assistance as needed. We strive to respond to all inquiries within 24 hours during business days."
-        }
-      ]
-    },
- 
-    "AboutUsSection": {
-      "propsTitle":" Get to know us better",
-      "Title": "About Depo web",
-      "Description": "At Depo Web, we are passionate about innovation and committed to transforming ideas into impactful digital solutions. With a team of skilled developers and creative thinkers, we specialize in providing a wide range of digital development and programming services tailored to meet the unique needs of each client. Our mission is to empower businesses by delivering high-quality scalable solutions that drive growth and success."
-    },
-    
-    "CardsSection": {
-      "Title": "Our Core Values",
-      "Cards": [
-        {
-          "Title": "Our Vision",
-          "Points": [
-            "• Become a leading digital solutions provider recognized for commitment to quality, innovation, and client success.",
-            "• Envision a future where Depo Web sets new standards in the digital industry.",
-            "• Help businesses worldwide reach their full potential through cutting-edge technology."
-          ]
-        },
-        {
-          "Title": "Our Mission",
-          "Points": [
-            "• Deliver customized, user-centered digital solutions that empower businesses in a rapidly evolving digital landscape.",
-            "• Commit to excellence in every project, with a focus on continuous improvement, collaboration, and integrity.",
-            "• Bring clients' visions to life through seamless and innovative digital experiences.",
-            "• Aim to support business growth through digital innovation and tailored solutions."
-          ]
-        },
-        {
-          "Title": "Our Values",
-          "Values": [
-            {
-  
-              "Title": "• Innovation:",
-              "Description": "We embrace creativity and stay ahead of industry trends to deliver cutting-edge solutions."
-            },
-            {
-  
-              "Title": "• Client-Centricity:",
-              "Description": "We prioritize our clients' needs, tailoring solutions to help them succeed."
-            },
-            {
-  
-              "Title": "• Integrity:",
-              "Description": "We operate with transparency and honesty in every aspect of our work."
-            },
-            {
-  
-              "Title": "• Excellence:",
-              "Description": "We focus on high-quality results that make a real impact."
-            },
-            {
-  
-              "Title": "• Collaboration:",
-              "Description": "We believe in teamwork, combining ideas to create the best solutions."
-            }
-          ]
-        }
-      ]
-    }
-    
-  
-  }
+  "FAQsSection": {
+    "Title": "FAQs",
+    "Questions": [
+      {
+        "question": "What services does Depo web provide?",
+        "answer": "Depo web offers a wide range of digital development and programming services, including custom website design, mobile app development, e-commerce solutions, digital marketing, and software consulting. We aim to deliver solutions tailored to meet the unique needs of each client."
+      },
+      {
+        "question": "How long does it take to complete a project?",
+        "answer": "Project timelines vary based on the complexity and specific requirements. Typically, smaller projects may take a few weeks, while larger or more complex solutions might take several months. After an initial consultation, we provide an estimated timeline that aligns with your goals and deadlines."
+      },
+      {
+        "question": "How can I contact customer support?",
+        "answer": "You can reach our support team through our Contact Us page, by phone, or by email. We’re here to answer questions, provide updates, and offer assistance as needed. We strive to respond to all inquiries within 24 hours during business days."
+      }
+    ]
+  },
 
+  "AboutUsSection": {
+    "propsTitle": " Get to know us better",
+    "Title": "About Depo web",
+    "Description": "At Depo Web, we are passionate about innovation and committed to transforming ideas into impactful digital solutions. With a team of skilled developers and creative thinkers, we specialize in providing a wide range of digital development and programming services tailored to meet the unique needs of each client. Our mission is to empower businesses by delivering high-quality scalable solutions that drive growth and success."
+  },
+
+  "CardsSection": {
+    "Title": "Our Core Values",
+    "Cards": [
+      {
+        "Title": "Our Vision",
+        "Points": [
+          "• Become a leading digital solutions provider recognized for commitment to quality, innovation, and client success.",
+          "• Envision a future where Depo Web sets new standards in the digital industry.",
+          "• Help businesses worldwide reach their full potential through cutting-edge technology."
+        ]
+      },
+      {
+        "Title": "Our Mission",
+        "Points": [
+          "• Deliver customized, user-centered digital solutions that empower businesses in a rapidly evolving digital landscape.",
+          "• Commit to excellence in every project, with a focus on continuous improvement, collaboration, and integrity.",
+          "• Bring clients' visions to life through seamless and innovative digital experiences.",
+          "• Aim to support business growth through digital innovation and tailored solutions."
+        ]
+      },
+      {
+        "Title": "Our Values",
+        "Values": [
+          {
+            "Title": "• Innovation:",
+            "Description": "We embrace creativity and stay ahead of industry trends to deliver cutting-edge solutions."
+          },
+          {
+            "Title": "• Client-Centricity:",
+            "Description": "We prioritize our clients' needs, tailoring solutions to help them succeed."
+          },
+          {
+            "Title": "• Integrity:",
+            "Description": "We operate with transparency and honesty in every aspect of our work."
+          },
+          {
+            "Title": "• Excellence:",
+            "Description": "We focus on high-quality results that make a real impact."
+          },
+          {
+            "Title": "• Collaboration:",
+            "Description": "We believe in teamwork, combining ideas to create the best solutions."
+          }
+        ]
+      }
+    ]
+  }
+}
