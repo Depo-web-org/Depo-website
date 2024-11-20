@@ -3,9 +3,6 @@ import { useTranslation } from 'react-i18next';
 
 const HeaderInfo = () => {
   const { t  } = useTranslation();
-  
-console.log();
-
   return (
     <section className='section-border'>
       <h2 className="text-white font-bold text-2xl lg:text-[32px] lg:text-center lg:mt-8 mb-6 lg:mb-16">
