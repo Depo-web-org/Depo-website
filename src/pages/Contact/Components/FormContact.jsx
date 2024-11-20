@@ -8,12 +8,11 @@ import { useTranslation } from "react-i18next";
 import ReCAPTCHA from "react-google-recaptcha";
 
 import "./FormContact.css";
-import './FormContact.css';
-import ar from '../../../../public/locales/countrysAr.json';
-import en from '../../../../public/locales/countrysEn.json';
+import "./FormContact.css";
+import ar from "../../../../public/locales/countrysAr.json";
+import en from "../../../../public/locales/countrysEn.json";
 
 const FormContact = () => {
- 
   const {
     register,
     handleSubmit,
@@ -27,17 +26,16 @@ const FormContact = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const recaptcha = useRef();
   const recaptchaValue = recaptcha?.current?.getValue();
-  const messageLength = messageValue?.trim().split(/\s+/).filter(Boolean).length || 0;
-  const { t , i18n  } = useTranslation(); 
+  const messageLength =
+    messageValue?.trim().split(/\s+/).filter(Boolean).length || 0;
+  const { t, i18n } = useTranslation();
   let countryOptions;
 
-  if(i18n.language === 'en'){ 
-    countryOptions=en
-  }else{
-    countryOptions=ar
+  if (i18n.language === "en") {
+    countryOptions = en;
+  } else {
+    countryOptions = ar;
   }
-  
-
   const sendDataToBackend = async (data, recaptchaValue) => {
     if (phoneValue?.length >= 10 && recaptchaValue) {
       setIsLoading(true);
@@ -197,8 +195,10 @@ const FormContact = () => {
           </span>
         </label>
         <ReCAPTCHA
+          key={i18n.language}
           ref={recaptcha}
           sitekey="6Lcl6YEqAAAAANdKLVZywDSMl7iLTh24k9QaXGnu"
+          hl={i18n.language === "ar" ? "ar" : "en"}
         />
         {isSubmitted && !recaptchaValue && (
           <span className="text-red-500 block">
