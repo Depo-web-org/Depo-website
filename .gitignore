@@ -15,3 +15,4 @@ build/
 *.vscode/
 *.idea/
 node_modules/vite/bin/vite.js
+*.htaccess
