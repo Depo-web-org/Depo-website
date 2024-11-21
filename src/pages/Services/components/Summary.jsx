@@ -25,7 +25,6 @@ export default function Summary() {
           </Link>
         </div>
       </div>
-      <div></div>
     </div>
   );
 }

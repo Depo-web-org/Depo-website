@@ -18,6 +18,7 @@ const Lang= ()=>{
     services: { text: `${t('navItems.services')}`, icon: <GrServices className="inline" />, link: "/services" },
     career: { text: `${t('navItems.career')}`, icon: <FaCode className="inline" />, link: "/career" },
     about: { text: `${t('navItems.about')}`, icon: <IoIosInformationCircle className="inline" />, link: "/about" },
+    // Portfolio:{ text: `${t('navItems.portfolio')}`, icon}
     contact: { text: `${t('navItems.button-nav')}`, icon: <IoMdContact className="inline" />, link: "/contact" }
   };
   return navItems
