@@ -193,7 +193,7 @@ const FormContact = () => {
                 )}`}
           </span>
         </label>
-        <div  className="recaptcha-dir">
+        <div  className="recaptcha-dir pt-4">
         <ReCAPTCHA
           key={i18n.language}
           ref={recaptcha}

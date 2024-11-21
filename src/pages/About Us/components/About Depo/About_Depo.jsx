@@ -2,7 +2,9 @@ import { t } from "i18next";
 import UseEffectAboutUS from "../../../../Hooks/useEffectAboutUS";
 
 export default function About_Depo() {
-  // Hoock useEffect
+
+  
+  // Hook useEffect
   UseEffectAboutUS()
 
   return (
@@ -17,7 +19,7 @@ export default function About_Depo() {
         </p>
       </div>
       {/* img About */}
-      <div className="col-span-12 md:col-span-4 w-full h-[225px]  mt-5 sm:mt-5 md:-mt-0 mb-4 lg:mb-0">
+      <div className="col-span-12 md:col-span-4 w-full h-[225px]  mt-5 sm:mt-5 md:-mt-0  lg:mb-0">
         <img
           className="w-full sm:w-[438px] h-full rounded-lg "
           src="/images/imgas AboutUs/img AboutUs.webp"
