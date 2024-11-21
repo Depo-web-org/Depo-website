@@ -64,11 +64,11 @@ export default function ServicesContainer() {
   ];
 
   return (
-    <div className="grid grid-cols-12 pt-2 gap-[10px] md:gap-[20px]">
+    <div className="grid grid-cols-12 pt-2 sm:gap-3  md:gap-[20px]">
       {servicesData.map((service) => (
         <div
           key={service.titleKey}
-          className="col-span-12 md:col-span-6 py-4 lg:col-span-3"
+          className="col-span-12 sm:col-span-6 md:col-span-4  py-4 xl:col-span-3"
         >
           <ServiceItem
             title={t(service.titleKey)} // Dynamically translate the title
