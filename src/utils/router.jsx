@@ -7,6 +7,7 @@ import Career from "../pages/Career/Career";
 import NotFound from "../pages/NotFound";
 import { lazy, Suspense } from "react";
 import Loading from "../components/Loading page/Loading";
+import Portfolio from "../pages/Portfolio";
 const Home = lazy(() => import("../pages/Home"));
 
 export const router = createBrowserRouter([
@@ -39,6 +40,10 @@ export const router = createBrowserRouter([
         path: "career",
         element: <Career />,
       },
+      {
+        path:'portfolio',
+        element:<Portfolio/>
+      }
     ],
   },
 ]);
