@@ -1,5 +1,5 @@
 import PagesBg from "../../components/common/PagesBg";
-import Allcard from "./Components/cards portfolio/Allcard";
+import VideoCard from "./Components/cards portfolio/videoCard";
 import Title from "./Components/Title";
 
 const Portfolio = () => {
@@ -9,12 +9,12 @@ const Portfolio = () => {
     <>
       <PagesBg title={"Our portfolio"} />
 
-      <div className=" gradient-bg min-h-screen px-4  md:px-[104px] pt-[40px] ">
+      <div className=" gradient-bg min-h-screen px-4 lg:px-[104px] pt-20 lg:pt-0 ">
         <Title title={"Projects Underway"} description={desc} />
 
         {/* cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-1  md:gap-6 ">
-          <Allcard />
+        <div className="grid grid-cols-12  gap-6 pb-6    ">
+          <VideoCard />
         </div>
       </div>
     </>

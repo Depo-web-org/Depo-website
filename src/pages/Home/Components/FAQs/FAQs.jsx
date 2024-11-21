@@ -29,9 +29,9 @@ export default function FAQs() {
     <>
       <div
         id="FAQs"
-        className="h-auto w-full md:my-[32px] text-white tracking-wide"
+        className="h-auto w-full md:my-[32px]  text-white tracking-wide"
       >
-        <div className="flex flex-col lg:items-center">
+        <div className="flex flex-col lg:items-center ">
           <h2 className="h-[39px] text-[25px] lg:text-[32px] font-bold mb-[-8px] lg:mb-[64px]">
             {t("FAQsSection.Title")}
           </h2>
