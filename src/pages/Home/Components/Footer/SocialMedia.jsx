@@ -1,7 +1,7 @@
-export const SocialMediaLogos=()=>{
-  
-  return <>
-  <div className="flex justify-center items-center gap-4 mt-4">
+export const SocialMediaLogos = () => {
+  return (
+    <>
+      <div className="flex justify-center max-w-60 flex-wrap items-center gap-4 mt-4">
         <a
           href="https://www.facebook.com/profile.php?id=61567296676384&mibextid=kFxxJD"
           target="_blank"
@@ -46,14 +46,37 @@ export const SocialMediaLogos=()=>{
             alt="LinkedIn"
           />
         </a>
+        <a
+          href="https://x.com/depowebeg?s=21&t=NFNL1oVylB3bysdsizslCA"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            className="h-[41px] w-[41px]"
+            src="images/x.svg"
+            alt="LinkedIn"
+          />
+        </a>
+        <a
+          href="https://www.tiktok.com/@depoweb.eg?_t=8rYSfX3k64O&_r=1"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            className="h-[41px] w-[41px]"
+            src="images/tiktok.svg"
+            alt="LinkedIn"
+          />
+        </a>
       </div>
-  </>
-}
+    </>
+  );
+};
 export default function SocialMedia() {
   return (
     <div className="col-span-12 md:col-span-6 lg:col-span-3 gap-4 flex w-[293px] h-[153px] flex-col items-start justify-start">
       <img className="w-48" src="images/logo_ 1.svg" alt="Logo" />
-      <SocialMediaLogos/>
+      <SocialMediaLogos />
     </div>
   );
 }
