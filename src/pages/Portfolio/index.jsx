@@ -1,7 +1,7 @@
 import PagesBg from "../../components/common/PagesBg";
 import VideoCard from "./Components/cards portfolio/videoCard";
 import Title from "./Components/Title";
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
 const Portfolio = () => {
   const cardInfo = [
@@ -17,7 +17,7 @@ const Portfolio = () => {
       img: "https://s3-alpha-sig.figma.com/img/6e6c/1275/4dd1f35bbebebef81a0f1521811acdf8?Expires=1733097600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Lps-mXvCJq2nJ5lFIpRPuqCne8E0DKex4-fchy0A9l82frkpsHN~7Rpqxnz2FcqvpABNvHD069ZCOjXNVhhHJ0npdpBUTcFw2VhyVmZuFG~QSzsM45ArbDueqMquGKumEVy3GUjhpbwwxk8A14nQyFPIV8ZMnegQukltvxghQg1vmw4igyWPD91Je7ET5m9CQZUDGle1ZcrPJ78L~ffg3i4rRNgcSLJmnp~iTh7tU2M-3firv~b9TfpdK02hrOeY-RozROFrHw~egm~wcIGBVjhK-owFTM558aYnd9~CToG8wcgPQJyOEd2b8VlIi42OmnDEF0L~XLVo81W1IIttRQ__",
       des: "Faster is a cutting-edge mobile app for on-demand transportation, offering quick, reliable rides with real-time tracking, upfront pricing, and flexible payment options. Designed for speed and comfort, Faster ensures a seamless and satisfying user experience.",
       textClick: "click play",
-      videoUrl: "https://depowebeg.com/assets/videos/DELIVENDOR.mp4",
+      videoUrl: "https://depowebeg.com/assets/videos/The_Faster.mp4",
     },
   ];
   let desc =
