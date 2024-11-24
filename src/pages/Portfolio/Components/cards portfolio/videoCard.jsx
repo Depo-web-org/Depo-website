@@ -1,12 +1,17 @@
+import { useState } from "react";
 import { FaPlay } from "react-icons/fa";
+import VideoModal from "../video/VideoModal";
 
-export default function VideoCard({card}) {
+export default function VideoCard({ card }) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <>
       {card.map((item, index) => (
+        <>
           <div
             key={index}
             className="mx-auto w-full col-span-12 sm:col-span-5 lg:col-span-4  "
+            onClick={() => setIsModalOpen(true)}
           >
             <div className="bg-white rounded-lg relative group overflow-hidden shadow-xl ">
               {/* Img Container */}
@@ -49,7 +54,13 @@ export default function VideoCard({card}) {
               </div>
             </div>
           </div>
-        ))}
+          <VideoModal
+            isOpen={isModalOpen}
+            onClose={() => setIsModalOpen(false)}
+            videoUrl={item.videoUrl}
+          />
+        </>
+      ))}
     </>
   );
 }
