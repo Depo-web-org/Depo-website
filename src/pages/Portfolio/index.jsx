@@ -1,6 +1,7 @@
 import PagesBg from "../../components/common/PagesBg";
 import VideoCard from "./Components/cards portfolio/videoCard";
 import Title from "./Components/Title";
+import { useEffect } from 'react';
 
 const Portfolio = () => {
   const cardInfo = [
@@ -21,10 +22,11 @@ const Portfolio = () => {
   ];
   let desc =
     "Our team is actively engaged in delivering these projects. Check back for progress updates as we work toward successful outcomes.";
+  useEffect(() => window.scroll(0, 0), []);
+
   return (
     <>
       <PagesBg title={"Our portfolio"} />
-
       <div className=" gradient-bg min-h-screen px-4 lg:px-[104px] pt-20 lg:pt-0 ">
         <Title title={"Projects Underway"} description={desc} />
 

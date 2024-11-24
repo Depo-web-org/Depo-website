@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { FaPlay } from "react-icons/fa";
 import VideoModal from "../video/VideoModal";
-
+import { FaPause } from "react-icons/fa6";
+import './videoCard.css'
 export default function VideoCard({ card }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
@@ -13,7 +14,7 @@ export default function VideoCard({ card }) {
             className="mx-auto w-full col-span-12 sm:col-span-5 lg:col-span-4 cursor-pointer "
             onClick={() => setIsModalOpen(true)}
           >
-            <div className="bg-white rounded-lg relative group overflow-hidden shadow-xl ">
+            <div className="bg-white rounded-lg relative group overflow-hidden shadow-xl parent-Video-Card">
               {/* Img Container */}
               <div className=" p-2 relative flex justify-center items-center  transition-all duration-1000 lg:group-hover:p-0">
                 <img
@@ -25,16 +26,24 @@ export default function VideoCard({ card }) {
               </div>
 
               {/* Content Container */}
-              <div className="z-30 flex items-center p-2">
-                <h3 className="text-gray-800 text-base sm:base  md:text-lg xl:text-2xl  leading-[29.05px] font-bold ">
+              <div className="z-30 flex items-center p-2 ">
+                <h3 className="text-gray-800 text-lg xl:text-2xl  leading-[29.05px] font-bold ">
                   {item.name}
                 </h3>
 
-                <div className="flex flex-1 justify-end   lg:justify-start  lg:group-hover:justify-end  lg:flex-none lg:group-hover:flex-1 transition-all duration-[1000ms] ">
-                  <FaPlay
+                  
+                  <div  className="video-Icon-Dir flex flex-1 justify-end   lg:justify-start  lg:group-hover:justify-end  lg:flex-none lg:group-hover:flex-1 transition-all duration-[1000ms] ">
+                 
+                  {
+                    isModalOpen ?  <FaPause
                     className=" text-xl lg:text-2xl mr-1 lg:group-hover:-mr-1 lg:ms-2 text-secondary transition-transform duration-[1000ms] ease-in-out 
                    lg:group-hover:translate-x-[calc(200%-10%)] lg:group-hover:rotate-180"
-                  />
+                  /> :  <FaPlay
+                  className=" text-xl lg:text-2xl mr-1 lg:group-hover:-mr-1 lg:ms-2 text-secondary transition-transform duration-[1000ms] ease-in-out 
+                 lg:group-hover:translate-x-[calc(200%-10%)] lg:group-hover:rotate-180"
+                /> 
+                  }
+        
                 </div>
 
                 <span className="relative lg:end-14 text-gray-700  font-semibold lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-500">
