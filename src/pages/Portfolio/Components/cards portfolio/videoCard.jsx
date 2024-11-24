@@ -2,9 +2,9 @@ import { useState } from "react";
 import { FaPlay } from "react-icons/fa";
 import VideoModal from "../video/VideoModal";
 import { FaPause } from "react-icons/fa6";
-import './videoCard.css'
+import "./videoCard.css";
 export default function VideoCard({ card }) {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [activeCardIndex, setActiveCardIndex] = useState(null);
   return (
     <>
       {card.map((item, index) => (
@@ -12,7 +12,7 @@ export default function VideoCard({ card }) {
           <div
             key={index}
             className="mx-auto w-full col-span-12 sm:col-span-5 lg:col-span-4 cursor-pointer "
-            onClick={() => setIsModalOpen(true)}
+            onClick={() => setActiveCardIndex(index)}
           >
             <div className="bg-white rounded-lg relative group overflow-hidden shadow-xl parent-Video-Card">
               {/* Img Container */}
@@ -31,19 +31,18 @@ export default function VideoCard({ card }) {
                   {item.name}
                 </h3>
 
-                  
-                  <div  className="video-Icon-Dir flex flex-1 justify-end   lg:justify-start  lg:group-hover:justify-end  lg:flex-none lg:group-hover:flex-1 transition-all duration-[1000ms] ">
-                 
-                  {
-                    isModalOpen ?  <FaPause
-                    className=" text-xl lg:text-2xl mr-1 lg:group-hover:-mr-1 lg:ms-2 text-secondary transition-transform duration-[1000ms] ease-in-out 
+                <div className="video-Icon-Dir flex flex-1 justify-end   lg:justify-start  lg:group-hover:justify-end  lg:flex-none lg:group-hover:flex-1 transition-all duration-[1000ms] ">
+                  {activeCardIndex === index ? (
+                    <FaPause
+                      className=" text-xl lg:text-2xl mr-1 lg:group-hover:-mr-1 lg:ms-2 text-secondary transition-transform duration-[1000ms] ease-in-out 
                    lg:group-hover:translate-x-[calc(200%-10%)] lg:group-hover:rotate-180"
-                  /> :  <FaPlay
-                  className=" text-xl lg:text-2xl mr-1 lg:group-hover:-mr-1 lg:ms-2 text-secondary transition-transform duration-[1000ms] ease-in-out 
+                    />
+                  ) : (
+                    <FaPlay
+                      className=" text-xl lg:text-2xl mr-1 lg:group-hover:-mr-1 lg:ms-2 text-secondary transition-transform duration-[1000ms] ease-in-out 
                  lg:group-hover:translate-x-[calc(200%-10%)] lg:group-hover:rotate-180"
-                /> 
-                  }
-        
+                    />
+                  )}
                 </div>
 
                 <span className="relative lg:end-14 text-gray-700  font-semibold lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-500">
@@ -63,11 +62,13 @@ export default function VideoCard({ card }) {
               </div>
             </div>
           </div>
-          <VideoModal
-            isOpen={isModalOpen}
-            onClose={() => setIsModalOpen(false)}
-            videoUrl={item.videoUrl}
-          />
+          {activeCardIndex === index && (
+            <VideoModal
+              isOpen={activeCardIndex !== null}
+              onClose={() => setActiveCardIndex(null)}
+              videoUrl={item.videoUrl}
+            />
+          )}
         </>
       ))}
     </>
