@@ -3,7 +3,7 @@
     "home": "Home",
     "services": "Services",
     "career": "Career",
-    "portfolio":"Portfolio",
+    "portfolio": "Portfolio",
     "about": "About Us",
     "button-nav": "Contact Us"
   },
@@ -216,5 +216,20 @@
         ]
       }
     ]
+  },
+
+  "portfolio": {
+    "Delivendor": {
+      "name": "Delivendor",
+      "description": "Delevendor is a modern delivery app connecting users with a wide range of vendors, including restaurants and stores. It offers an intuitive interface, real-time order tracking, and secure payment options, ensuring a seamless and convenient delivery experience.",
+      "textClick": "click play",
+      "videoUrl": "https://www.youtube.com/watch?v=ntaNl6kaoHk"
+    },
+    "TheFaster": {
+      "name": "The Faster",
+      "description": "Faster is a cutting-edge mobile app for on-demand transportation, offering quick, reliable rides with real-time tracking, upfront pricing, and flexible payment options. Designed for speed and comfort, Faster ensures a seamless and satisfying user experience.",
+      "textClick": "click play",
+      "videoUrl": "https://www.youtube.com/watch?v=ntaNl6kaoHk"
+    }
   }
 }
