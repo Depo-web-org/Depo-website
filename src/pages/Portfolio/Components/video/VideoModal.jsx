@@ -41,7 +41,6 @@ export default function VideoModal({ isOpen, onClose, videoUrl }) {
   const modalRef = useRef(null);
   const speedMenuRef = useRef(null);
 
-  console.log(videoUrl);
   useEffect(() => {
     const handleEsc = (e) => {
       if (e.key === "Escape") onClose();
@@ -152,7 +151,7 @@ export default function VideoModal({ isOpen, onClose, videoUrl }) {
 
   return (
     <div
-      className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+      className="fixed inset-0 px-4 bg-black bg-opacity-50 flex items-center justify-center z-50"
       onClick={handleOverlayClick}
     >
       <div

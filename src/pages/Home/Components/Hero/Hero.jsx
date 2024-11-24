@@ -3,8 +3,22 @@ import Button from "../../../../components/common/Button"
 import './animationHero.css'
 import { ImLink } from "react-icons/im"
 import { useTranslation } from "react-i18next"
+import { useEffect } from "react"
 const Hero = () => {
   const { t , i18n } = useTranslation();
+
+
+  // to resolve problem of animation work in language change 
+  useEffect(() => {
+    const elements = document.querySelectorAll('.slide-in-top, .slide-in-right, .slide-in-left, .slide-in-bottom');
+    elements.forEach((element) => {
+      element.classList.replace('slide-in-bottom', 'temp-class-bottom') 
+      element.classList.replace('slide-in-top', 'temp-class')
+      void element.offsetWidth 
+      element.classList.replace('temp-class-bottom', 'slide-in-bottom')
+      element.classList.replace('temp-class', 'slide-in-top')
+    })
+  }, [i18n.language])
   
   return (
     <>
