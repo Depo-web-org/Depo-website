@@ -4,7 +4,6 @@ export default {
   theme: {
     extend: {
       colors: {
-        // #052c5d
         primary: "#1A4F92",
         "primary-active": "#142A4A",
         "primary-hover": "#153F74",
