@@ -17,7 +17,7 @@ const CenterNav = ({ navItems }) => {
             </div>
           </div>
         </div>
-        <div className="h-full bg-secondary rounded-[57px] flex flex-1 items-center justify-between px-4 xl:px-8">
+        <div className="h-full bg-secondary rounded-[57px] flex flex-1 items-center justify-between  xl:px-8 overflow-hidden ">
           {Object.entries(navItems).map(([key, item]) =>
             key !== "contact" ? (
               <NavLink

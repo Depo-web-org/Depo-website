@@ -18,8 +18,9 @@ export default function VideoCard({ card }) {
               {/* Img Container */}
               <div className=" p-2 relative flex justify-center items-center  transition-all duration-1000 lg:group-hover:p-0">
                 <img
+                loading="lazy"
                   src={item.img}
-                  alt="img card"
+                  alt={`${item.des}`}
                   className="rounded-lg  w-full  object-cover transition-all duration-1000 lg:group-hover:rounded-none"
                 />
                 <div className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
