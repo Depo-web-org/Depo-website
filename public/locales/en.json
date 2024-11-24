@@ -219,6 +219,10 @@
   },
 
   "portfolio": {
+    "Our portfolio":"Our portfolio",
+    "Title page":"Projects Underway",
+    "description page":"Our team is actively engaged in delivering these projects. Check back for progress updates as we work toward successful outcomes.",
+   
     "Delivendor": {
       "name": "Delivendor",
       "description": "Delevendor is a modern delivery app connecting users with a wide range of vendors, including restaurants and stores. It offers an intuitive interface, real-time order tracking, and secure payment options, ensuring a seamless and convenient delivery experience.",
