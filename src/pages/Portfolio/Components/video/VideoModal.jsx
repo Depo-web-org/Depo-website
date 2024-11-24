@@ -173,7 +173,7 @@ export default function VideoModal({ isOpen, onClose, videoUrl }) {
           onLoadedMetadata={handleLoadedMetadata}
           onClick={togglePlay}
         >
-          <source src={""} type="video/mp4" />
+          <source src={videoUrl} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
