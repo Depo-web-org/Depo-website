@@ -1,11 +1,10 @@
-import { t } from "i18next";
-import UseEffectAboutUS from "../../../../Hooks/useEffectAboutUS";
+import { useTranslation } from "react-i18next";
+
+ 
 
 export default function About_Depo() {
+  const { t } = useTranslation();
 
-  
-  // Hook useEffect
-  UseEffectAboutUS()
 
   return (
     <div className="grid grid-cols-12 items-center pt-20 lg:pt-[26px]  ">

@@ -1,10 +1,12 @@
-import { t } from "i18next";
+ 
 import PagesBg from "../../components/common/PagesBg";
 import VideoCard from "./Components/cards portfolio/videoCard";
 import Title from "./Components/Title";
-import UseEffectAboutUS from "../../Hooks/useEffectAboutUS";
+import { useTranslation } from "react-i18next";
 
 const Portfolio = () => {
+  const { t } = useTranslation();
+
   const cardInfo = [
     {
       name:"Delivendor",
@@ -22,7 +24,7 @@ const Portfolio = () => {
     },
   ];
 
-  UseEffectAboutUS()
+ 
   return (
     <>
       <PagesBg title={`${t("portfolio.Our portfolio")}`} />

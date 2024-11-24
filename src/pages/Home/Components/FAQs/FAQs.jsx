@@ -1,12 +1,11 @@
 import { useState } from "react";
 import "./FQAs.css";
 import { HiArrowCircleDown } from "react-icons/hi";
-import { t } from "i18next";
 import { useTranslation } from "react-i18next";
 
 export default function FAQs() {
   const [showText, setshowText] = useState(null);
-  const { i18n } = useTranslation();
+  const {t , i18n } = useTranslation();
 
   const AllFAQs = [
     {

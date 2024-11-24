@@ -1,9 +1,7 @@
-import { t } from "i18next";
-import UseEffectAboutUS from "../../../../Hooks/useEffectAboutUS";
+import { useTranslation } from "react-i18next";
 
 export default function Card_AboutUs() {
-  // Hoock useEffect
-  UseEffectAboutUS();
+  const { t } = useTranslation();
 
   const AllCard = [
     {
