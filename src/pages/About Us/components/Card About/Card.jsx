@@ -62,7 +62,7 @@ export default function Card_AboutUs() {
           key={item.id}
           className={`bg-primary relative col-span-12 md:col-span-6 h-auto text-white w-full py-3 ps-3 rounded-md flex flex-col md:flex-row ${
             index === AllCard.length - 1
-              ? "sm:col-span-12 md:col-span-12 lg:col-span-12 lg:w-[calc(100%-43%)]  md:ms-[220px] lg:m-auto"
+              ? "sm:col-span-12 md:col-span-12 lg:col-span-12 lg:w-[calc(100%-43%)]  md:ms-[200px] lg:m-auto"
               : ""
           }`}
         >
