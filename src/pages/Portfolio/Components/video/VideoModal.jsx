@@ -1,5 +1,4 @@
 import { useRef, useState, useEffect } from "react";
-import PropTypes from "prop-types";
 import {
   Play,
   Pause,
@@ -42,6 +41,7 @@ export default function VideoModal({ isOpen, onClose, videoUrl }) {
   const modalRef = useRef(null);
   const speedMenuRef = useRef(null);
 
+  console.log(videoUrl);
   useEffect(() => {
     const handleEsc = (e) => {
       if (e.key === "Escape") onClose();
@@ -152,7 +152,7 @@ export default function VideoModal({ isOpen, onClose, videoUrl }) {
 
   return (
     <div
-      className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
+      className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
       onClick={handleOverlayClick}
     >
       <div
@@ -173,7 +173,7 @@ export default function VideoModal({ isOpen, onClose, videoUrl }) {
           onLoadedMetadata={handleLoadedMetadata}
           onClick={togglePlay}
         >
-          <source src={""} type="video/mp4" />
+          <source src={videoUrl} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
@@ -253,9 +253,3 @@ export default function VideoModal({ isOpen, onClose, videoUrl }) {
     </div>
   );
 }
-
-VideoModal.propTypes = {
-  isOpen: PropTypes.bool.isRequired,
-  onClose: PropTypes.func.isRequired,
-  videoUrl: PropTypes.string.isRequired,
-};

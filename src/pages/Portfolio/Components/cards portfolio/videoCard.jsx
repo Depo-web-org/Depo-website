@@ -10,7 +10,7 @@ export default function VideoCard({ card }) {
         <>
           <div
             key={index}
-            className="mx-auto w-full col-span-12 sm:col-span-5 lg:col-span-4  "
+            className="mx-auto w-full col-span-12 sm:col-span-5 lg:col-span-4 cursor-pointer "
             onClick={() => setIsModalOpen(true)}
           >
             <div className="bg-white rounded-lg relative group overflow-hidden shadow-xl ">
@@ -32,7 +32,7 @@ export default function VideoCard({ card }) {
 
                 <div className="flex flex-1 justify-end   lg:justify-start  lg:group-hover:justify-end  lg:flex-none lg:group-hover:flex-1 transition-all duration-[1000ms] ">
                   <FaPlay
-                    className=" text-xl lg:text-2xl mr-2 lg:ms-2 text-secondary transition-transform duration-[1000ms] ease-in-out 
+                    className=" text-xl lg:text-2xl mr-1 lg:group-hover:-mr-1 lg:ms-2 text-secondary transition-transform duration-[1000ms] ease-in-out 
                    lg:group-hover:translate-x-[calc(200%-10%)] lg:group-hover:rotate-180"
                   />
                 </div>
