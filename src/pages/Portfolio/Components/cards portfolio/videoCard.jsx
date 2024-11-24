@@ -8,10 +8,8 @@ export default function VideoCard({ card }) {
   return (
     <>
       {card.map((item,index ) => (
-        <>
+        <div key={`${index+item.des}`}  className="mx-auto w-full col-span-12 sm:col-span-5 lg:col-span-4 cursor-pointer ">
           <div
-            key={`${index+item.des}`}
-            className="mx-auto w-full col-span-12 sm:col-span-5 lg:col-span-4 cursor-pointer "
             onClick={() => setActiveCardIndex(index)}
           >
             <div className="bg-white rounded-lg relative group overflow-hidden shadow-xl parent-Video-Card">
@@ -70,7 +68,7 @@ export default function VideoCard({ card }) {
               videoUrl={item.videoUrl}
             />
           )}
-        </>
+        </div>
       ))}
     </>
   );
