@@ -7,10 +7,10 @@ export default function VideoCard({ card }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <>
-      {card.map((item, index) => (
+      {card.map((item,index ) => (
         <>
           <div
-            key={index}
+            key={`${index+item.des}`}
             className="mx-auto w-full col-span-12 sm:col-span-5 lg:col-span-4 cursor-pointer "
             onClick={() => setIsModalOpen(true)}
           >

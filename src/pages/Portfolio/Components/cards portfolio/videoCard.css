@@ -8,7 +8,7 @@
     }
     html[lang="ar"] .parent-Video-Card:hover .video-Icon-Dir svg {
         transform: translateX(-200%) rotate(120deg) ; 
-    margin: 0 0px;
+    margin: 0 -25px;
     }
 }
 html[lang="ar"] .parent-Video-Card .video-Icon-Dir svg {
