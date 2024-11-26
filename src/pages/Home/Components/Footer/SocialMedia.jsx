@@ -74,8 +74,10 @@ export const SocialMediaLogos = () => {
 };
 export default function SocialMedia() {
   return (
-    <div className="col-span-12 md:col-span-6 lg:col-span-3 gap-4 flex w-[293px] h-[153px] flex-col items-start justify-start">
-      <img className="w-48" src="images/logo_ 1.svg" alt="Logo" />
+    <div className="col-span-12 md:col-span-6 lg:col-span-3 gap-4 flex  max-w-60  h-[153px] flex-col items-center justify-start">
+      <div>
+        <img className="w-full" src="images/logo_ 1.svg" alt="Logo" />
+      </div>
       <SocialMediaLogos />
     </div>
   );
