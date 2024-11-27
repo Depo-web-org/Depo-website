@@ -5,6 +5,14 @@
 * {
   font-family: "Inter", sans-serif !important;
 }
+
+/* stop Selecting */
+html {
+  -webkit-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none;
+}
+
 html[lang="ar"] {
   direction: rtl;
   text-align: right;
@@ -12,6 +20,36 @@ html[lang="ar"] {
 html[lang="en"] {
   direction: ltr;
   text-align: left;
+}
+
+/* scrollbar style */
+
+body {
+  --sb-thumb-color: #00a5a4;
+  --sb-track-color: #1a4f92;
+  --sb-size: 4px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size)
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 1px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 1px;
+  
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color)
+                     var(--sb-track-color);
+  }
 }
 
 .active {

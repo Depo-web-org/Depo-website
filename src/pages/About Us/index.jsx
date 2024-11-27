@@ -19,7 +19,7 @@ export default function AboutUs() {
  
       <div className="gradient-bg min-h-screen">
         <PagesBg title={t("AboutUsSection.propsTitle")}/>
-        <section className="w-[calc(100%-32px)] lg:w-[calc(100%-208px)]  mx-auto">
+        <section className="w-[calc(100%-32px)] lg:w-[calc(100%-208px)]  mx-auto ">
           <About_Depo />
           <Card_AboutUs />
         </section>

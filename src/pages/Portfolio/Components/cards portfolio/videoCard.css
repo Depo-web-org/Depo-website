@@ -1,0 +1,17 @@
+
+
+
+
+@media (min-width: 1024px) {
+    html[lang="ar"] .parent-Video-Card .video-Icon-Dir svg {
+        transform:  rotate(90deg) ; 
+    }
+    html[lang="ar"] .parent-Video-Card:hover .video-Icon-Dir svg {
+        transform: translateX(-200%) rotate(120deg) ; 
+    margin: 0 -25px;
+    }
+}
+html[lang="ar"] .parent-Video-Card .video-Icon-Dir svg {
+    transform:  rotate(180deg); 
+    margin: 0 5px;
+}

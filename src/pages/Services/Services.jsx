@@ -18,7 +18,7 @@ export default function Services() {
       </Helmet>
 
       <PagesBg title={t("services.title")} />
-      <div className="min-h-screen gradient-bg px-4 pt-20 lg:pt-0 md:px-[104px] ">
+      <div className="min-h-screen gradient-bg px-4 pt-20 lg:pt-0 lg:px-[104px] ">
         <Summary />
         <ServicesContainer />
       </div>

@@ -1,9 +1,7 @@
-import { t } from "i18next";
-import UseEffectAboutUS from "../../../../Hooks/useEffectAboutUS";
+import { useTranslation } from "react-i18next";
 
 export default function Card_AboutUs() {
-  // Hoock useEffect
-  UseEffectAboutUS();
+  const { t } = useTranslation();
 
   const AllCard = [
     {
@@ -68,7 +66,7 @@ export default function Card_AboutUs() {
         >
           {/* Text card */}
           <div
-            className={`w-full h-auto pb-24 md:pb-24 relative  
+            className={`w-full h-auto pb-24 lg:pb-24 relative  
               ${index === AllCard.length - 1 ? "pb-[5px]" : ""}`}
           >
             <p className="text-[24px] md:text-[32px] leading-[30px] md:leading-[38.73px] font-bold">
@@ -83,7 +81,7 @@ export default function Card_AboutUs() {
                   </p>
                 ))
               ) : (
-                <span className="text-[14px] md:text-[16px] font-normal">
+                <span className="text-sm md:text-base font-normal">
                   {/* Creating  <br/> */}
                   {AllCard[0].points.map((item, index) => (
                     <p key={index}>{item.point}</p>
@@ -96,7 +94,7 @@ export default function Card_AboutUs() {
           {/* Img card*/}
           <div
             className={`w-[156px] h-[96px] bottom-2  absolute right-0 ${
-              index === AllCard.length - 1 ? "hidden md:block" : ""
+              index === AllCard.length - 1 ? "hidden lg:block " : ""
             }`}
           >
             <img className="h-full w-full" src={item.img} alt="img About" />

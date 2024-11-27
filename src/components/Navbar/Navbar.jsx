@@ -10,6 +10,7 @@ import ResponsiveNav from "./ResponsiveNav";
 import { useState } from "react";
 import CenterNav from "./CenterNav";
 import { useTranslation } from "react-i18next";
+import { GiEarthAfricaEurope } from "react-icons/gi";
 
 const Lang= ()=>{
   const {t} =useTranslation()
@@ -17,6 +18,7 @@ const Lang= ()=>{
     home: { text: `${t('navItems.home')}`, icon: <IoHome className="inline" />, link: "/" },
     services: { text: `${t('navItems.services')}`, icon: <GrServices className="inline" />, link: "/services" },
     career: { text: `${t('navItems.career')}`, icon: <FaCode className="inline" />, link: "/career" },
+    Portfolio:{ text: `${t('navItems.portfolio')}`, icon:<GiEarthAfricaEurope className="inline"/> , link: "/portfolio"},
     about: { text: `${t('navItems.about')}`, icon: <IoIosInformationCircle className="inline" />, link: "/about" },
     contact: { text: `${t('navItems.button-nav')}`, icon: <IoMdContact className="inline" />, link: "/contact" }
   };

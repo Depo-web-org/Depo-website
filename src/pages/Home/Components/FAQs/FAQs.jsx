@@ -1,12 +1,11 @@
 import { useState } from "react";
 import "./FQAs.css";
 import { HiArrowCircleDown } from "react-icons/hi";
-import { t } from "i18next";
 import { useTranslation } from "react-i18next";
 
 export default function FAQs() {
   const [showText, setshowText] = useState(null);
-  const { i18n } = useTranslation();
+  const {t , i18n } = useTranslation();
 
   const AllFAQs = [
     {
@@ -29,9 +28,9 @@ export default function FAQs() {
     <>
       <div
         id="FAQs"
-        className="h-auto w-full md:my-[32px] text-white tracking-wide"
+        className="h-auto w-full md:my-[32px]  text-white tracking-wide"
       >
-        <div className="flex flex-col lg:items-center">
+        <div className="flex flex-col lg:items-center ">
           <h2 className="h-[39px] text-[25px] lg:text-[32px] font-bold mb-[-8px] lg:mb-[64px]">
             {t("FAQsSection.Title")}
           </h2>

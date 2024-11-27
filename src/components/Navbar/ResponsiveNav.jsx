@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Divide as Hamburger } from "hamburger-react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Aderss from "../../pages/Home/Components/Footer/Address";
 import Map from "../../pages/Home/Components/Footer/Map";
 import logo from "/images/Logo.webp";
@@ -38,7 +38,9 @@ const ResponsiveNav = ({
 
          
           <div dir="ltr" className="flex items-center h-full  gap-1  pr-2 ">
+            <Link to={"/"}>
             <img src={logo} alt="Depo Web" className=' w-16' />
+            </Link>
             <div className=''>
               <LanguageSwitcher />
             </div>

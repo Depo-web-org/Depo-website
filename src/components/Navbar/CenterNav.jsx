@@ -6,7 +6,7 @@ import LanguageSwitcher from "./LanguageSwitcher";
 const CenterNav = ({ navItems }) => {
   return (
     <>
-      <div className="hidden lg:flex  h-full  lg:px-[104px] mx-auto justify-between py-2 px-8   ">
+      <div className="hidden lg:flex  h-full  lg:px-[104px] mx-auto justify-between py-2 px-8  ">
         <div className="h-full  w-1/4 ">
           <div dir="ltr" className="flex items-center h-full w-1/4 gap-1  ">
           <Link to="/" className="min-w-full ">
@@ -17,7 +17,7 @@ const CenterNav = ({ navItems }) => {
             </div>
           </div>
         </div>
-        <div className="h-full bg-secondary rounded-[57px] flex flex-1 items-center justify-between px-8">
+        <div className="h-full bg-secondary rounded-[57px] flex flex-1 items-center justify-between px-2 xl:px-8 overflow-hidden ">
           {Object.entries(navItems).map(([key, item]) =>
             key !== "contact" ? (
               <NavLink
