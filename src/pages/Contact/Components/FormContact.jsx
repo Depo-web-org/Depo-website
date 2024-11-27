@@ -11,7 +11,6 @@ import "./FormContact.css";
 import "./FormContact.css";
 import ar from "../../../../public/locales/countrysAr.json";
 import en from "../../../../public/locales/countrysEn.json";
-// import { useLocation } from "react-router-dom";
 
 const FormContact = () => {
   const location_URL = window.location.href.split('/contact')[0];
