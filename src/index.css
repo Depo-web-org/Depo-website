@@ -5,6 +5,14 @@
 * {
   font-family: "Inter", sans-serif !important;
 }
+
+/* stop Selecting */
+html {
+  -webkit-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none;
+}
+
 html[lang="ar"] {
   direction: rtl;
   text-align: right;
@@ -43,6 +51,7 @@ body::-webkit-scrollbar-thumb {
                      var(--sb-track-color);
   }
 }
+
 .active {
   color: #00a5a4;
 }

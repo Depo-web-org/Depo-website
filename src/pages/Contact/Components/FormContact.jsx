@@ -11,8 +11,10 @@ import "./FormContact.css";
 import "./FormContact.css";
 import ar from "../../../../public/locales/countrysAr.json";
 import en from "../../../../public/locales/countrysEn.json";
+// import { useLocation } from "react-router-dom";
 
 const FormContact = () => {
+  const location_URL = window.location.href.split('/contact')[0];
   const {
     register,
     handleSubmit,
@@ -41,7 +43,7 @@ const FormContact = () => {
       setIsLoading(true);
       const formData = { ...data, phone: phoneValue };
       await axios
-        .post("https://dev.depowebeg.com/api/api/form", formData, {
+        .post(`${location_URL}/api/api/form`, formData, {
           headers: {
             "Content-Type": "application/json",
           },
